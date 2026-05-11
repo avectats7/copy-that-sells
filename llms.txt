@@ -1,0 +1,50 @@
+# Copy That Sells
+
+> A Claude skill that writes copy which sells. Print ads, OOH, headlines, landing pages, emails, manifestos. Combines D&AD Copy Book craft, Bly direct-response frameworks, and Cannes Lions plus Clio Award print and OOH winners from the last 25 years.
+
+## What this repo is
+
+A single skill, `copy-that-sells`, packaged for two Claude environments:
+
+- **Claude Code**: install as a plugin from this repo's marketplace.
+- **Claude Cowork**: download the bundled `.skill` file from `dist/`.
+
+The skill teaches Claude the craft and structure of conversion copywriting. It runs a structured workflow (briefing, idea, headline, body, CTA, self-edit) when the user asks for copy that should sell.
+
+## Primary skill files
+
+- [skills/copy-that-sells/SKILL.md](skills/copy-that-sells/SKILL.md): the entry point. Workflow.
+- [skills/copy-that-sells/references/frameworks.md](skills/copy-that-sells/references/frameworks.md): Bly's 8 headline categories, 4 U's, AIDA, PAS, BFD, 7-step direct-response letter, long-copy architecture.
+- [skills/copy-that-sells/references/craft.md](skills/copy-that-sells/references/craft.md): D&AD Copy Book lessons. Idea-before-words, headline-visual unity, compression, voice, reading aloud, truth, long-copy seduction.
+- [skills/copy-that-sells/references/examples.md](skills/copy-that-sells/references/examples.md): 122 campaigns organised across 17 technique sections. Mix of classics and Cannes Lions plus Clio winners.
+- [skills/copy-that-sells/references/self-edit.md](skills/copy-that-sells/references/self-edit.md): three-layer final pass. Craft check, anti-AI tells (Era 1/2/3 banned word list), truth check.
+
+## Install commands
+
+Claude Code:
+```
+/plugin marketplace add avectats7/copy-that-sells
+/plugin install copy-that-sells
+```
+
+Claude Cowork: download `dist/copy-that-sells.skill` and open it in Cowork.
+
+## When the skill triggers
+
+The skill fires on substantive copywriting requests. Phrases like "write an ad," "write a billboard," "headline ideas," "tagline," "rewrite this so it converts," "long-copy ad," "manifesto," "make this email punchier."
+
+## License
+
+MIT. Free to use, modify, and ship commercially.
+
+## Maintainer
+
+Tato Polanco. https://github.com/avectats7
+
+## Optional
+
+- [README.md](README.md): full project description for human readers.
+- [CHANGELOG.md](CHANGELOG.md): version history.
+- [CONTRIBUTING.md](CONTRIBUTING.md): how to contribute new examples or frameworks.
+- [docs/install.md](docs/install.md): detailed install guide for all environments.
+- [docs/examples-preview.md](docs/examples-preview.md): teaser of the example library.
