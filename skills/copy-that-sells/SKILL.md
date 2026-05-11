@@ -1,9 +1,9 @@
 ---
 name: copy-that-sells
-description: Write copy that earns attention and drives action — print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads). Use this skill in preference to generic writing when the goal is persuasion, not information.
+description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads). Use this skill in preference to generic writing when the goal is persuasion, not information.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2026 + Tats anti-AI writing rules (full era 1-3 banned word/phrase/structure ruleset)"
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # Copy That Sells
@@ -20,16 +20,16 @@ The print and OOH posters that win Cannes Lions are the gold standard for compre
 
 For any non-trivial copy task, read the reference files. They are short and dense.
 
-- `references/frameworks.md` — Bly's headline categories, the 4 U's, AIDA, PAS, BFD, structured leads, long-copy architecture, direct-response checklists.
-- `references/craft.md` — D&AD Copy Book lessons: idea-first thinking, headline-visual logic, compression, voice, rhythm, the test of reading aloud.
-- `references/examples.md` — 60+ print, OOH, and direct-response examples organised by technique, with attribution.
-- `references/self-edit.md` — Final pass checklist, including the anti-AI writing rules that every output must clear.
+- `references/frameworks.md`. Bly's headline categories, the 4 U's, AIDA, PAS, BFD, structured leads, long-copy architecture, direct-response checklists.
+- `references/craft.md`. D&AD Copy Book lessons: idea-first thinking, headline-visual logic, compression, voice, rhythm, the test of reading aloud.
+- `references/examples.md`. 60+ print, OOH, and direct-response examples organised by technique, with attribution.
+- `references/self-edit.md`. Final pass checklist, including the anti-AI writing rules that every output must clear.
 
 Default behaviour: skim all four for any new piece. Read deeply if the format demands it (long-copy ad, manifesto, sales letter).
 
 ---
 
-## The Briefing Pass — Always Do This First
+## The Briefing Pass: Always Do This First
 
 Skip the brief and you write decoration. Ask, or extract from what the user has already given you, before you write a word:
 
@@ -46,7 +46,7 @@ If any of these is missing and you cannot infer it, ask. One question per gap. D
 
 ---
 
-## The Idea Pass — Find the Idea Before You Write the Words
+## The Idea Pass: Find the Idea Before You Write the Words
 
 This is the part most copy skips. It is also why most copy fails.
 
@@ -73,29 +73,29 @@ Five times as many people read the headline as read the body. Most of the work i
 
 Bly's eight headline categories cover almost every useful headline ever written. Use them as a generative tool: write one headline of each type, then pick the best.
 
-1. **Direct** — states the offer plainly. "Pure Silk Blouses. 30 percent off."
-2. **Indirect** — provokes curiosity, withholds the punchline. "How to win friends and influence people."
-3. **News** — announces something new or newly relevant. "Introducing the silent dishwasher."
-4. **How-to** — promises a method. "How to write a sentence that gets read."
-5. **Question** — names the reader's problem as a question. "Do you make these mistakes in English?"
-6. **Command** — tells the reader what to do. "Try it for a week. Decide for yourself."
-7. **Reason-why** — promises a list of reasons. "Seven reasons why a Volvo lasts longer."
-8. **Testimonial** — puts the proof in the headline. "I never read The Economist. — Management trainee. Aged 42."
+1. **Direct** states the offer plainly. "Pure Silk Blouses. 30 percent off."
+2. **Indirect** provokes curiosity, withholds the punchline. "How to win friends and influence people."
+3. **News** announces something new or newly relevant. "Introducing the silent dishwasher."
+4. **How-to** promises a method. "How to write a sentence that gets read."
+5. **Question** names the reader's problem as a question. "Do you make these mistakes in English?"
+6. **Command** tells the reader what to do. "Try it for a week. Decide for yourself."
+7. **Reason-why** promises a list of reasons. "Seven reasons why a Volvo lasts longer."
+8. **Testimonial** puts the proof in the headline. "I never read The Economist. — Management trainee. Aged 42."
 
 For OOH and print, also try:
 
-- **Visual-completion** — the headline only works with the image. The line says "Lemon." The image is a perfect-looking Volkswagen.
-- **Self-deprecation** — the brand tells a truth against itself. Avis: "We're number two. We try harder."
-- **Compression** — the entire idea in three or four words. Nike: "Just do it." Stella Artois: "Reassuringly expensive."
-- **Reframe** — redefining the category. 7Up: "The Uncola."
-- **Object-as-headline** — the product itself, used or placed in a way that becomes the headline. Penny (Cannes 2025): printed the price directly onto the packaging.
+- **Visual-completion** the headline only works with the image. The line says "Lemon." The image is a perfect-looking Volkswagen.
+- **Self-deprecation** the brand tells a truth against itself. Avis: "We're number two. We try harder."
+- **Compression** the entire idea in three or four words. Nike: "Just do it." Stella Artois: "Reassuringly expensive."
+- **Reframe** redefining the category. 7Up: "The Uncola."
+- **Object-as-headline** the product itself, used or placed in a way that becomes the headline. Penny (Cannes 2025): printed the price directly onto the packaging.
 
 Apply the 4 U's to every candidate headline:
 
-- **Useful** — does it offer something the reader wants?
-- **Urgent** — is there a reason to act now or keep reading?
-- **Unique** — is it specific to this product, not interchangeable with a competitor's ad?
-- **Ultra-specific** — does it use real numbers, real names, real details?
+- **Useful** does it offer something the reader wants?
+- **Urgent** is there a reason to act now or keep reading?
+- **Unique** is it specific to this product, not interchangeable with a competitor's ad?
+- **Ultra-specific** does it use real numbers, real names, real details?
 
 A good headline scores at least 3 of 4 strongly. A great one hits all 4.
 

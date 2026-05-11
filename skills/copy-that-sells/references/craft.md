@@ -116,7 +116,7 @@ The Avis line "We're number two. We try harder" is famous because it tells a tru
 
 The mechanism: when a brand admits a weakness, the reader is disarmed. The reader's default position is suspicion. Self-deprecation breaks the suspicion. Everything the brand says next is heard as more credible.
 
-But self-deprecation has to be true. And it has to be small enough that the brand can recover from it within the same ad. "Our food is mediocre" is not useful self-deprecation. "We're a no-frills airline. So our seats don't recline. But our fares do" — that works because it reframes the weakness as a benefit.
+But self-deprecation has to be true. And it has to be small enough that the brand can recover from it within the same ad. "Our food is mediocre" is not useful self-deprecation. "We're a no-frills airline. So our seats don't recline. But our fares do". That works because it reframes the weakness as a benefit.
 
 Other forms of truth-telling that build trust:
 

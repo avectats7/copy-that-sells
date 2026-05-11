@@ -5,10 +5,10 @@ Seventy-plus pieces of print, OOH, and direct-response work organised by techniq
 Attribution conventions: brand, year (approximate where uncertain), agency, plus the verbatim headline where the line is famous enough to quote confidently. Where the work is more visual than verbal, the description does the work. Award labels (Cannes, Clio, D&AD, One Show) are noted where the work is a known winner.
 
 Live galleries worth checking for current craft:
-- adsoftheworld.com — filterable by Print + OOH; check the Cannes Lions Grand Prix Winners and Clio Award Winners collections each year.
-- clios.com/winners-gallery — searchable Clio archive.
-- canneslions.com — official Cannes Lions winners.
-- dandad.org/awards — D&AD Pencil archive.
+- adsoftheworld.com. Filterable by Print + OOH; check the Cannes Lions Grand Prix Winners and Clio Award Winners collections each year.
+- clios.com/winners-gallery. Searchable Clio archive.
+- canneslions.com. Official Cannes Lions winners.
+- dandad.org/awards. D&AD Pencil archive.
 
 ## How to use this file
 
@@ -16,7 +16,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 1. Compression — entire idea in three to six words
+## 1. Compression: entire idea in three to six words
 
 - **Nike** "Just do it." (Wieden+Kennedy, 1988). Three words. Names a universal hesitation and dismisses it. Works on a billboard, a sneaker box, a Twitter bio.
 - **Stella Artois** "Reassuringly expensive." (Lowe Howard-Spink, 1980s). Two words turn the price objection into the proof point.
@@ -33,7 +33,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 2. Headline + visual completion — neither works alone
+## 2. Headline + visual completion: neither works alone
 
 - **Volkswagen** "Lemon." (DDB, 1960, Julian Koenig / Helmut Krone). Perfect-looking car. The headline says it is a reject. The body explains the standard.
 - **Volkswagen** "Think Small." (DDB, 1959). Tiny car on a vast white page. The image is the proof of the headline.
@@ -46,7 +46,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 3. Self-deprecation — truth against the brand
+## 3. Self-deprecation: truth against the brand
 
 - **Avis** "We try harder." See Section 1. The original.
 - **VW Beetle** body copy after Lemon: confessing the rejection rate as proof of quality control. The brand admits something embarrassing to prove the larger virtue.
@@ -58,7 +58,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 4. Reframe — redefining the category
+## 4. Reframe: redefining the category
 
 - **7Up** "The Uncola." (J. Walter Thompson, 1968). The category is everything except us.
 - **Apple** "1984." (Chiat/Day, 1984, Lee Clow / Steve Hayden). Personal computing as rebellion against the corporate norm.
@@ -71,7 +71,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 5. Specificity — proof inside the line
+## 5. Specificity: proof inside the line
 
 - **Rolls-Royce** "At 60 miles an hour the loudest noise in this new Rolls-Royce comes from the electric clock." (Ogilvy & Mather, 1958, David Ogilvy). The single most-imitated headline in advertising. The number is the proof. The detail is the proof.
 - **Volvo** "Drive it like you hate it." (Scali McCabe Sloves, 1970s). Body listed the welds, the cage, the test data.
@@ -84,7 +84,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 6. Question — the reader answers and is invested
+## 6. Question: the reader answers and is invested
 
 - **John Caples** "Do you make these mistakes in English?" (1919). The most-tested headline of the early twentieth century.
 - **Clairol** "Does she... or doesn't she?" (Foote, Cone & Belding, 1956, Shirley Polykoff). Sold hair colour by asking the only question that mattered.
@@ -94,7 +94,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 7. Provocation / challenge — disturb the reader
+## 7. Provocation / challenge: disturb the reader
 
 - **The Economist** "Why should I do anything to change my image? I don't have one." (AMV BBDO, David Abbott). The reader is dared to recognise themselves in the line.
 - **Greenpeace** dozens of poster campaigns whose lines confront the reader with the cost of inaction. The format: a hard image, a single sentence that says what you already half-knew.
@@ -104,7 +104,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 8. Long-copy seduction — the ad is an essay
+## 8. Long-copy seduction: the ad is an essay
 
 - **Patek Philippe** "You never actually own a Patek Philippe. You merely look after it for the next generation." (Leagas Delaney, 1996, Tim Delaney). Long-copy series about fathers, sons, watches as inheritance. The line at the end says what the body has built up to.
 - **The Economist** running long-copy series. Each ad a single argument. The reader who finishes is sold.
@@ -117,7 +117,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 9. Reason-why — claims supported in line
+## 9. Reason-why: claims supported in line
 
 - **Volkswagen** "Why won't your wife let you drive it?" (DDB, 1960s). The body listed the reasons. The reasons did the selling.
 - **Volvo** various reason-why ads listing safety features. The list was the case.
@@ -127,7 +127,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 10. Object-as-headline — the product is the ad
+## 10. Object-as-headline: the product is the ad
 
 - **Penny** "Price Packs." See Section 5. The package itself was the line.
 - **The Zimbabwean Newspaper** "Trillion Dollar Campaign." See Section 5. The currency was the canvas.
@@ -140,7 +140,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 11. Demonstration in print — proof inside the page
+## 11. Demonstration in print: proof inside the page
 
 - **Maxell** Blown Away Guy. (Howard Marks, 1981). The blast from the speaker did the convincing.
 - **Schwartz Spices** "Smell" execution. Magazine inserts that smelled of the spice. The page was the proof.
@@ -150,7 +150,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 12. Series and running campaigns — the brand becomes a voice
+## 12. Series and running campaigns: the brand becomes a voice
 
 - **Economist** ongoing yellow-and-white poster series, 1980s onward. Hundreds of executions, one voice, one visual identity.
 - **Absolut** "Absolut [insert]" 1980s onward. Bottle as the constant; the world around it as the variable.
@@ -161,7 +161,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 13. Public-service tonality — moral seriousness done with restraint
+## 13. Public-service tonality: moral seriousness done with restraint
 
 - **Amnesty International** print campaigns by Indra Sinha and others. Long copy that lays out the case with the discipline of a court filing. The voice is grave. The argument is the entire ad.
 - **Sandy Hook Promise** "Evan." (BBDO New York, 2016). See Section 7.
@@ -172,7 +172,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 14. Dare / insult the reader — used sparingly
+## 14. Dare / insult the reader: used sparingly
 
 - **VW** "Lemon." See Section 2. The brand insults itself, but the implied subject is the reader: you, who buy other cars, are accepting cars we would reject.
 - **The Economist** "I never read The Economist." See Section 2. The implied insult is to the reader who has not yet started.
@@ -181,7 +181,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 15. Truth-against-the-category — naming what everyone else does
+## 15. Truth-against-the-category: naming what everyone else does
 
 - **Honest Tea** various ads about ingredient labels. The brand reads its own label aloud and the category looks shifty by comparison.
 - **Innocent** drinks. The label voice that became the brand. "100 percent pure fruit smoothies, nothing added, nothing else." The category's evasions were the implicit comparison.
@@ -190,7 +190,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 16. Cultural and political moments — copy as the news
+## 16. Cultural and political moments: copy as the news
 
 - **Saatchi & Saatchi** "Labour isn't working." See Section 8. Political poster as long-copy argument.
 - **Nike** "Dream Crazy." (Wieden+Kennedy, 2018, Cannes Outdoor Grand Prix 2019, with Colin Kaepernick). Single image, single line: "Believe in something. Even if it means sacrificing everything." The line is risk reversal for the brand and the reader together.
@@ -204,14 +204,14 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 Latin-American agencies have been quietly responsible for some of the strongest print and OOH craft of the last twenty years. Worth studying in the original language. Award shows have noticed; Cannes and Clio both run heavy on these names.
 
-- **AlmapBBDO (Sao Paulo)** — Volkswagen Brazil, Havaianas, Billboard magazine. The Havaianas series (multiple Clio + Cannes Lions wins) sold the flip-flop as a recurring character in absurd scenes. Volkswagen Brazil's print has won Lions almost every year of the past two decades.
-- **DDB Brasil and DM9DDB** — multiple D&AD Pencils and Cannes Lions across decades. Strong on Volkswagen, Pepsi, public service work.
-- **DAVID (Sao Paulo and Buenos Aires)** — Burger King Brazil "Burn That Ad" (2019, Cannes Mobile Grand Prix; not print but the print extensions of the same idea ran in dailies). Heineken work.
-- **Africa (Sao Paulo)** — Heineken Brazil, Itau bank, strong long-copy tradition.
-- **Ogilvy & Mather Mexico** — Cerveza Indio "Indio Stars" and "Indio Diccionario" series, multiple Cannes and Clio honours.
-- **Leo Burnett Mexico City** — McDonald's Mexico, multiple Cannes Lions and Clios in print.
-- **Sancho BBDO (Bogota)** — strong long-copy print tradition for Colombian brands and public service work.
-- **JWT Mexico / Wunderman Mexico / Mayo (Buenos Aires)** — running output across two decades of Latin-American Cannes and Clio winners.
+- **AlmapBBDO (Sao Paulo)** Volkswagen Brazil, Havaianas, Billboard magazine. The Havaianas series (multiple Clio + Cannes Lions wins) sold the flip-flop as a recurring character in absurd scenes. Volkswagen Brazil's print has won Lions almost every year of the past two decades.
+- **DDB Brasil and DM9DDB** multiple D&AD Pencils and Cannes Lions across decades. Strong on Volkswagen, Pepsi, public service work.
+- **DAVID (Sao Paulo and Buenos Aires)** Burger King Brazil "Burn That Ad" (2019, Cannes Mobile Grand Prix; not print but the print extensions of the same idea ran in dailies). Heineken work.
+- **Africa (Sao Paulo)** Heineken Brazil, Itau bank, strong long-copy tradition.
+- **Ogilvy & Mather Mexico** Cerveza Indio "Indio Stars" and "Indio Diccionario" series, multiple Cannes and Clio honours.
+- **Leo Burnett Mexico City** McDonald's Mexico, multiple Cannes Lions and Clios in print.
+- **Sancho BBDO (Bogota)** strong long-copy print tradition for Colombian brands and public service work.
+- **JWT Mexico / Wunderman Mexico / Mayo (Buenos Aires)** running output across two decades of Latin-American Cannes and Clio winners.
 
 Reading recommendation when writing in Spanish: study these agencies in the language they actually wrote in. The rhythm of Latin-American Spanish copy is different from translated English. Spanish allows the headline to land later in the sentence in a way English does not; the agencies above know how to use that.
 

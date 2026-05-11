@@ -2,7 +2,19 @@
 
 All notable changes to the `copy-that-sells` skill.
 
-## [1.1.0] — 2026-05-11
+## [1.1.1]: 2026-05-12
+
+### Changed
+- Dogfooding pass. Stripped all em dashes (—) from the skill's own prose. The skill teaches "no em dashes in copy" so the skill files now follow that rule. Em dashes inside historical ad quotes (notably the Economist "I never read The Economist. — Management trainee. Aged 42." line) are preserved because the dash is part of the original copy as it ran.
+- Section headings that previously used " — " now use ": " (cleaner read in section titles anyway).
+- Quick-reference file lists in `SKILL.md` switched from " — description" form to ". Description." form.
+- Bullet labels in `references/frameworks.md` and `references/examples.md` cleaned of em-dash connectors.
+
+### Notes
+- No behavioural change. Same workflow, same references, same example library. The skill itself does not run any differently.
+- Bundle in `dist/copy-that-sells.skill` rebuilt from the cleaned source.
+
+## [1.1.0]: 2026-05-11
 
 ### Added
 - Section 17 in `references/examples.md`: Latin-American agency print to study. AlmapBBDO, DM9DDB, DAVID, Africa, Sancho BBDO, Ogilvy & Mather Mexico, Leo Burnett Mexico City. Spanish-language copy notes.
@@ -13,7 +25,7 @@ All notable changes to the `copy-that-sells` skill.
 ### Changed
 - `SKILL.md` metadata source string updated to credit Cannes Lions and Clio Award archives plus the full anti-AI writing ruleset.
 
-## [1.0.0] — 2026-05-11
+## [1.0.0]: 2026-05-11
 
 ### Added
 - Initial release. `SKILL.md` workflow (briefing, idea, headline, body, CTA, self-edit).

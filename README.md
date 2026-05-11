@@ -242,7 +242,7 @@ If you build on this skill, an acknowledgement is appreciated.
 
 ## Maintainer
 
-Tato Polanco — senior marketing operator. 10+ years in fintech, SaaS, and Web3. Six Telly Awards including one for copywriting. Based in Vigo, Spain.
+Tato Polanco. Senior marketing operator. 10+ years in fintech, SaaS, and Web3. Six Telly Awards including one for copywriting. Based in Vigo, Spain.
 
 GitHub: [@avectats7](https://github.com/avectats7)
 

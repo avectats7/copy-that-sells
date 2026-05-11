@@ -1,7 +1,7 @@
 {
   "name": "copy-that-sells",
   "description": "Copywriting skill for Claude. Write print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, emails, social, product descriptions, manifestos. Combines D&AD Copy Book craft with Bly direct-response frameworks. Treats Cannes Lions and Clio Award print and OOH winners as the gold standard.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "Tato Polanco",
     "url": "https://github.com/avectats7"

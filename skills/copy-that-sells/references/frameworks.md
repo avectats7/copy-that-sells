@@ -18,20 +18,20 @@ Distilled from Robert Bly's The Copywriter's Handbook plus direct-response copy 
 
 ---
 
-## The 4 U's — apply to every headline and subject line
+## The 4 U's: apply to every headline and subject line
 
 Bly's quick filter. Score each candidate headline on four criteria. A weak headline scores 0 or 1. A working headline scores 3 or 4.
 
-- **Useful** — does the headline offer the reader something they want? A benefit, a piece of news, a piece of information.
-- **Urgent** — is there a reason to keep reading now? Time-bound, scarcity, a problem that is biting today.
-- **Unique** — could a competitor swap their logo in and run this headline? If yes, it is not unique enough.
-- **Ultra-specific** — does it name a number, a person, a place, a date, a result? Vague language is the death of selling copy.
+- **Useful** does the headline offer the reader something they want? A benefit, a piece of news, a piece of information.
+- **Urgent** is there a reason to keep reading now? Time-bound, scarcity, a problem that is biting today.
+- **Unique** could a competitor swap their logo in and run this headline? If yes, it is not unique enough.
+- **Ultra-specific** does it name a number, a person, a place, a date, a result? Vague language is the death of selling copy.
 
 Example: "Save money on your insurance" scores 1 (Useful, barely). "Save 312 pounds a year on the same insurance policy you have right now" scores 4.
 
 ---
 
-## Bly's eight headline categories — use as a generative tool
+## Bly's eight headline categories: use as a generative tool
 
 For any brief, write one headline of each type. Then pick the best, or hybridise.
 
@@ -77,7 +77,7 @@ Puts the proof in the headline. The reader hears the claim from someone like the
 
 ---
 
-## Six lead types — Bly's playbook for opening sentences
+## Six lead types: Bly's playbook for opening sentences
 
 The headline gets the click. The lead gets the read. After the headline, the first sentence of the body is the most important thing on the page.
 
@@ -108,20 +108,20 @@ Pick the lead type that matches what the reader already feels. A reader in pain 
 
 ---
 
-## AIDA — the oldest scaffold, still the most useful
+## AIDA: the oldest scaffold, still the most useful
 
 Attention. Interest. Desire. Action.
 
-- **Attention** — the headline. Stop the scroll. Stop the page-turn. Stop the walk past the billboard.
-- **Interest** — the lead and first paragraph. Earn the next sentence.
-- **Desire** — the body. Build the case. Stack the proof. Picture the outcome.
-- **Action** — the close. Tell the reader exactly what to do. Reduce the friction. Restate the offer.
+- **Attention** the headline. Stop the scroll. Stop the page-turn. Stop the walk past the billboard.
+- **Interest** the lead and first paragraph. Earn the next sentence.
+- **Desire** the body. Build the case. Stack the proof. Picture the outcome.
+- **Action** the close. Tell the reader exactly what to do. Reduce the friction. Restate the offer.
 
 Use AIDA to diagnose a draft. Read it and ask: where does Attention end and Interest begin? Where does Interest fail to become Desire? Where does Desire arrive but Action is missing?
 
 ---
 
-## PAS — Problem, Agitate, Solve
+## PAS: Problem, Agitate, Solve
 
 The shortest reliable structure for short ads, emails, and landing-page hero sections.
 
@@ -143,13 +143,13 @@ Example structure for a 90-second sales email:
 
 ---
 
-## BFD — Beliefs, Feelings, Desires
+## BFD: Beliefs, Feelings, Desires
 
 A briefing framework rather than a copy framework. Use it during the briefing pass to mine the reader's psychology before writing.
 
-- **Beliefs** — what does the reader currently believe about the category, the brand, themselves? Which belief must shift?
-- **Feelings** — what is the reader feeling at the moment they encounter this copy? Anxiety, hope, boredom, envy, fear of looking stupid?
-- **Desires** — what does the reader want at the surface, and what do they want underneath the surface? A productivity tool, but really respect. A diet plan, but really self-control.
+- **Beliefs** what does the reader currently believe about the category, the brand, themselves? Which belief must shift?
+- **Feelings** what is the reader feeling at the moment they encounter this copy? Anxiety, hope, boredom, envy, fear of looking stupid?
+- **Desires** what does the reader want at the surface, and what do they want underneath the surface? A productivity tool, but really respect. A diet plan, but really self-control.
 
 Good copy speaks to the surface desire and triggers the deeper one.
 
