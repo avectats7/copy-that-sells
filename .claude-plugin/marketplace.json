@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "copy-that-sells",
+  "description": "A Claude skill that writes copy which sells — print ads, OOH, headlines, landing pages, emails. Distributed as a single-plugin marketplace.",
   "owner": {
     "name": "Tato Polanco",
     "url": "https://github.com/avectats7"
@@ -9,7 +10,7 @@
     {
       "name": "copy-that-sells",
       "description": "Copywriting skill for Claude that writes copy which sells. Print ads, OOH, headlines, landing pages, ads, emails. Built on D&AD Copy Book craft and Bly direct-response frameworks. Cannes Lions and Clio Award winners as the gold standard.",
-      "source": "."
+      "source": "./"
     }
   ]
 }
