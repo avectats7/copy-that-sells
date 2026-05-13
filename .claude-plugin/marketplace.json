@@ -10,6 +10,7 @@
     {
       "name": "copy-that-sells",
       "description": "Copywriting skill for Claude that writes copy which sells. Print ads, OOH, headlines, landing pages, ads, emails. Built on D&AD Copy Book craft and Bly direct-response frameworks. Cannes Lions and Clio Award winners as the gold standard.",
+      "category": "productivity",
       "source": "./"
     }
   ]
