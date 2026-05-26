@@ -1,0 +1,57 @@
+name: Build skill bundle
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'scripts/build-skill.sh'
+      - '.github/workflows/build.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'scripts/build-skill.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild skill bundle
+        run: ./scripts/build-skill.sh
+
+      - name: Verify dist matches source
+        run: |
+          # The build script writes to dist/. If the committed dist drifts
+          # from the source, the diff below catches it.
+          if ! git diff --exit-code dist/; then
+            echo ""
+            echo "::error::dist/copy-that-sells.skill is out of sync with source."
+            echo "Run ./scripts/build-skill.sh locally and commit the result."
+            exit 1
+          fi
+          echo "dist matches source."
+
+      - name: Smoke check the bundle contents
+        run: |
+          # Make sure the expected files are present in the bundle.
+          required=(
+            "copy-that-sells/SKILL.md"
+            "copy-that-sells/references/craft.md"
+            "copy-that-sells/references/frameworks.md"
+            "copy-that-sells/references/examples.md"
+            "copy-that-sells/references/self-edit.md"
+            "copy-that-sells/references/spanish-craft.md"
+            "copy-that-sells/references/formats.md"
+            "copy-that-sells/references/diagnostics.md"
+            "copy-that-sells/references/voice-bank.md"
+          )
+          contents=$(unzip -l dist/copy-that-sells.skill | awk '{print $NF}')
+          for f in "${required[@]}"; do
+            if ! echo "$contents" | grep -q "^$f$"; then
+              echo "::error::$f missing from bundle"
+              exit 1
+            fi
+          done
+          echo "bundle contents OK."
