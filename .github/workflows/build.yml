@@ -18,24 +18,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild skill bundle
-        run: ./scripts/build-skill.sh
-
-      - name: Verify dist matches source
+      - name: Verify committed bundle matches source content
         run: |
-          # The build script writes to dist/. If the committed dist drifts
-          # from the source, the diff below catches it.
-          if ! git diff --exit-code dist/; then
+          # We do not compare bundles byte-for-byte because zip metadata
+          # (timestamps, OS attributes, file ordering) differs across
+          # platforms even with -X. Instead, extract the committed bundle
+          # and diff its contents against the source tree. This catches
+          # real drift while ignoring zip metadata.
+          tmpdir=$(mktemp -d)
+          unzip -q dist/copy-that-sells.skill -d "$tmpdir"
+          if ! diff -r --brief skills/copy-that-sells "$tmpdir/copy-that-sells"; then
             echo ""
-            echo "::error::dist/copy-that-sells.skill is out of sync with source."
-            echo "Run ./scripts/build-skill.sh locally and commit the result."
+            echo "::error::dist/copy-that-sells.skill contents drift from skills/copy-that-sells/."
+            echo "Run ./scripts/build-skill.sh locally and commit the rebuilt bundle."
             exit 1
           fi
-          echo "dist matches source."
+          echo "bundle content matches source."
 
-      - name: Smoke check the bundle contents
+      - name: Smoke check that the build script still works
         run: |
-          # Make sure the expected files are present in the bundle.
+          # The verify step above checks the committed bundle. This step
+          # makes sure the build script itself still produces a valid
+          # bundle on this platform.
+          ./scripts/build-skill.sh
+          # Sanity: the rebuilt bundle should still contain all required files.
           required=(
             "copy-that-sells/SKILL.md"
             "copy-that-sells/references/craft.md"
@@ -50,7 +56,7 @@ jobs:
           contents=$(unzip -l dist/copy-that-sells.skill | awk '{print $NF}')
           for f in "${required[@]}"; do
             if ! echo "$contents" | grep -q "^$f$"; then
-              echo "::error::$f missing from bundle"
+              echo "::error::$f missing from rebuilt bundle"
               exit 1
             fi
           done
