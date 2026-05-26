@@ -3,7 +3,7 @@ name: copy-that-sells
 description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads). Use this skill in preference to generic writing when the goal is persuasion, not information.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2026 + Tats anti-AI writing rules (full era 1-3 banned word/phrase/structure ruleset)"
-  version: 1.1.1
+  version: 1.2.0
 ---
 
 # Copy That Sells
@@ -20,18 +20,34 @@ The print and OOH posters that win Cannes Lions are the gold standard for compre
 
 For any non-trivial copy task, read the reference files. They are short and dense.
 
-- `references/frameworks.md`. Bly's headline categories, the 4 U's, AIDA, PAS, BFD, structured leads, long-copy architecture, direct-response checklists.
+**Core craft (read on every task):**
+- `references/frameworks.md`. Bly's headline categories, the modern extensions (Listicle, Negative, Outcome-first), the 4 U's, AIDA, PAS, BFD, structured leads, long-copy architecture, direct-response checklists.
 - `references/craft.md`. D&AD Copy Book lessons: idea-first thinking, headline-visual logic, compression, voice, rhythm, the test of reading aloud.
-- `references/examples.md`. 60+ print, OOH, and direct-response examples organised by technique, with attribution.
-- `references/self-edit.md`. Final pass checklist, including the anti-AI writing rules that every output must clear.
+- `references/examples.md`. 120+ print, OOH, and direct-response examples organised by technique, with attribution.
+- `references/self-edit.md`. Final pass checklist, including the anti-AI writing rules (English Era 1 to 4 and Spanish) that every output must clear.
 
-Default behaviour: skim all four for any new piece. Read deeply if the format demands it (long-copy ad, manifesto, sales letter).
+**Format and language (read when relevant):**
+- `references/formats.md`. Per-format blueprints with word counts: subject line, cold email, landing hero, pricing page, sales page, billboard, paid social, paid search, push, App Store, manifesto, pre-roll.
+- `references/spanish-craft.md`. The 20 percent rule, verb position, regional variants (rioplatense, mexicano, castellano, andino, caribeño), vos/tú/usted, banned Spanish vocabulary, verbatim LatAm Cannes/Clio winners. Read on every Spanish task.
+- `references/voice-bank.md`. Twelve voices with two-line samples each. Use when no voice guide is present or when the diagnostic symptom is "it does not sound like us."
+- `references/diagnostics.md`. The critique-first procedure for when the user pastes existing copy. Symptom-cause-fix table. Edit vs Restructure vs Burn down decision.
+
+**Cookbook (read when stuck):**
+- `cookbook/`. Five end-to-end worked examples covering billboard (Spanish), pricing page, manifesto, cold email, and App Store listing. Each includes the brief, the full output, and a postmortem.
+
+Default behaviour: skim the core four for any new piece. Add the format file and the spanish file when relevant. Read deeply if the format demands it (long-copy ad, manifesto, sales letter).
 
 ---
 
 ## The Briefing Pass: Always Do This First
 
-Skip the brief and you write decoration. Ask, or extract from what the user has already given you, before you write a word:
+Skip the brief and you write decoration. Ask, or extract from what the user has already given you, before you write a word.
+
+**Two modes.** Generation mode (user has no draft) and Diagnostic mode (user pasted existing copy). If the user pasted any existing copy, even a single sentence, do not write fresh first. Switch to diagnostic mode and follow `references/diagnostics.md`. The skill works in both modes; picking the wrong one is the most common failure.
+
+**Brief detection.** If the user has already provided most of the eight briefing inputs in their request, acknowledge what they gave you, restate the missing pieces in one line, and proceed. Do not interrogate a user who has already done the work. A complete brief is a gift; reading past it is a tax on the user.
+
+**The eight inputs:**
 
 1. What is the one thing this copy must do? Sell a product, book a demo, change a belief, get a click. One thing. Not three.
 2. Who is the reader? Not a demographic. A specific person with a specific problem and a specific moment. The person standing at the bus stop, not "urban millennials."
@@ -39,7 +55,7 @@ Skip the brief and you write decoration. Ask, or extract from what the user has 
 4. What is the promise? A real, specific benefit. Not "enhanced productivity." "Two hours back every Tuesday morning."
 5. What is the proof? Numbers, demonstrations, comparisons, expert testimony, user quotes, guarantees. Copy without proof is opinion.
 6. What is the format constraint? Billboard glance (3 seconds), magazine spread (8 seconds), homepage hero (5 seconds before scroll), long-form email (60 seconds if the hook lands).
-7. What is the brand voice? If the user has a voice guide, follow it. If not, ask. If still nothing, pick a voice and call it out: "I am writing this in a dry, confident voice. Tell me if you want different."
+7. What is the brand voice? If the user has a voice guide, follow it. If not, pick from the twelve voices in `references/voice-bank.md`, name your pick back to the user, and proceed. "I am writing this in Voice 1 (dry confident) blended with Voice 8 (founder narrator). Tell me if you want a different lever."
 8. What is the call to action? What happens after they read this?
 
 If any of these is missing and you cannot infer it, ask. One question per gap. Do not write past a hole.
@@ -82,6 +98,12 @@ Bly's eight headline categories cover almost every useful headline ever written.
 7. **Reason-why** promises a list of reasons. "Seven reasons why a Volvo lasts longer."
 8. **Testimonial** puts the proof in the headline. "I never read The Economist. — Management trainee. Aged 42."
 
+For blog posts, paid social, and modern direct response (see `references/frameworks.md` for the full versions):
+
+- **Listicle** a number naming a finite list. "Seven mistakes that cost CFOs an hour every Tuesday."
+- **Negative** what not to do or buy. Patagonia: "Don't buy this jacket."
+- **Outcome-first** the result is the headline. "From 0 to $40,000 MRR in 90 days."
+
 For OOH and print, also try:
 
 - **Visual-completion** the headline only works with the image. The line says "Lemon." The image is a perfect-looking Volkswagen.
@@ -123,11 +145,47 @@ For long copy, the architecture matters. See `references/frameworks.md` for AIDA
 
 A weak CTA loses sales the rest of the copy earned. A good CTA continues the promise.
 
+### Core rules
 - Action verb plus what they get. "Get the free guide" beats "Submit."
 - Mirror the language of the headline. If the headline promises "two hours back every Tuesday," the button can say "Get my Tuesday back."
 - Reduce friction in the words. "Start free" reduces more friction than "Sign up."
 - One primary CTA per page or per ad. Secondary CTAs are fine if they support the primary one.
 - For direct response, restate the offer in the CTA area: what they get, what it costs, what the guarantee is, what happens next.
+
+### Verb bank by commitment level
+
+Commitment increases left to right. Match the verb to where the reader is in their decision.
+
+- **Low (free, no card, browse).** See. Read. Watch. Try. Browse. Start free. Take a look. Show me.
+- **Medium (sign up, trial, demo).** Start the trial. Open an account. Book a 15 minute call. Get the demo. Reserve a spot.
+- **High (pay, buy, subscribe).** Buy now. Subscribe. Get the plan. Upgrade. Order. Pay and start.
+- **Specific to category.** Apply. Enroll. Donate. Pledge. Vote. Download. Install. Tell me when X ships.
+
+Avoid generic verbs that match nothing: Submit, Click here, Continue, Learn more (as a CTA, not as secondary link), Next.
+
+### Microcopy under the button
+
+A line of microcopy under the button reduces the last 10 percent of friction. Three patterns that work:
+
+- **Risk reversal.** "No card up front." "Cancel any time." "60 day refund."
+- **Time anchor.** "Takes 90 seconds." "Done in 4 minutes."
+- **Social anchor.** "12,400 founders use Pulse." "Joined this week by 312 finance teams."
+
+One line, never two. Microcopy below the button that runs to two lines pulls the eye away from the button.
+
+### Secondary CTA patterns
+
+When the page needs a fallback for readers not ready to commit:
+
+- **Same offer, lower friction.** Primary is "Start the trial." Secondary is "See a 90 second demo first."
+- **Education path.** Primary is "Buy now." Secondary is "Read the case study."
+- **Live human.** Primary is "Start free." Secondary is "Talk to a person before you decide."
+
+A secondary CTA that competes with the primary is not a secondary CTA. It is a distraction. The secondary should be visibly smaller, sit nearby, and route to a lower friction action.
+
+### Mirror test
+
+Read the headline aloud. Read the CTA aloud immediately after. The CTA should sound like the natural next sentence after the headline. If it feels like a topic change, rewrite the CTA in the language of the headline.
 
 ---
 
@@ -146,7 +204,7 @@ Always do this before you ship. See `references/self-edit.md` for the full check
 
 ## Output Format
 
-When delivering copy, structure your response as:
+When delivering copy in generation mode, structure your response as:
 
 ### Idea
 One line. The thing the reader is meant to walk away believing or feeling.
@@ -155,12 +213,16 @@ One line. The thing the reader is meant to walk away believing or feeling.
 The actual copy, ready to use. No annotation inside the copy itself.
 
 ### Alternates
-2 to 4 alternate versions of the headline and CTA. Each with one line of rationale. This gives the user a choice and shows the range.
+2 to 4 alternate versions of the headline and CTA. Each with one line of rationale. This gives the user a choice and shows the range. Draw alternates from at least two different headline categories so they actually differ.
 
 ### Notes
-Brief: which Bly framework or D&AD principle is doing the work, any assumptions made about audience or proof, any open questions that would sharpen the copy further.
+Brief: word count of the final, which Bly framework or D&AD principle is doing the work, the voice (named from `voice-bank.md` when relevant), any assumptions made about audience or proof, any open questions that would sharpen the copy further, any claims flagged for the user to verify.
 
 Do not pad the response with summary. The work is the copy.
+
+### Diagnostic mode
+
+If the user pasted existing copy, follow the format in `references/diagnostics.md` instead: Diagnosis, Severity and recommendation, The fix, What this teaches.
 
 ---
 
