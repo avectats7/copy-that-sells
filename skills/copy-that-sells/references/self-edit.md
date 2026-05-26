@@ -36,7 +36,7 @@ Copy that sounds AI-generated loses trust the moment the reader notices. This se
 
 The core rule: if a sentence could have been written by ChatGPT, rewrite it. If a word appears on the banned list, replace it. If a structure matches the banned patterns, break it.
 
-The banned words are organised by era because the AI tells have shifted as models have shifted. Words that were obvious GPT-4 tells in 2024 are still tells now, even if the latest models lean on a different set. Treat the full list as a single blacklist.
+The banned words are organised by era because the AI tells have shifted as models have shifted. Words that were obvious GPT-4 tells in 2024 are still tells now, even if the latest models lean on a different set. Treat the full list as a single blacklist. Spanish has its own list further down because the Spanish AI fingerprint differs from the English one.
 
 ### Banned words: Era 1 (the original GPT tells, 2023 to mid-2024)
 
@@ -46,9 +46,29 @@ Additionally. Boasts. Bolstered. Crucial. Delve. Delve into. Emphasizing. Enduri
 
 Align with. Aligning with. Bolstered (still banned). Crucial (still banned). Emphasizing (still banned). Enhance. Enhanced. Enhancing. Enduring (still banned). Fostering. Highlighting. Pivotal (still banned). Showcasing. Underscore (still banned). Vibrant (still banned).
 
-### Banned words: Era 3 (current AI fingerprints, mid-2025 onward)
+### Banned words: Era 3 (mid-2025)
 
 Emphasizing. Enhance. Highlighting. Showcasing. (All still banned regardless of era.)
+
+### Banned words: Era 4 (Claude 4.x and Opus 4.5 to 4.7 generation, 2026)
+
+The current generation of frontier models has its own fingerprint. These words and phrases are the 2026 tells and join the banned list:
+
+Essentially. Fundamentally. At its core. The reality is. The truth is. In essence. It is worth pausing here. In many ways. If anything. More than just (when used as a contrast setup, e.g. "more than just a tool"). The beauty of it lies in. The beauty of X is. Lies at the intersection of. Sits at the intersection of. I would be remiss not to mention. I'd be remiss. A delicate dance. A delicate balance. Walks the line between. Threads the needle. Imagine X. Picture X. (When used as a manipulative reader-attention device, e.g. "Imagine a world where...")
+
+### Banned words: Spanish (any era)
+
+The Spanish AI fingerprint is its own list. If a piece of copy is in Spanish, this list is non-negotiable. See `spanish-craft.md` for the full set; the headline summary is below.
+
+**Vocabulario:** Potenciar. Robusto. Fomentar. Óptimo. Innovador (de relleno). Transformar (de relleno). Empoderar. Sinergia. Aprovechar (de relleno). Maximizar. Optimizar. Holístico. Integral (de relleno). Vibrante. Cautivar. Apasionante. Revolucionario. Disruptivo. Trascendental. Crucial (de relleno). Fundamental (de relleno). Esencial (de relleno). Pionero (sin prueba). Líder (sin prueba). Vanguardia. De vanguardia. Multifacético. Apuntalar.
+
+**Verbos de relleno corporativo:** Implementar (cuando "hacer" alcanza). Llevar a cabo. Realizar (cuando "hacer" alcanza). Brindar. Otorgar. Posibilitar. Facilitar (de relleno). Materializar. Articular (cuando no es literal). Plasmar.
+
+**Aperturas y cierres vacíos:** "En el mundo actual." "En la era digital." "Hoy en día." "En la actualidad." "En el dinámico mundo de." "En el cambiante panorama de." "Más que nunca." "Cabe destacar que." "Es importante mencionar que." "Vale la pena señalar que." "En conclusión." "En definitiva." "En última instancia." "Al final del día."
+
+**Buzz de catálogo:** "Desbloqueá el potencial." "Liberá el poder de." "Adentrate en el mundo de." "Llevá tu negocio al siguiente nivel." "Generá impacto real." "Marcá la diferencia." "Construí el futuro." "Sumate a la revolución." "Sé parte del cambio."
+
+**Patrones de contraste de IA en español:** "No es solo X, es Y." "No se trata de X, sino de Y." "No es un producto, es un movimiento." "Más que un X, una Y." Estos patrones son la firma más clara de un modelo escribiendo en español. Reescribir desde cero.
 
 ### Banned words: universally overused AI vocabulary
 
@@ -142,8 +162,14 @@ This pass is the difference between copy that ships and copy that should not hav
 
 ---
 
-## Quick-reference master list
+## Quick-reference master list (English)
 
 For a fast scan, here is the full banned word list in alphabetical order. If a word appears below, do not use it.
 
-Absolutely. Additionally. Align with. Beacon. Bolstered. Boasts. Captivate. Capitalize. Commence. Commendable. Comprehensive. Crucial. Cutting-edge. Delve. Dynamic. Embark. Empower. Emphasizing. Enduring. Enhance. Ever-evolving. Explore. Foster. Fostering. Framework. Game-changer. Garner. Groundbreaking. Harness. Highlighting. Holistic. Innovative. Interplay. Intricate. Key (adj.). Landscape. Leverage (verb). Meticulous. Multifaceted. Navigate. Noteworthy. Paramount. Pave the way. Pivotal. Realm. Revolutionary. Robust. Seamless. Showcase. Showcasing. Spearhead. Streamline. Synergy. Tapestry. Testament. Transformative. Underscore. Unlock. Unleash. Unpack. Utilize. Valuable. Vibrant.
+Absolutely. Additionally. Align with. At its core. Beacon. Bolstered. Boasts. Captivate. Capitalize. Commence. Commendable. Comprehensive. Crucial. Cutting-edge. Delicate dance. Delve. Dynamic. Embark. Empower. Emphasizing. Enduring. Enhance. Essentially. Ever-evolving. Explore. Foster. Fostering. Framework. Fundamentally. Game-changer. Garner. Groundbreaking. Harness. Highlighting. Holistic. I'd be remiss. Imagine X (as attention device). In essence. In many ways. Innovative. Interplay. Intricate. Key (adj.). Landscape. Leverage (verb). Lies at the intersection of. Meticulous. More than just X (as contrast setup). Multifaceted. Navigate. Noteworthy. Paramount. Pave the way. Picture X (as attention device). Pivotal. Realm. Revolutionary. Robust. Seamless. Showcase. Showcasing. Sits at the intersection of. Spearhead. Streamline. Synergy. Tapestry. Testament. The beauty of X is. The reality is. The truth is. Threads the needle. Transformative. Underscore. Unlock. Unleash. Unpack. Utilize. Valuable. Vibrant. Walks the line between.
+
+## Quick-reference master list (Spanish)
+
+Para escaneo rápido. Si una palabra aparece abajo, no la uses en copy en español.
+
+Apasionante. Aprovechar (de relleno). Apuntalar. Articular (no literal). Brindar. Cautivar. Crucial (de relleno). Desbloquear (en frases hechas). De vanguardia. Disruptivo. Dinámico. Empoderar. En conclusión. En definitiva. En el dinámico mundo de. En el mundo actual. En la actualidad. En la era digital. En última instancia. Esencial (de relleno). Facilitar (de relleno). Fomentar. Fundamental (de relleno). Holístico. Hoy en día. Implementar (cuando "hacer" alcanza). Innovador (de relleno). Integral (de relleno). Liberar el poder de. Líder (sin prueba). Llevar a cabo. Marcar la diferencia. Materializar. Maximizar. Más que nunca. Multifacético. No es solo X, es Y. No se trata de X, sino de Y. Optimizar. Óptimo. Otorgar. Pionero (sin prueba). Plasmar. Posibilitar. Potenciar. Realizar (cuando "hacer" alcanza). Revolucionario. Robusto. Sinergia. Sumate a la revolución. Trascendental. Transformar (de relleno). Vanguardia. Vibrante.

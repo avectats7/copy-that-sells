@@ -6,6 +6,7 @@ Distilled from Robert Bly's The Copywriter's Handbook plus direct-response copy 
 
 - The 4 U's
 - Bly's eight headline categories
+- Modern extensions: Listicle, Negative, Outcome-first
 - Six lead types
 - AIDA
 - PAS
@@ -74,6 +75,39 @@ Promises a numbered list of reasons. The list does the selling.
 Puts the proof in the headline. The reader hears the claim from someone like them, or from someone whose authority they trust.
 - "I never read The Economist. — Management trainee. Aged 42."
 - "We grew from 50 to 4,200 customers in nine months. Here is what happened."
+
+---
+
+## Modern extensions: three headline categories Bly's eight do not name
+
+Bly's framework was set decades before the blog post, the paid social ad, and the App Store. Three more categories have proven themselves in modern direct response. Use them as additions, not replacements.
+
+### 9. Listicle
+A number, often odd, naming a finite list the reader can finish.
+- "9 things every founder learns the wrong way."
+- "Seven mistakes that cost CFOs an hour every Tuesday."
+
+When it works: blog posts, paid social, content marketing. The number sets the expectation; the reader knows how long the read is. Strong on social platforms because the number scans in a thumbnail.
+
+When it fails: financial services, luxury, anything where the list form reads as low effort. The category overuses listicles, so they decay quickly inside content marketing.
+
+### 10. Negative
+The headline tells the reader what not to do, what not to buy, or what to avoid.
+- "Do not buy this jacket." (Patagonia, Black Friday 2011.)
+- "Never trust a startup that pitches without a demo."
+
+When it works: contrarian positioning, anti category brands, anywhere the reader is fatigued by category enthusiasm. The negative headline bypasses the reader's marketing immune system because the brand sounds like it is on the reader's side.
+
+When it fails: brands new to the reader. A negative headline from a brand the reader has never heard of reads as confusing rather than confident.
+
+### 11. Outcome-first
+The result is the headline. The product, the method, and the proof come second.
+- "From 0 to $40,000 MRR in 90 days."
+- "She lost 27 pounds without changing what she ate."
+
+When it works: direct response. Performance marketing. Anywhere the reader is shopping for an outcome and the brand is one of several ways to get there. The outcome-first headline is the dominant pattern on YouTube, course landing pages, weight loss, and indie product launches.
+
+When it fails: regulated categories (financial services, health) where naming the outcome creates compliance exposure. Always check the regulatory layer before writing an outcome-first headline.
 
 ---
 
