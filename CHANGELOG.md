@@ -2,6 +2,29 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [1.2.0]: 2026-05-26
+
+### Added
+- `references/spanish-craft.md`. Full Spanish writing reference. The 20 percent rule, verb position, regional variants (rioplatense, mexicano, castellano, andino, caribeño), vos/tú/usted decision tree, banned Spanish vocabulary and phrases, 16 verbatim Cannes/Clio LatAm headlines with rationale, list of LatAm and Spanish maestros to study.
+- `references/formats.md`. Per-format blueprints with word counts, structures, dos and don'ts for: email subject line, cold email, lifecycle email, landing page hero, pricing page, sales page, product page, billboard/OOH, paid social, paid search, push notification, App Store listing, manifesto, pre-roll video script.
+- `references/voice-bank.md`. Twelve named voices with two-line samples each: dry confident, quiet intimate, manifesto, folksy slow, conspirator, sober authority, cheeky rebel, founder narrator, technical precise, hostile funny, plain spoken trader, public service grave. Each includes when to use, when to avoid, and brand examples.
+- `references/diagnostics.md`. Critique-first procedure for when the user pastes existing copy. Five-question diagnostic. Symptom-cause-fix table. Edit vs Restructure vs Burn down decision. Diagnostic output format.
+- `cookbook/`. Five end-to-end worked examples with brief, full output, and postmortem: billboard for a LatAm fintech (Spanish, OOH), B2B SaaS pricing page (English, conversion structure), DTC manifesto (English, voice-first), founder cold email (English, outbound), App Store listing (English, ASO + selling).
+- `evals/`. Lightweight regression suite. 12 test prompts, scoring rubric, static checker (`check_banned_words.sh`) that scans output files for banned English and Spanish vocabulary, em dashes, en dashes, and compound-word hyphens.
+- `scripts/build-skill.sh`. Reproducible build script for the `.skill` bundle. Idempotent, runs in CI.
+- `.github/workflows/build.yml`. CI workflow that rebuilds the bundle on PRs and verifies that committed `dist/` matches source.
+
+### Changed
+- `SKILL.md`. Added a two-mode workflow (generation vs diagnostic) and a brief-detection branch so the skill no longer interrogates users who have already supplied a complete brief. Expanded the CTA pass into a full section with a verb bank by commitment level, microcopy patterns, and a mirror test. Output format now requires word count and voice name in the Notes block.
+- `references/frameworks.md`. Added three modern headline categories as extensions to Bly's eight: Listicle, Negative, Outcome-first. Each with when-it-works and when-it-fails guidance.
+- `references/self-edit.md`. Added Era 4 banned words (Claude 4.x and Opus 4.5 to 4.7 generation, 2026 fingerprints). Added a full Spanish banned-word and banned-phrase section. Split the master quick-reference list into English and Spanish.
+- `README.md`. Expanded the "What's inside" section to reflect the new file inventory. Added two new before/after examples (founder cold email, Spanish OOH). Updated the repo-structure diagram.
+- Version bumped to 1.2.0 in `SKILL.md` and `.claude-plugin/plugin.json`.
+
+### Notes
+- The skill more than doubled in surface area in this release: from 4 reference files to 8, plus a five-example cookbook and an eval suite. The reading discipline is unchanged. Read the core four on every task, add format and Spanish files when relevant, dip into voice-bank and diagnostics when the workflow calls for them.
+- The bundle in `dist/copy-that-sells.skill` was rebuilt from the new source via `scripts/build-skill.sh`.
+
 ## [1.1.1]: 2026-05-12
 
 ### Changed

@@ -13,11 +13,21 @@ The skill teaches Claude the craft and structure of conversion copywriting. It r
 
 ## Primary skill files
 
-- [skills/copy-that-sells/SKILL.md](skills/copy-that-sells/SKILL.md): the entry point. Workflow.
-- [skills/copy-that-sells/references/frameworks.md](skills/copy-that-sells/references/frameworks.md): Bly's 8 headline categories, 4 U's, AIDA, PAS, BFD, 7-step direct-response letter, long-copy architecture.
-- [skills/copy-that-sells/references/craft.md](skills/copy-that-sells/references/craft.md): D&AD Copy Book lessons. Idea-before-words, headline-visual unity, compression, voice, reading aloud, truth, long-copy seduction.
-- [skills/copy-that-sells/references/examples.md](skills/copy-that-sells/references/examples.md): 122 campaigns organised across 17 technique sections. Mix of classics and Cannes Lions plus Clio winners.
-- [skills/copy-that-sells/references/self-edit.md](skills/copy-that-sells/references/self-edit.md): three-layer final pass. Craft check, anti-AI tells (Era 1/2/3 banned word list), truth check.
+Core craft:
+- [skills/copy-that-sells/SKILL.md](skills/copy-that-sells/SKILL.md): the entry point. Two-mode workflow (generation + diagnostic).
+- [skills/copy-that-sells/references/frameworks.md](skills/copy-that-sells/references/frameworks.md): Bly's 8 headline categories plus 3 modern extensions (Listicle, Negative, Outcome-first), 4 U's, AIDA, PAS, BFD, 7-step direct-response letter, long-copy architecture.
+- [skills/copy-that-sells/references/craft.md](skills/copy-that-sells/references/craft.md): D&AD Copy Book lessons.
+- [skills/copy-that-sells/references/examples.md](skills/copy-that-sells/references/examples.md): 122 campaigns organised across 17 technique sections.
+- [skills/copy-that-sells/references/self-edit.md](skills/copy-that-sells/references/self-edit.md): three-layer final pass. Craft check, anti-AI tells (English Era 1 to 4 plus full Spanish list), truth check.
+
+Format and language:
+- [skills/copy-that-sells/references/formats.md](skills/copy-that-sells/references/formats.md): per-format blueprints with word counts for subject line, cold email, landing hero, pricing page, sales page, billboard, paid social, paid search, push, App Store, manifesto, pre-roll.
+- [skills/copy-that-sells/references/spanish-craft.md](skills/copy-that-sells/references/spanish-craft.md): Spanish writing reference. 20 percent rule, verb position, regional variants, vos/tú/usted, banned Spanish vocabulary, verbatim LatAm winners.
+- [skills/copy-that-sells/references/voice-bank.md](skills/copy-that-sells/references/voice-bank.md): twelve voices with samples and use cases.
+- [skills/copy-that-sells/references/diagnostics.md](skills/copy-that-sells/references/diagnostics.md): critique-first procedure for when the user pastes existing copy.
+
+Cookbook:
+- [skills/copy-that-sells/cookbook/](skills/copy-that-sells/cookbook/): five end-to-end worked examples covering billboard (Spanish), pricing page, manifesto, cold email, App Store listing.
 
 ## Install commands
 

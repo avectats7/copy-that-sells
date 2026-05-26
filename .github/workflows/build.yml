@@ -1,0 +1,63 @@
+name: Build skill bundle
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'scripts/build-skill.sh'
+      - '.github/workflows/build.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'scripts/build-skill.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify committed bundle matches source content
+        run: |
+          # We do not compare bundles byte-for-byte because zip metadata
+          # (timestamps, OS attributes, file ordering) differs across
+          # platforms even with -X. Instead, extract the committed bundle
+          # and diff its contents against the source tree. This catches
+          # real drift while ignoring zip metadata.
+          tmpdir=$(mktemp -d)
+          unzip -q dist/copy-that-sells.skill -d "$tmpdir"
+          if ! diff -r --brief skills/copy-that-sells "$tmpdir/copy-that-sells"; then
+            echo ""
+            echo "::error::dist/copy-that-sells.skill contents drift from skills/copy-that-sells/."
+            echo "Run ./scripts/build-skill.sh locally and commit the rebuilt bundle."
+            exit 1
+          fi
+          echo "bundle content matches source."
+
+      - name: Smoke check that the build script still works
+        run: |
+          # The verify step above checks the committed bundle. This step
+          # makes sure the build script itself still produces a valid
+          # bundle on this platform.
+          ./scripts/build-skill.sh
+          # Sanity: the rebuilt bundle should still contain all required files.
+          required=(
+            "copy-that-sells/SKILL.md"
+            "copy-that-sells/references/craft.md"
+            "copy-that-sells/references/frameworks.md"
+            "copy-that-sells/references/examples.md"
+            "copy-that-sells/references/self-edit.md"
+            "copy-that-sells/references/spanish-craft.md"
+            "copy-that-sells/references/formats.md"
+            "copy-that-sells/references/diagnostics.md"
+            "copy-that-sells/references/voice-bank.md"
+          )
+          contents=$(unzip -l dist/copy-that-sells.skill | awk '{print $NF}')
+          for f in "${required[@]}"; do
+            if ! echo "$contents" | grep -q "^$f$"; then
+              echo "::error::$f missing from rebuilt bundle"
+              exit 1
+            fi
+          done
+          echo "bundle contents OK."

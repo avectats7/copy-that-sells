@@ -12,15 +12,28 @@ If you have ever asked Claude to write an ad and it came back with "unlock the p
 
 ## What's inside
 
-A single skill, `copy-that-sells`, with one entry point and four reference files.
+A single skill, `copy-that-sells`, with one entry point, eight reference files, and a cookbook of worked examples.
 
-- `SKILL.md` (193 lines). The workflow. Briefing pass, idea pass, headline pass, body pass, CTA pass, self-edit pass. Decides what the skill does and when it runs.
-- `references/frameworks.md` (255 lines). Bly's eight headline categories. The 4 U's. AIDA. PAS. BFD. The seven-step direct-response sales letter. Long-copy architecture for sales pages. Voice-of-customer mining. Checklists.
-- `references/craft.md` (191 lines). The D&AD Copy Book in working form. Find the idea before the words. Make headline and visual one unit. Compress. Vary rhythm. Read aloud. Truth against self. Long-copy seduction. What to do when nothing works.
-- `references/examples.md` (253 lines). 122 individual campaigns organised into 17 technique sections. Mix of timeless classics and recent Cannes Lions plus Clio winners. Lookup table you scan when stuck.
-- `references/self-edit.md` (149 lines). Three-layer final pass. Craft check, anti-AI tells (Era 1 / Era 2 / Era 3 banned word list plus compound-hyphen rule and weak-verb table), truth check. Stops AI tells before they ship.
+**Core craft.**
+- `SKILL.md`. The workflow. Briefing pass, idea pass, headline pass, body pass, CTA pass, self-edit pass. Two modes: generation and diagnostic.
+- `references/frameworks.md`. Bly's eight headline categories plus three modern extensions (Listicle, Negative, Outcome-first). The 4 U's. AIDA. PAS. BFD. The seven-step direct-response sales letter. Long-copy architecture for sales pages. Voice-of-customer mining. Checklists.
+- `references/craft.md`. The D&AD Copy Book in working form. Find the idea before the words. Make headline and visual one unit. Compress. Vary rhythm. Read aloud. Truth against self. Long-copy seduction. What to do when nothing works.
+- `references/examples.md`. 122 individual campaigns organised into 17 technique sections. Mix of timeless classics and recent Cannes Lions plus Clio winners. Lookup table you scan when stuck.
+- `references/self-edit.md`. Three-layer final pass. Craft check, anti-AI tells (Era 1 through Era 4 banned word lists in English plus a full Spanish list), truth check. Stops AI tells before they ship.
 
-The skill works in any language. It writes Spanish in Spanish, not as a translation. Latino Spanish and Castilian Spanish are treated as different.
+**Format and language.**
+- `references/formats.md`. Per-format blueprints with word counts, structures, dos and don'ts: subject line, cold email, landing hero, pricing page, sales page, billboard, paid social, paid search, push, App Store, manifesto, pre-roll.
+- `references/spanish-craft.md`. The 20 percent rule. Verb position. Regional variants (rioplatense, mexicano, castellano, andino, caribeño). Vos, tú, usted, vosotros. Banned Spanish vocabulary and phrases. 16 verbatim Cannes/Clio LatAm headlines with rationale. Maestros to study.
+- `references/voice-bank.md`. Twelve voices with two-line samples each: dry confident, quiet intimate, manifesto, folksy slow, conspirator, sober authority, cheeky rebel, founder narrator, technical precise, hostile funny, plain spoken trader, public service grave.
+- `references/diagnostics.md`. The critique-first procedure for when the user pastes existing copy. Five-question diagnostic. Symptom-cause-fix table. Edit vs Restructure vs Burn down decision.
+
+**Cookbook.**
+- `cookbook/`. Five end-to-end worked examples: billboard for a LatAm fintech (Spanish), B2B SaaS pricing page, DTC manifesto, founder cold email, App Store listing. Each includes the original brief, the full output in the standard skill format, and a postmortem naming the frameworks and craft moves that did the work.
+
+**Evals.**
+- `evals/`. A lightweight regression suite. Twelve test prompts, a scoring rubric, and a static checker that scans output files for banned vocabulary in English and Spanish, em dashes, and compound-word hyphens.
+
+The skill works in any language. It writes Spanish in Spanish, not as a translation. Latino Spanish and Castilian Spanish are treated as different. The Spanish craft file is the most detailed of its kind in any public copywriting skill.
 
 ---
 
@@ -115,7 +128,9 @@ This skill teaches Claude that voice. The references are the syllabus. The workf
 
 ---
 
-## What good looks like (a quick before-and-after)
+## What good looks like (three quick before-and-afters)
+
+### Example 1: Email platform homepage hero
 
 **Before** (Claude default, generic AI voice)
 
@@ -125,9 +140,47 @@ This skill teaches Claude that voice. The references are the syllabus. The workf
 
 > Most inbox tools assume you want more email. We assume you want less. Our app reads your week, drafts your replies, surfaces the three things actually waiting on you. Try it free for ten days. If your inbox is not lighter on day eleven, we will refund you and write you an apology by hand.
 
-Same product. Different tradition.
+Same product. Different tradition. The skilled version uses self-deprecation against the category, specificity (three things, ten days, day eleven), reason-why proof (the mechanism, briefly), risk reversal (refund plus apology), and a CTA that continues the promise. None of these moves are accidental. They are in the references.
 
-The second version uses self-deprecation against the category, specificity (three things, ten days, day eleven), reason-why proof (the mechanism, briefly), risk reversal (refund plus apology), and a CTA that continues the promise. None of these moves are accidental. They are in the references.
+### Example 2: Founder cold email (B2B SaaS)
+
+**Before** (generic AI cold email)
+
+> Hi Maya,
+>
+> I hope this email finds you well. I came across your profile and was impressed by your work at Acme. I wanted to reach out because I believe our innovative platform could help your team unlock significant efficiency gains. We are revolutionising the async standup space by leveraging cutting-edge AI to streamline your team's workflow. Would you be open to a quick 30 minute discovery call next week to explore synergies?
+>
+> Best regards,
+> Generic Founder
+
+**After** (using this skill, applied to the same brief)
+
+> Hi Maya,
+>
+> I saw your January post about cutting your standup from 25 minutes to 7. The reason I am writing is that even after the cut, half the engineering leads I talk to are still running a 7 minute standup that does not need to exist.
+>
+> I run Pulse. It is an async standup tool that writes the standup itself from GitHub PRs and Slack activity. Your team does not fill out a form. They keep working. The standup arrives in Slack at 10am and the lead reads it in 90 seconds.
+>
+> Linear, Vercel, Render, and Modal run on Pulse. Engineers stopped filling out forms. Leads stopped chasing them.
+>
+> Worth a 15 minute call next week to see if it fits?
+>
+> Tato
+
+The skilled version names a specific public post in line one (which is the only thing that earns the read), reframes the offer as the absence of the form (the real differentiator), lands the proof in a single sentence with four named customers, and asks for the smallest defensible meeting. See `cookbook/04-founder-cold-email.md` for the full output and postmortem.
+
+### Example 3: Spanish OOH for a LatAm fintech
+
+**Before** (literal translation, AI Spanish voice)
+
+> Caja te ayuda a potenciar tus ahorros aprovechando una innovadora tecnología que transforma la manera en que gestionas tu dinero. Optimizá tu futuro financiero hoy mismo. Descargá la aplicación.
+
+**After** (using this skill with `spanish-craft.md`)
+
+> Lo que no pensás, lo ahorrás.
+> Caja. Bajala.
+
+Five words on the headline. Verb at the end of both clauses, rioplatense rhythm. No banned vocabulary (no "potenciar," no "innovadora," no "transforma," no "optimizá"). Subject pronoun dropped ("vos" is implicit in the voseo). The 4 U's pass: useful (saves money), urgent (every swipe, today), unique (only Caja does the round-up), ultra-specific (the line lands the mechanism without naming it). See `cookbook/01-billboard-latam-fintech.md` for the full output and the four variants per neighbourhood.
 
 ---
 
@@ -204,13 +257,34 @@ copy-that-sells/
 ├── skills/
 │   └── copy-that-sells/
 │       ├── SKILL.md             Entry point. The workflow.
-│       └── references/
-│           ├── frameworks.md    Bly. AIDA. PAS. Eight headline types.
-│           ├── craft.md         D&AD Copy Book lessons.
-│           ├── examples.md      122 campaigns by technique.
-│           └── self-edit.md     Anti-AI rules. Final pass.
+│       ├── references/
+│       │   ├── frameworks.md    Bly + modern extensions. AIDA. PAS.
+│       │   ├── craft.md         D&AD Copy Book lessons.
+│       │   ├── examples.md      122 campaigns by technique.
+│       │   ├── self-edit.md     Anti-AI rules (EN Era 1-4, ES). Final pass.
+│       │   ├── formats.md       Per-format blueprints with word counts.
+│       │   ├── spanish-craft.md Spanish writing rules. Regional variants.
+│       │   ├── voice-bank.md    Twelve voices with samples.
+│       │   └── diagnostics.md   Critique-first procedure.
+│       └── cookbook/
+│           ├── README.md
+│           ├── 01-billboard-latam-fintech.md
+│           ├── 02-saas-pricing-page.md
+│           ├── 03-dtc-manifesto.md
+│           ├── 04-founder-cold-email.md
+│           └── 05-app-store-listing.md
 ├── dist/
 │   └── copy-that-sells.skill    Cowork-ready zipped bundle.
+├── evals/
+│   ├── README.md
+│   ├── prompts.md               12 regression prompts.
+│   ├── rubric.md                Scoring criteria.
+│   └── check_banned_words.sh    Static checker (EN + ES).
+├── scripts/
+│   └── build-skill.sh           Rebuild dist bundle from source.
+├── .github/
+│   └── workflows/
+│       └── build.yml            CI: rebuild + verify on PR.
 ├── docs/
 │   ├── examples-preview.md      Teaser of the example library.
 │   └── install.md               Detailed install guide.

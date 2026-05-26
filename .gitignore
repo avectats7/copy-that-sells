@@ -7,3 +7,7 @@ node_modules/
 *.swp
 .env
 .env.local
+
+# Eval outputs are run-specific; keep the dir tracked via .gitkeep only.
+evals/outputs/*
+!evals/outputs/.gitkeep
