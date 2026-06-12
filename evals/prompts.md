@@ -30,7 +30,7 @@ Twelve prompts that cover the formats and languages the skill targets. Run any o
 
 ## 07-paid-search-en
 
-> Write a Google paid search ad for Ledgerline (the reconciliation tool from prompt 02). Search query the ad is targeting: "reconciliation software for startups." Format: 3 headlines of 30 characters each, 2 descriptions of 90 characters each. Voice: technical.
+> Write a Google responsive search ad for Ledgerline (the reconciliation tool from prompt 02). Search query the ad is targeting: "reconciliation software for startups." Format: 10 headlines of up to 30 characters each covering query echo, differentiator, proof, risk reversal, and CTA; 4 descriptions of up to 90 characters each. Note which headline, if any, you would pin and why. Voice: technical.
 
 ## 08-newsletter-subject-line-en
 

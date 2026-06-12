@@ -187,22 +187,24 @@ Estos son frases de presentación corporativa, no de copy que vende.
 
 A working library. Each line is from a known campaign. Use as proof of existence and as a study of cadence. Adapt the move, not the words.
 
+Regla editorial: ninguna línea entra a esta lista sin atribución verificada contra una fuente primaria (archivo del festival, prensa del sector, o la propia marca). Si una línea de esta lista no se puede verificar, se reemplaza, no se defiende.
+
 - **Coca-Cola** "Destapa la felicidad." (McCann, 2009). Tres palabras. Verbo + objeto. La acción física es la metáfora.
 - **Mastercard** "Hay cosas que el dinero no puede comprar. Para todo lo demás, existe Mastercard." (McCann, 1997, versión castellano). El reframe de categoría en dos cláusulas.
 - **McDonald's** "Me encanta." (DDB, versión hispano de "I'm Lovin' It," 2003 en adelante). Dos palabras. Voz del cliente, no de la marca.
 - **BBVA** "Adelante." (varios, 2010s). Una palabra. Imperativo. La marca como empuje hacia adelante.
-- **Movistar** "Compartida, la vida es más." (Sra. Rushmore, mediados 2010s). El verbo elidido. La promesa en seis palabras.
-- **Aquarius** "Para gente con inquietudes." (Sra. Rushmore, 2000s). Tagline larga que define al consumidor antes de definir al producto.
+- **Movistar** "Compartida, la vida es más." (Mother London, 2008). El verbo elidido. La promesa en cinco palabras.
+- **Aquarius** "El ser humano es extraordinario." (Sra. Rushmore, 2000s en adelante). La marca define al humano antes que al producto. Eslogan de era que sostuvo campañas durante más de una década.
 - **El Corte Inglés** "Si no queda satisfecho, le devolvemos su dinero." (interno, varios). La garantía como tagline. Reversión de riesgo completa.
-- **Mercado Libre** "Lo que buscás está en Mercado Libre." (DDB Buenos Aires, 2000s). Voseo rioplatense. Promesa funcional sin adorno.
-- **DGT España** "Te queda toda la vida por delante. No la pierdas en la carretera." (varios, campañas de seguridad vial). Public service. El reframe del tiempo como recurso finito.
-- **Cerveza Aguila Colombia** "Lo mejor de Colombia." (Bavaria, varios). Tagline territorial. El producto como símbolo nacional.
+- **Mercado Libre** "Encontrá lo que buscás." (2000s en adelante). Voseo rioplatense en imperativo. Promesa funcional sin adorno.
+- **DGT España** "En un siniestro de tráfico puedes morir o perder tu vida." (DGT, 2025). Public service. El reframe brutal: las dos salidas de un siniestro, y ninguna es la que el lector creía.
+- **Cerveza Águila Colombia** "Águila, sin igual y siempre igual." (Bavaria, eslogan histórico atribuido a Mario Santo Domingo). La paradoja como mnemónico: única y constante en la misma frase.
 - **Cerveza Indio** "Indio Diccionario." (Ogilvy México, mediados 2010s, Cannes y Clio honors). Serie que reclamó palabras del español mexicano que la cerveza categorizó como ya suyas. La marca como propietaria del idioma local.
 - **Lotería de Navidad España** "El mayor premio es compartirlo." (Leo Burnett Madrid, varios años, 2010s en adelante). Reframe del premio: lo que importa no es ganar, es a quién se le da. La campaña anual más vista del año en España.
-- **Banco Galicia Argentina** "Cosas que pasan en un país enorme." (Mercado McCann, 2010s). Long-copy serial usando relatos cortos de la vida cotidiana argentina como manera de ubicar al banco en el día a día.
+- **Quilmes Argentina** "El sabor del encuentro." (era Agulla & Baccetti, 1990s). Tres palabras que convirtieron una cerveza en el pretexto nacional para juntarse. El producto como excusa, el encuentro como promesa.
 - **Telcel México** "Todo México es territorio Telcel." (Ogilvy México, mediados 2000s). El reframe de cobertura como soberanía territorial.
-- **YPF Argentina** "Lo hacemos los argentinos." (varios). La marca como expresión colectiva nacional.
-- **Doritos LatAm** "Para los que se atreven." (varios). El producto como prueba de identidad del consumidor, no al revés.
+- **YPF Argentina** "Si te digo Energía Argentina, decís YPF." (YPF, 2024 en adelante). El eslogan como test de asociación: la marca hace la pregunta y la respuesta es la marca.
+- **Doritos LatAm** "Para los atrevidos." (adaptación latinoamericana de "For the bold," 2010s en adelante). El producto como prueba de identidad del consumidor, no al revés.
 
 Live galleries en español:
 
@@ -242,6 +244,12 @@ No escribir en español cuando:
 - La marca tiene voice guide en inglés sin equivalente en español. La traducción rompería el tono.
 
 Si hay duda, una pregunta antes de escribir: "¿Esta copia es para audiencia en un país hispanohablante específico, o regional, o vas a usarla también en inglés?" La respuesta cambia la variante, el pronombre, y la mitad del léxico.
+
+---
+
+## Voice in Spanish
+
+The voice bank (`voice-bank.md`) carries three native Spanish registers: Voice 13 (porteña seca), Voice 14 (mexicana directa), Voice 15 (castellana conceptual). Pick the voice there; come back to this file for the conjugation, the lexicon, and the banned list. The two files work as a pair: voice-bank decides who is talking, this file decides how that person actually sounds in their country.
 
 ---
 

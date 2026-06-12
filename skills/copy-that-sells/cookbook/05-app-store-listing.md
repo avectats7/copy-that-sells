@@ -42,17 +42,17 @@ The change you would have lost adds up faster than the savings you would have ma
 
 **Full description (below the fold)**
 > **How it works**
-> Link your card. We watch the purchases. Every time you spend, we round up to the next dollar and move the change into a high yield savings account at our partner bank. The change adds up faster than you expect.
+> Link your card. We watch the purchases. Every time you spend, we round up to the next dollar and move the change into a high-yield savings account at our partner bank. The change adds up faster than you expect.
 >
 > **What you get**
 > - 4.5% APY on the savings balance
 > - FDIC insured up to $250,000 (through our partner bank)
-> - Automatic round ups on every linked card
+> - Automatic round-ups on every linked card
 > - No monthly fee, no minimum balance
 > - Pause or withdraw any time
 >
 > **Why people use it**
-> The average user saves $42 a month from round ups alone. Some users add a recurring weekly transfer on top. After a year the balance is real money and the user did almost nothing.
+> The average user saves $42 a month from round-ups alone. Some users add a recurring weekly transfer on top. After a year the balance is real money and the user did almost nothing.
 >
 > **Privacy**
 > We do not sell your purchase data. We see the round up amount. That is the only thing we use.
@@ -77,11 +77,11 @@ The change you would have lost adds up faster than the savings you would have ma
 
 ### Notes
 
-Character counts (verified):
-- App name: 23 chars (max 30).
+Character counts (measured with `wc -c`, not estimated):
+- App name: 22 chars (max 30).
 - Subtitle: 28 chars (max 30).
-- Promotional text: 167 chars (max 170).
-- First 3 lines of description: 162 chars total. Inside the iOS "more" fold.
+- Promotional text: 166 chars (max 170).
+- First 3 lines of description: 134 chars total. Inside the iOS "more" fold.
 - Screenshot captions: 4 to 5 words each. Inside the readable limit for portrait screenshot overlays.
 
 Framework doing the work: AIDA at the listing level. Attention is the app name + subtitle. Interest is the promotional text and the 3-line above-fold description. Desire is the "How it works," "What you get," and "Why people use it" sections. Action is the Get button (Apple controls the button itself; the copy works around it).
@@ -94,6 +94,8 @@ Voice craft moves applied:
 Self-edit pass: read aloud at scrolling pace. No em dashes. No banned vocabulary. The list bullets are genuinely list-like content (features), not paragraph filler dressed as a list. The screenshot captions hold the voice across five separate frames.
 
 The $42 a month figure is flagged in Notes as needing verification before publication; in production, the actual product analytics would replace the placeholder.
+
+Compliance flag (regulated category, see `self-edit.md` Layer 3): "4.5% APY" needs "variable, subject to change" treatment and a date; "FDIC insured up to $250,000 (through our partner bank)" must match the partner bank's required disclosure language exactly; the average-savings claim needs substantiation on file. None of this changes the copy above; it ships to legal with the flags attached.
 
 ---
 

@@ -5,14 +5,43 @@ on:
     paths:
       - 'skills/**'
       - 'scripts/build-skill.sh'
+      - 'evals/**'
       - '.github/workflows/build.yml'
   push:
     branches: [main]
     paths:
       - 'skills/**'
       - 'scripts/build-skill.sh'
+      - 'evals/**'
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checker self-test
+        # A checker that cannot fail is worse than no checker. This catches
+        # the class of bug where a platform-specific grep flag silently
+        # disables detection (the macOS grep -P regression).
+        run: ./evals/check_banned_words.sh --self-test
+
+      - name: Cookbook copy is clean
+        # The cookbook outputs are the skill's own published copy. They are
+        # scanned copy-only (blockquotes + ```copy fences) because the prose
+        # around them legitimately discusses banned words by name.
+        run: ./evals/check_banned_words.sh --copy-only skills/copy-that-sells/cookbook/0*.md
+
+      - name: Saved eval outputs are clean (if any)
+        run: |
+          shopt -s nullglob
+          files=(evals/outputs/*.md)
+          if [[ ${#files[@]} -eq 0 ]]; then
+            echo "no saved eval outputs; skipping."
+            exit 0
+          fi
+          ./evals/check_banned_words.sh "${files[@]}"
+
   build:
     runs-on: ubuntu-latest
     steps:

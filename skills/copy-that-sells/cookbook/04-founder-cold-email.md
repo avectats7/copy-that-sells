@@ -59,7 +59,7 @@ The async standup that does not ask your team to write the standup.
 
 ### Notes
 
-Word count: 122 words. Inside the cold email upper bound.
+Word count: 129 words measured, including greeting, sign-off, and link line. Inside the 130-word cold email upper bound, with no room to spare; the next edit must cut, not add.
 
 Framework doing the work: the five-line cold email structure from `formats.md`. Line one names a specific reason for writing this person (Maya's January post). Line two reframes Pulse in terms of her problem (the standup that does not need to exist). Line three is the proof (four named customers). Line four is the ask (a 15 minute call, the smallest defensible request). Sign off is the founder's name plus one link.
 

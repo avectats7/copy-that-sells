@@ -1,8 +1,10 @@
 # Examples: A Working Library of Copy That Sold
 
-Seventy-plus pieces of print, OOH, and direct-response work organised by technique. Mix of timeless classics that defined the craft and award winners from roughly 2001 onward at Cannes Lions (Print + Outdoor Grand Prix), Clio Awards (Grand Clio + Gold for Print and OOH), D&AD Pencils, and One Show. Use as a quick-fire reference when looking for a way in.
+122 pieces of print, OOH, and direct-response work organised by technique. Mix of timeless classics that defined the craft and award winners from roughly 2001 onward at Cannes Lions (Print + Outdoor Grand Prix), Clio Awards (Grand Clio + Gold for Print and OOH), D&AD Pencils, and One Show. Use as a quick-fire reference when looking for a way in.
 
 Attribution conventions: brand, year (approximate where uncertain), agency, plus the verbatim headline where the line is famous enough to quote confidently. Where the work is more visual than verbal, the description does the work. Award labels (Cannes, Clio, D&AD, One Show) are noted where the work is a known winner.
+
+Editorial rule: no example enters this file without a verified attribution (festival archive, trade press, or the brand itself). An entry that cannot be verified gets replaced, not defended. This file is the skill's proof library; a fabricated proof here poisons every output that cites it.
 
 Live galleries worth checking for current craft:
 - adsoftheworld.com. Filterable by Print + OOH; check the Cannes Lions Grand Prix Winners and Clio Award Winners collections each year.
@@ -40,8 +42,8 @@ Scan the section headings to find the technique your brief needs. Each example i
 - **Economist** "I never read The Economist. — Management trainee. Aged 42." (AMV BBDO, 1980s onward, David Abbott). The page is just yellow and the line. The reader supplies the meaning.
 - **The Independent** "It is. Are you?" (Saatchi & Saatchi, 1986). The newspaper's name completes the line.
 - **Penguin Books** "It will keep your mouth shut." (running campaign, various agencies). Image of a book; the line reframes reading as defence against being asked anything.
-- **British Airways** "Magic of Flying." (Ogilvy London, 2013, Cannes Outdoor Grand Prix 2014). Digital billboards in London that detected real planes passing overhead, pointed at them, and named the flight number and destination. The headline was the sky.
-- **British Airways** "Windows" (Uncommon Creative Studio, 2023, Cannes Outdoor Grand Prix 2023, Gold Clio Billboard 2024). OOH that wrote captions to the clouds and destinations passing across them: "Mac and cheese? Why not Mykonos?" The line and the moment together did the selling.
+- **British Airways** "Magic of Flying." (OgilvyOne London, 2013, Cannes Direct Grand Prix 2014 and a Clio Grand Prix). Digital billboards in London where a child stood up and pointed at real BA planes passing overhead, naming the live flight number and destination. The headline was the sky.
+- **British Airways** "A British Original." (Uncommon Creative Studio, 2023, Cannes Outdoor Grand Prix 2023). Over 500 print, digital, and OOH executions that played the real, human reasons people fly ("To say sorry in person") against the flat "Business or Leisure" tick-box on the booking form. The form was the foil; the reason was the ad. The follow-up "Windows" series ran customers' faces at the aircraft window with almost no copy at all.
 - **Volkswagen** "King Arthur." (DDB classic series). The visual carries the story; the line is the punctuation.
 
 ---
@@ -77,7 +79,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 - **Volvo** "Drive it like you hate it." (Scali McCabe Sloves, 1970s). Body listed the welds, the cage, the test data.
 - **Hathaway** "The man in the Hathaway shirt." (Ogilvy, 1951). The model wore an eyepatch. The detail was the brand.
 - **Volvo** "The Volvo 240 is the most carefully tested car you can buy." Body copy detailed each test. Specificity as the entire argument.
-- **Penny** "Price Packs." (Serviceplan Munich, 2024, Cannes Print Grand Prix 2025). Printed the retail price directly on the packaging. The product was the proof of the promise: this is the price, it cannot change.
+- **Penny** "Price Packs." (Serviceplan NEO Munich, 2024, Cannes Print & Publishing Grand Prix 2025). Printed the fixed retail price directly on the packaging of five staple products. The product was the proof of the promise: this is the price, it cannot change.
 - **Tropicana** "Brighter Mornings for Brighter Days." (DDB, 2010, Cannes Outdoor Grand Prix 2010). Built a giant artificial sun in Inuvik during the Arctic dark season. The demonstration was the headline.
 - **The Zimbabwean Newspaper** "Trillion Dollar Campaign." (TBWA\Hunt\Lascaris, 2009, Grand Clio + Cannes Outdoor Grand Prix 2009). Printed posters directly onto Zimbabwean trillion-dollar notes, then worthless from hyperinflation. The substrate was the headline. The currency became the medium became the message.
 - **Mexico Tourism Board** various. Specific village names, specific dishes, specific roads, in long copy that made the country a list of particulars.
@@ -86,10 +88,10 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ## 6. Question: the reader answers and is invested
 
-- **John Caples** "Do you make these mistakes in English?" (1919). The most-tested headline of the early twentieth century.
+- **Maxwell Sackheim** "Do you make these mistakes in English?" (1919, for the Sherwin Cody School of English). Among the most-tested headlines of the early twentieth century; it ran essentially unchanged for four decades. Often misattributed to Caples, who analysed it but did not write it.
 - **Clairol** "Does she... or doesn't she?" (Foote, Cone & Belding, 1956, Shirley Polykoff). Sold hair colour by asking the only question that mattered.
 - **Listerine** "Often a bridesmaid but never a bride." (Lambert Pharmacal, 1925, Milton Feasley). Question in disguise. The reader fills in the cause.
-- **Pepsi** "Is Pepsi OK?" (TBWA\Chiat\Day, 2019). Reclaiming the dismissive restaurant line.
+- **Pepsi** "Is Pepsi OK?" (Goodby Silverstein & Partners, Super Bowl 2019, "More Than OK"). Reclaiming the dismissive restaurant line.
 - **Anchor Butter** "How do you do yours?" (BMP, 1990s). The personal question to the reader.
 
 ---
@@ -112,7 +114,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 - **Saturn (the car brand)** Hal Riney long-copy ads in the 1990s. Folksy, slow, intimate. The opposite of car-ad-bombast. The voice was the entire product.
 - **Apple** "Here's to the crazy ones." (TBWA\Chiat\Day, 1997). Manifesto-length copy delivered both as TV voice-over and as print. The headline is famous; the body is the reason it sticks.
 - **Volkswagen** "Lemon" body copy and the entire DDB long-copy era. The argument is the ad.
-- **Saatchi & Saatchi for Conservative Party** "Labour isn't working." (1978, 1979, Charles & Maurice Saatchi). Long-copy political poster. Single image, single line, body of supporting argument. Helped win the 1979 election.
+- **John Caples for U.S. School of Music** "They laughed when I sat down at the piano. But when I started to play!" (1926). The most imitated story-lead ad in direct response. The headline opens a narrative the body copy finishes; the reader stays for the revenge.
 - **Mary Wells / Wells Rich Greene for Alka-Seltzer** "I can't believe I ate the whole thing." (1972). Long-format radio and TV; the line works because the entire surrounding monologue earns it.
 
 ---
@@ -142,7 +144,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ## 11. Demonstration in print: proof inside the page
 
-- **Maxell** Blown Away Guy. (Howard Marks, 1981). The blast from the speaker did the convincing.
+- **Maxell** Blown Away Guy. (Scali McCabe Sloves, 1980; photographed by Steve Steigman). The blast from the speaker did the convincing.
 - **Schwartz Spices** "Smell" execution. Magazine inserts that smelled of the spice. The page was the proof.
 - **Volkswagen** "Snowplough." (DDB, 1963). Famous film, but the print version: an image of a snowplough and the line "Have you ever wondered how the man who drives the snowplough drives to the snowplough?" The reader has to think. The thinking is the demonstration.
 - **Burger King** "Whopper Detour." (FCB New York, 2018). App-based campaign that unlocked a Whopper for one cent if the user opened the app at a McDonald's. The location was the demonstration.
@@ -192,7 +194,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ## 16. Cultural and political moments: copy as the news
 
-- **Saatchi & Saatchi** "Labour isn't working." See Section 8. Political poster as long-copy argument.
+- **Saatchi & Saatchi for the Conservative Party** "Labour isn't working." (1978-79). A snaking unemployment queue and three words. No body copy; the argument lives entirely in the pun and the image. Helped win the 1979 election.
 - **Nike** "Dream Crazy." (Wieden+Kennedy, 2018, Cannes Outdoor Grand Prix 2019, with Colin Kaepernick). Single image, single line: "Believe in something. Even if it means sacrificing everything." The line is risk reversal for the brand and the reader together.
 - **Audi** various Super Bowl print accompaniments on equal pay. The line and the statistic together.
 - **The Washington Post** "Democracy Dies in Darkness." (2017). Tagline as editorial stance.

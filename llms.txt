@@ -14,16 +14,16 @@ The skill teaches Claude the craft and structure of conversion copywriting. It r
 ## Primary skill files
 
 Core craft:
-- [skills/copy-that-sells/SKILL.md](skills/copy-that-sells/SKILL.md): the entry point. Two-mode workflow (generation + diagnostic).
-- [skills/copy-that-sells/references/frameworks.md](skills/copy-that-sells/references/frameworks.md): Bly's 8 headline categories plus 3 modern extensions (Listicle, Negative, Outcome-first), 4 U's, AIDA, PAS, BFD, 7-step direct-response letter, long-copy architecture.
+- [skills/copy-that-sells/SKILL.md](skills/copy-that-sells/SKILL.md): the entry point. Two-mode workflow (generation + diagnostic) with briefing, research, idea, headline, body, offer, CTA, and self-edit passes.
+- [skills/copy-that-sells/references/frameworks.md](skills/copy-that-sells/references/frameworks.md): Schwartz's 5 awareness levels and market sophistication, Bly's 8 headline categories plus 3 modern extensions (Listicle, Negative, Outcome-first), 4 U's, So-What ladder, AIDA, PAS, BFD, 7-step direct-response letter, long-copy architecture.
 - [skills/copy-that-sells/references/craft.md](skills/copy-that-sells/references/craft.md): D&AD Copy Book lessons.
 - [skills/copy-that-sells/references/examples.md](skills/copy-that-sells/references/examples.md): 122 campaigns organised across 17 technique sections.
 - [skills/copy-that-sells/references/self-edit.md](skills/copy-that-sells/references/self-edit.md): three-layer final pass. Craft check, anti-AI tells (English Era 1 to 4 plus full Spanish list), truth check.
 
 Format and language:
-- [skills/copy-that-sells/references/formats.md](skills/copy-that-sells/references/formats.md): per-format blueprints with word counts for subject line, cold email, landing hero, pricing page, sales page, billboard, paid social, paid search, push, App Store, manifesto, pre-roll.
-- [skills/copy-that-sells/references/spanish-craft.md](skills/copy-that-sells/references/spanish-craft.md): Spanish writing reference. 20 percent rule, verb position, regional variants, vos/tú/usted, banned Spanish vocabulary, verbatim LatAm winners.
-- [skills/copy-that-sells/references/voice-bank.md](skills/copy-that-sells/references/voice-bank.md): twelve voices with samples and use cases.
+- [skills/copy-that-sells/references/formats.md](skills/copy-that-sells/references/formats.md): per-format blueprints with word counts for subject line and preheader, cold email, landing hero, pricing page, sales page, billboard, paid social (15-structure hook bank), paid search (responsive search ads), push, App Store, manifesto, pre-roll.
+- [skills/copy-that-sells/references/spanish-craft.md](skills/copy-that-sells/references/spanish-craft.md): Spanish writing reference. 20 percent rule, verb position, regional variants, vos/tú/usted, banned Spanish vocabulary, verified verbatim LatAm and Spanish campaign lines.
+- [skills/copy-that-sells/references/voice-bank.md](skills/copy-that-sells/references/voice-bank.md): fifteen voices with samples and use cases, including three native Spanish registers.
 - [skills/copy-that-sells/references/diagnostics.md](skills/copy-that-sells/references/diagnostics.md): critique-first procedure for when the user pastes existing copy.
 
 Cookbook:

@@ -100,9 +100,9 @@ Beacon. Captivate. Captivating. Capitalize (as filler, e.g. "capitalize on oppor
 
 **The default rule of three.** LLMs reach for triads by reflex. "Fast, simple, and effective." "Growth, retention, and conversion." Vary deliberately: sometimes two, sometimes four, sometimes none. If you do use three, make sure the three items are not interchangeable.
 
-**Dashes and hyphens: forbidden in copy.** Em dashes, en dashes, and standalone hyphens are all banned. They are a known AI writing tell and make prose feel assembled rather than written. Replace with a full stop, a colon, or rewrite the sentence so the connector is not needed.
+**Dashes: banned as connectors, allowed in one place.** The em dash and en dash used to join clauses ("the product works — and it shows") are the single most recognisable AI writing tell. Replace with a full stop, a colon, or rewrite the sentence so the connector is not needed. One surgical exception: the attribution dash in a testimonial, set before a name. "I never read The Economist. — Management trainee. Aged 42." That dash is a typographic convention a century older than any model, and the gold standard of testimonial headlines depends on it. Use it only there: dash, then a name or a named role. Anywhere else, the dash dies.
 
-Hyphens in compound words are also forbidden. Write around them. "Go-to-market" becomes "GTM" or "go to market." "Pre-launch" becomes "before launch." "Mid-raise" becomes "mid raise" or reword. Exception: hyphens that are part of an established acronym (B2B, B2C) are fine because the hyphen is the term, not punctuation.
+**Compound-word hyphens: ban the invented, keep the grammatical.** The AI tell is the decorative invented compound: "ever-evolving," "fast-paced," "cutting-edge," "best-in-class," "go-to" as an adjective. Those die on sight; most are on the banned word list anyway. But standard English compound modifiers before a noun keep their hyphen, because dropping it produces a grammar error a native editor would mark: "high-yield savings account," "4-hour onboarding," "well-known brand," "money-back guarantee." The test: if the hyphenated form is how a dictionary or a style guide writes it, keep it. If you assembled the compound yourself to sound dynamic, reword it. When in doubt, restructure the sentence so the question disappears ("onboarding takes 4 hours"). Established acronyms (B2B, B2C) are fine; the hyphen is the term, not punctuation.
 
 **Excessive bullet points.** When everything is a list, nothing gets communicated. Prefer prose. Reserve bullets for genuinely list-like content: steps, items, comparisons.
 
@@ -145,6 +145,18 @@ The fastest way to destroy trust is to invent a number, a testimonial, or a proo
 - [ ] If you are unsure about a fact, flag it in the Notes section of your output rather than burying the uncertainty in the copy.
 
 A piece of copy with one fabricated proof point is worse than a piece of copy with no proof points. The fabrication, once spotted, poisons everything around it.
+
+### Regulated categories: flag before you ship
+
+Some categories cannot publish a claim just because it is true. If the copy touches one of these, add a "needs legal review" flag to the Notes with the specific claims listed. Do not soften the copy preemptively; write it strong and flag it.
+
+- **Fintech and banking.** Interest rates and APY need "variable, subject to change" treatment and dating. Deposit insurance through a partner bank must say so ("FDIC insured through our partner bank"). Anything that reads like investment advice or a guaranteed return needs sign-off.
+- **Health, supplements, medical.** Outcome claims ("lowers blood pressure," "she lost 27 pounds") require substantiation on file and often a disclaimer. "Helps support" language exists for a reason; use it only when legal requires, because it is also weaker copy.
+- **Legal, insurance, financial advice.** Jurisdiction matters. "We win cases" style claims are barred in many bar associations. Flag any results-based claim.
+- **Alcohol, gambling, lending.** Age gates, responsible-use lines, and APR disclosure obligations vary by country. The copy should leave room for the mandatory line without breaking the layout.
+- **Comparative claims in any category.** Naming a competitor, or describing them identifiably, requires the comparison to be true, current, and provable on the named dimension. "Two thirds the price" needs a date and a source.
+
+The skill's job is to write the strongest honest line and make the legal exposure visible. The user's job is to clear it.
 
 ---
 

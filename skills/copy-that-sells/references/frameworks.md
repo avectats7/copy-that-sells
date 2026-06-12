@@ -5,12 +5,15 @@ Distilled from Robert Bly's The Copywriter's Handbook plus direct-response copy 
 ## Table of contents
 
 - The 4 U's
+- Schwartz's five levels of awareness
+- Market sophistication
 - Bly's eight headline categories
 - Modern extensions: Listicle, Negative, Outcome-first
 - Six lead types
 - AIDA
 - PAS
 - BFD
+- The So-What ladder: features into benefits
 - The seven-step direct-response sales letter
 - Long-copy architecture for sales pages
 - Reason-why copy
@@ -32,7 +35,44 @@ Example: "Save money on your insurance" scores 1 (Useful, barely). "Save 312 pou
 
 ---
 
-## Bly's eight headline categories: use as a generative tool
+## Schwartz's five levels of awareness: pick the headline by the reader's starting point
+
+Eugene Schwartz organised every market around one question: how much does the reader already know? The answer decides which headline category and which lead can work. A headline aimed at the wrong level fails no matter how well it is written. This is the selector that sits above every other tool in this file.
+
+1. **Unaware.** The reader does not know they have the problem. Lead with the story or the provocation, never the product. Naming the product in the headline wastes the slot.
+2. **Problem-aware.** The reader feels the pain but does not know solutions exist. Lead with the problem, said sharper than the reader could say it themselves.
+3. **Solution-aware.** The reader knows solutions exist but not yours. Lead with the mechanism, or the proof that your way works.
+4. **Product-aware.** The reader knows your product but is not convinced. Lead with the differentiator and the proof. Comparison and demonstration live here.
+5. **Most aware.** The reader wants the product and is waiting for a reason to act now. Lead with the offer: the price, the deal, the guarantee, the deadline. The shortest copy lives here.
+
+The mapping table:
+
+| Awareness level | Headline categories that work | Lead types that work | Copy length |
+|---|---|---|---|
+| Unaware | Indirect, Visual-completion, Reframe | Story, Provocative question | Longest |
+| Problem-aware | Question, Negative, How-to | Problem, Story | Long |
+| Solution-aware | How-to, News, Reason-why | Big promise, News | Medium |
+| Product-aware | Direct, Testimonial, Outcome-first | News, Connection | Short |
+| Most aware | Direct, Command, offer in the headline | Big promise (the deal itself) | Shortest |
+
+Two operating rules:
+
+- Diagnose the level during the briefing pass, as part of "what does the reader currently believe." Name the level in your Notes so the user can correct it.
+- When traffic is mixed, write for the level that pays. A retargeting ad faces product-aware readers. A cold prospecting email faces problem-aware readers at best. The same product needs different headlines per placement, and most "the copy stopped working" complaints are an awareness mismatch, not a writing problem.
+
+---
+
+## Market sophistication: how tired is the reader of the category's promises
+
+Schwartz's second axis. Markets age. The first product in a category can promise plainly ("Lose weight"). By the fifth wave, the reader has heard every promise, and the copy must either escalate the mechanism ("Lose weight while you sleep, because of X"), niche down ("for new mothers"), or abandon the claim and lead with identification ("You are not lazy. Your diet is.").
+
+The working test: write the plainest version of your promise, then count how many competitors the reader has already heard say it.
+
+- **Zero to one competitor saying it.** State the promise plainly. You are early; plainness wins.
+- **Two to four.** Lead with the mechanism that makes the promise credible. The promise alone is now wallpaper.
+- **Five or more.** Stop promising. Reframe the category or speak to identity. This is why mature categories (fitness, productivity software, coffee) punish direct headlines and reward reframes.
+
+This axis explains most reframe examples in `examples.md` section 4: the Uncola, Real Beauty, and "Don't buy this jacket" are all moves made in exhausted markets.
 
 For any brief, write one headline of each type. Then pick the best, or hybridise.
 
@@ -189,6 +229,24 @@ Good copy speaks to the surface desire and triggers the deeper one.
 
 ---
 
+## The So-What ladder: features into benefits
+
+Bly's foundational move, and the one most drafts skip. The reader does not buy what the product is; they buy what it does for them. Climb every feature up the ladder before writing.
+
+- **Feature.** What the product is or has. "The blade is surgical-grade steel."
+- **Advantage.** What the feature does. "It stays sharp for five years."
+- **Benefit.** What the reader gets. "You never cook with a dull knife."
+- **Deeper benefit.** What that means in the reader's life. "Sunday dinner prep stops being the chore you postpone."
+
+The test is asking "so what?" twice. "Surgical-grade steel." So what? "It stays sharp for five years." So what? "You never fight a tomato again." When "so what?" has no further answer the reader cares about, you have reached the benefit. Write that, and keep the feature as the proof underneath it.
+
+Two cautions:
+
+- Do not strip the feature out entirely. The feature is the reason-why that makes the benefit credible. Benefit in the headline, feature in the body.
+- Technical buyers (Voice 9 territory) often want the feature with the benefit left implicit. "0.3 millisecond latency, p99" sells to an infrastructure engineer without the ladder spelled out. Know which reader you have before deciding which rung to write.
+
+---
+
 ## The seven-step direct-response letter (Bly)
 
 For long-form sales letters, landing pages, and direct-mail equivalents. Use as a structural skeleton.
@@ -258,8 +316,9 @@ If a customer review says "I just wanted something that wouldn't break in six mo
 
 ### Before you write
 - [ ] Briefing pass complete. All 8 briefing questions answered.
+- [ ] Awareness level named (Schwartz). Headline category matched to it.
 - [ ] Voice-of-customer raw quotes collected.
-- [ ] 3 to 7 ideas generated. One picked.
+- [ ] 3 to 7 ideas generated. One picked against the four-question idea test.
 
 ### Headline check
 - [ ] Tried all 8 Bly categories.
@@ -272,6 +331,7 @@ If a customer review says "I just wanted something that wouldn't break in six mo
 - [ ] Lead earns the second sentence.
 - [ ] Each paragraph leads into the next.
 - [ ] Every claim has a reason or proof.
+- [ ] Every feature climbed the So-What ladder, or stayed as proof on purpose.
 - [ ] No filler adjectives or qualifiers.
 - [ ] Reader's deeper desire surfaced once.
 

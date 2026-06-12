@@ -1,16 +1,18 @@
-# Voice Bank: Twelve Voices to Pick From
+# Voice Bank: Fifteen Voices to Pick From
 
-Voice is the single largest lever in copy after the idea. The same proposition written in two different voices reads as two different products. This file is a working bank of twelve voices, each with sample lines and a recipe for when to use it. Use it during the briefing pass when the user has no voice guide, or during the diagnostic pass when the symptom is "it does not sound like us."
+Voice is the single largest lever in copy after the idea. The same proposition written in two different voices reads as two different products. This file is a working bank of fifteen voices (twelve from the English-language tradition, three native Spanish registers), each with sample lines and a recipe for when to use it. Use it during the briefing pass when the user has no voice guide, or during the diagnostic pass when the symptom is "it does not sound like us."
 
 ## How to use this file
 
 Three modes:
 
-1. **No voice guide.** Read the twelve voices below. Pick the one closest to what the brand wants to be. Confirm with the user before writing: "I am writing this in a Voice 3 register. Tell me if you want a different lever."
+1. **No voice guide.** Read the fifteen voices below. Pick the one closest to what the brand wants to be. Confirm with the user before writing: "I am writing this in a Voice 3 register. Tell me if you want a different lever."
 2. **User has reference copy.** Read three to five samples from the user's existing material. Match the closest voice from this list and name it back to the user so they can confirm or correct. "Your existing copy reads as Voice 6 (sober authority). I will hold that."
 3. **Diagnostic mode.** The user says "it does not sound like us." Ask them to pick a voice from this list as a quick anchor. Then rewrite.
 
-The twelve are not exhaustive. They are starting points. A real brand voice is usually a blend, weighted toward one. State the blend explicitly: "70 percent Voice 1 (dry confident), 30 percent Voice 5 (conspirator). The result is dry with a wink."
+The fifteen are not exhaustive. They are starting points. A real brand voice is usually a blend, weighted toward one. State the blend explicitly: "70 percent Voice 1 (dry confident), 30 percent Voice 5 (conspirator). The result is dry with a wink."
+
+If the copy is in Spanish, start from Voices 13 to 15 and read `spanish-craft.md` for the variant, the pronoun, and the banned vocabulary before writing a word. An English-tradition voice can be blended in (Voice 13 is cousin to Voice 1), but the conjugation, lexicon, and rhythm come from the regional register, never from translation.
 
 ---
 
@@ -218,6 +220,57 @@ The twelve are not exhaustive. They are starting points. A real brand voice is u
 
 ---
 
+## Voice 13: Porteña seca (rioplatense)
+
+**Characteristics.** Voseo. Understatement. Humour so dry it can pass for a statement of fact. Short clauses, the verb landing late where it hits hardest. The reader is treated as a co-conspirator who already knows the joke about the category. Cousin of Voice 1 (dry confident), but the dryness is porteño: self-aware, slightly fatalistic, never earnest.
+
+**Sample lines.**
+
+> Encontrá lo que buscás.
+> Vos firmá tranquilo. Leer la letra chica es nuestro laburo.
+
+**Use when.** Brands speaking to Argentina or Uruguay. Young urban professionals. Categories thick with cynicism (banking, telcos, insurance) where earnestness reads as a lie. Fintech and challenger brands.
+
+**Avoid when.** Pan-LatAm campaigns (the voseo localises instantly). Premium formality (private banking wants usted). Mexico or Spain, where the conjugation alone breaks the spell.
+
+**Register references.** The Agulla & Baccetti era of Quilmes. Mercado Libre's functional voseo. The humour line that runs from Mafalda to Capusotto. Conjugation, lexicon, and rhythm: see `spanish-craft.md`, rioplatense section.
+
+---
+
+## Voice 14: Mexicana directa
+
+**Characteristics.** Tuteo. Fast punchline, short close. Street vocabulary used with precision, one word at a time, never as costume. Warmth without ceremony: the brand talks like the friend who tells you the truth about the price. The Mexican line closes faster than the rioplatense one.
+
+**Sample lines.**
+
+> Ahorita sí: tu cambio de hoy ya está ahorrado.
+> No es magia. Es tu lana, mejor acomodada.
+
+**Use when.** Consumer brands in Mexico. Young urban audiences. Categories where corporate coldness is the enemy: banking for the unbanked, delivery, telco challengers.
+
+**Avoid when.** Formal registers (except the ironic usted, which is its own art). Andean or Southern Cone audiences; the lexicon travels badly. Enterprise B2B.
+
+**Register references.** Cerveza Indio's "Diccionario" reclaiming of Mexican Spanish. Telcel's territorial confidence. The punchline tradition that runs from Cantinflas to the meme account. Conjugation and lexicon: see `spanish-craft.md`, mexicano section.
+
+---
+
+## Voice 15: Castellana conceptual
+
+**Characteristics.** Tú and vosotros. The idea play over the dry compression: Spanish advertising's strongest tradition is the concept that rewinds a cliché. The line lands on a thought, not a punch. Comfortable with a longer beat and an emotional close.
+
+**Sample lines.**
+
+> ¿Te gusta conducir?
+> El mayor premio es compartirlo.
+
+**Use when.** Brands in Spain. Emotional, concept-led campaigns. TV-led work where the line is the residue of the film. Lottery, automotive, food, telecom.
+
+**Avoid when.** Latin America (vosotros and the rhythm do not travel). Hard direct response, where the concept softens the CTA. Performance formats that need the offer in the first line.
+
+**Register references.** Toni Segarra's "¿Te gusta conducir?" for BMW España. Lotería de Navidad's "El mayor premio es compartirlo." Sra. Rushmore's era of Aquarius. Maestros and cadence: see `spanish-craft.md`, castellano section.
+
+---
+
 ## How to pick a voice in 60 seconds
 
 Ask three questions about the brief.
@@ -240,6 +293,8 @@ Ask three questions about the brief.
    - Citizen wants Voice 12 or Voice 3.
 
 The three answers narrow the bank to two or three voices. Pick the one most fitting and confirm with the user.
+
+A fourth question when the copy is in Spanish: **which country?** Argentina or Uruguay points to Voice 13. Mexico points to Voice 14. Spain points to Voice 15. Pan-regional campaigns blend Voice 14's tuteo with the register the brief demands, and `spanish-craft.md` settles the pronoun.
 
 ---
 

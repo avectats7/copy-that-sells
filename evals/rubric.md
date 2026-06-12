@@ -1,8 +1,8 @@
 # Rubric
 
-Score each output across five dimensions. Total possible: 25. Anything under 18 is a failing run.
+Score each output across five dimensions, plus a sixth when the prompt is diagnostic (the user pasted existing copy). Total possible: 25 for generation prompts, 30 for diagnostic prompts. Failing runs: under 18/25 for generation, under 22/30 for diagnostic.
 
-You can either score by hand or paste both this rubric and the output into a fresh Claude session and ask for a score. Keep the same critic prompt across runs so the scores are comparable.
+You can score by hand, paste this rubric and the output into a fresh Claude session, or use `SCORE=1 ./evals/run_evals.sh <id>` to automate the critic. Keep the same critic prompt across runs so the scores are comparable.
 
 ---
 
@@ -55,6 +55,17 @@ The CTA verb is specific (not Submit, Click here, Learn more, Continue). The CTA
 - 3 = verb is okay but not specific.
 - 2 = generic verb.
 - 1 = no CTA or competing CTAs.
+
+## 6. Diagnostic discipline (5 points, diagnostic prompts only)
+
+Scored only when the prompt pasted existing copy (e.g. prompt 09). The skill must diagnose before it rewrites, per `references/diagnostics.md`.
+
+- 5 = names the root cause referencing one of the five diagnostic questions before any rewrite; states the Edit / Restructure / Burn down call; ends with the "what this teaches" lever.
+- 4 = diagnoses first, but the root cause is loosely tied to the framework or the teaching line is missing.
+- 3 = a diagnosis exists but is generic ("it sounds corporate") with no question referenced.
+- 2 = rewrite delivered first, diagnosis bolted on after.
+- 1 = no diagnosis; just a rewrite.
+- 0 = the rewrite contradicts the pasted copy's own brief (did not read it).
 
 ---
 

@@ -34,6 +34,19 @@ The default is diagnose first. Skipping diagnosis when the user pasted copy is a
 
 ---
 
+## Before the five questions: get the numbers
+
+When the complaint is about performance ("not converting," "open rates fell," "nobody clicks"), ask two context questions before diagnosing a word of copy:
+
+1. **Where does the traffic come from?** Cold paid social, branded search, a newsletter, a sales sequence. Traffic source sets the awareness level, and copy written for the wrong level fails regardless of craft. A hero that converts branded-search visitors at 4 percent can convert cold TikTok traffic at 0.2 percent with no copy defect at all.
+2. **What is the current rate, and against what expectation?** "Converting at 1.2 percent" means nothing without the offer, the price, and the category baseline. A 1.2 percent rate on a $15 tool is a copy problem. A 1.2 percent rate on a $12,000 contract may be normal.
+
+If the user has no numbers, proceed on craft alone but say so in the diagnosis: "This is a craft read; the conversion question needs your traffic source and current rate."
+
+And keep one honest outcome on the table: **sometimes the copy is not the problem.** If the audience is wrong, the price is misaligned with the market, or the offer is weaker than every competitor's, no rewrite fixes it. Saying "the words are fine; the offer is losing to X" is a legitimate diagnosis and often the most valuable one.
+
+---
+
 ## The diagnostic pass in five questions
 
 For any pasted copy, run these five questions in order. Stop at the first one that fails. The first failure is the root cause. The remaining questions cannot be answered until the root is fixed.
@@ -90,6 +103,8 @@ The user describes the symptom. You name the cause and propose the fix.
 | "The CTA is weak" | Verb is generic; CTA does not mirror the promise | SKILL.md CTA pass |
 | "Hero feels off" | Headline and visual not working as one unit | `craft.md` headline + visual |
 | "Long copy lost me halfway" | Voice drifted; argument lacks shape | `craft.md` long-copy section |
+| "We rewrote it three times, still flat" | The copy is not the problem: offer, price, or audience | The two data questions above; SKILL.md Offer Pass |
+| "It converts on search, dies on social" | Awareness mismatch per traffic source | `frameworks.md` Schwartz levels |
 
 When the user names a symptom, your first job is to translate it to one of these root causes. Then you can fix.
 
@@ -172,7 +187,9 @@ Three disagreements where you hold the line:
 ## A working list of diagnostic principles
 
 - Diagnose before rewriting. Always.
+- When the complaint is performance, ask for traffic source and current rate before blaming the words.
 - Run the five questions in order. Stop at the first failure. That is the root.
+- "The copy is not the problem" is a valid diagnosis. Deliver it when it is true.
 - Translate the user's symptom into one of the table's root causes before responding.
 - Decide between edit, restructure, and burn down honestly. The user respects the call more than the patch.
 - Always teach the lever. The user should pull it on their own next time.

@@ -2,6 +2,51 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [1.3.0]: 2026-06-12
+
+### Fixed: factual audit of the example libraries
+
+Every doubtful attribution was checked against primary sources (festival archives, trade press, the brands themselves). The skill preaches "never invent proof"; its own proof library now holds to that.
+
+- "Do you make these mistakes in English?" reattributed from John Caples to its actual author, Maxwell Sackheim (1919, Sherwin Cody School). Caples' real classic ("They laughed when I sat down at the piano," 1926) added to the long-copy section.
+- Pepsi "Is Pepsi OK?" (2019) reattributed from TBWA\Chiat\Day to Goodby Silverstein & Partners.
+- British Airways: "Magic of Flying" award corrected from Cannes Outdoor Grand Prix to Cannes **Direct** Grand Prix 2014 (OgilvyOne London); the 2023 Outdoor Grand Prix entry corrected to "A British Original" (Uncommon) with an accurate description, replacing a conflated write-up with an invented caption line.
+- Maxell "Blown Away Guy" credit corrected to Scali McCabe Sloves, 1980, photographed by Steve Steigman.
+- "Labour isn't working" reclassified out of the long-copy section (it was an image-plus-line poster, not a long-copy ad) into the cultural-moments section with an accurate description.
+- Spanish verbatim library: five unverifiable lines replaced with verified ones. Aquarius now quotes "El ser humano es extraordinario" (Sra. Rushmore); Movistar "Compartida, la vida es más" reattributed to Mother London, 2008; Banco Galicia's invented line replaced by Quilmes "El sabor del encuentro" (era Agulla & Baccetti); YPF's invented line replaced by the verified "Si te digo Energía Argentina, decís YPF" (2024); Águila corrected to "Sin igual y siempre igual"; DGT replaced with the verified 2025 line "En un siniestro de tráfico puedes morir o perder tu vida"; Doritos corrected to "Para los atrevidos"; Mercado Libre corrected to "Encontrá lo que buscás."
+- New editorial rule in both example files: no entry ships without a verified attribution; unverifiable entries get replaced, not defended.
+- Self-reported counts corrected across the repo: examples.md header now says 122 (was "Seventy-plus"); cookbook 04's word count corrected to the measured 129 (was 122); cookbook 05's character counts corrected to the measured 22 and 166 and 134 (were 23, 167, 162). Notes must now report measured counts, not estimates.
+- Metadata and credits: award-window claims corrected from "2001-2026" to "2001-2025" (Cannes 2026 has not happened yet); anti-AI ruleset reference updated from "era 1-3" to "era 1-4."
+
+### Fixed: tooling
+
+- `evals/check_banned_words.sh` rewritten. The previous version used `grep -P`, which macOS BSD grep rejects; the error was silenced, so **em dashes were never detected on macOS and the checker reported PASS on files that should fail**. Dash detection now runs in perl (portable), with a `--self-test` mode so a broken detector can never silently pass again. Also fixed: the per-line exception filter that let one allowed acronym exonerate a whole line (now per-match), the hyphen WARN whose comment claimed half-weight scoring that did not exist (now an honest warning), and the `bolstered?` regex that missed "bolster"/"bolsters."
+- CI now actually runs the checker (the previous workflow only verified the dist bundle): a new `lint` job runs the self-test, scans cookbook copy in `--copy-only` mode, and scans any saved eval outputs on every PR.
+
+### Added
+
+- **Schwartz's five levels of awareness and market sophistication** in `frameworks.md`, with a mapping table from awareness level to headline category, lead type, and copy length. The briefing pass now names the awareness level; the headline pass selects categories by it. This is the selector that decides which of the skill's own tools apply.
+- **The So-What ladder** (feature, advantage, benefit, deeper benefit) in `frameworks.md`: Bly's features-into-benefits move, with the double "so what?" test.
+- **The Research Pass** in SKILL.md: when the product is real, fetch the current landing page, mine voice-of-customer language, and read competitor headlines before the idea pass. Research informs copy; it never enters copy unverified.
+- **The Offer Pass** in SKILL.md, between body and CTA: the deal, the guarantee (specific, ideally tied to the promise), honest urgency (never manufactured), and bonuses that solve the buyer's next problem.
+- **A four-question idea selection test** in SKILL.md, replacing the adjectives ("sharpest, freshest") with operable criteria: meets the reader's awareness level, the competition could not sign it, survives the billboard test, slightly uncomfortable to publish.
+- **Diagnostic mode now asks for data**: traffic source and current-vs-expected rate before blaming the words, plus a legitimate "the copy is not the problem" outcome and two new symptom-table rows (offer/price/audience failure, awareness mismatch by traffic source).
+- **Three native Spanish voices** in the voice bank (Voice 13 porteña seca, Voice 14 mexicana directa, Voice 15 castellana conceptual), cross-linked with `spanish-craft.md`, plus a country question in the 60-second picker.
+- **Paid search rewritten for responsive search ads** (the 3-headline expanded text ad format died in 2022): headline inventory by job, all four descriptions, pinning trade-offs.
+- **Email preheader guidance**: the 40 to 90 characters the inbox shows after the subject, written as the subject's next thought.
+- **A 15-structure hook bank** for paid social in `formats.md`, grouped by mechanism and mapped to awareness levels.
+- **Regulated-category compliance checklist** in `self-edit.md` Layer 3 (fintech, health, legal, alcohol/gambling/lending, comparative claims), and a compliance flag added to the App Store cookbook's APY and FDIC claims.
+- **`evals/run_evals.sh`**: headless eval runner via `claude -p` with the skill loaded; saves outputs, runs the checker, optional `SCORE=1` critic pass against the rubric.
+- **Rubric dimension 6, diagnostic discipline** (diagnostic prompts score out of 30): diagnose before rewriting, reference the five questions, make the edit/restructure/burn-down call, teach the lever.
+
+### Changed
+
+- Dash rule scoped in `self-edit.md`: connector em/en dashes stay banned; the testimonial attribution dash ("quote. — Name") is now an explicit exception, because the skill's own gold standard (the Economist line) depends on it. The checker enforces the same split (FAIL connector, WARN attribution).
+- Compound-hyphen rule scoped: invented decorative compounds stay banned; standard dictionary compound modifiers ("high-yield," "4-hour," "money-back") keep their hyphen, ending the grammatically wrong "high yield savings account" outputs. Cookbook copy updated accordingly.
+- `examples.md` moved out of the read-on-every-task core (its own usage notes say "when stuck"); the core is now three files, saving roughly 5k tokens per task with no behaviour change.
+- SKILL.md description now states boundaries against adjacent skills (page structure belongs to CRO/page skills, non-sales editing to editing skills).
+- Version bumped to 1.3.0 in `SKILL.md` and `.claude-plugin/plugin.json`; bundle rebuilt.
+
 ## [1.2.0]: 2026-05-26
 
 ### Added

@@ -51,7 +51,7 @@ The cheapest reconciliation tool that audits as cleanly as the expensive ones.
 > - 2,000 transactions a month
 > - SOC 2 audit trail
 > - Same day support
-> - 4 hour onboarding session
+> - 4-hour onboarding session
 >
 > CTA: Start the trial
 

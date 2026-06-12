@@ -15,25 +15,25 @@ If you have ever asked Claude to write an ad and it came back with "unlock the p
 A single skill, `copy-that-sells`, with one entry point, eight reference files, and a cookbook of worked examples.
 
 **Core craft.**
-- `SKILL.md`. The workflow. Briefing pass, idea pass, headline pass, body pass, CTA pass, self-edit pass. Two modes: generation and diagnostic.
-- `references/frameworks.md`. Bly's eight headline categories plus three modern extensions (Listicle, Negative, Outcome-first). The 4 U's. AIDA. PAS. BFD. The seven-step direct-response sales letter. Long-copy architecture for sales pages. Voice-of-customer mining. Checklists.
+- `SKILL.md`. The workflow. Briefing pass, research pass, idea pass, headline pass, body pass, offer pass, CTA pass, self-edit pass. Two modes: generation and diagnostic.
+- `references/frameworks.md`. Schwartz's five levels of awareness and market sophistication (the selector that picks the headline type). Bly's eight headline categories plus three modern extensions (Listicle, Negative, Outcome-first). The 4 U's. The So-What ladder (features into benefits). AIDA. PAS. BFD. The seven-step direct-response sales letter. Long-copy architecture for sales pages. Voice-of-customer mining. Checklists.
 - `references/craft.md`. The D&AD Copy Book in working form. Find the idea before the words. Make headline and visual one unit. Compress. Vary rhythm. Read aloud. Truth against self. Long-copy seduction. What to do when nothing works.
 - `references/examples.md`. 122 individual campaigns organised into 17 technique sections. Mix of timeless classics and recent Cannes Lions plus Clio winners. Lookup table you scan when stuck.
 - `references/self-edit.md`. Three-layer final pass. Craft check, anti-AI tells (Era 1 through Era 4 banned word lists in English plus a full Spanish list), truth check. Stops AI tells before they ship.
 
 **Format and language.**
-- `references/formats.md`. Per-format blueprints with word counts, structures, dos and don'ts: subject line, cold email, landing hero, pricing page, sales page, billboard, paid social, paid search, push, App Store, manifesto, pre-roll.
-- `references/spanish-craft.md`. The 20 percent rule. Verb position. Regional variants (rioplatense, mexicano, castellano, andino, caribeño). Vos, tú, usted, vosotros. Banned Spanish vocabulary and phrases. 16 verbatim Cannes/Clio LatAm headlines with rationale. Maestros to study.
-- `references/voice-bank.md`. Twelve voices with two-line samples each: dry confident, quiet intimate, manifesto, folksy slow, conspirator, sober authority, cheeky rebel, founder narrator, technical precise, hostile funny, plain spoken trader, public service grave.
+- `references/formats.md`. Per-format blueprints with word counts, structures, dos and don'ts: subject line and preheader, cold email, landing hero, pricing page, sales page, billboard, paid social (with a 15-structure hook bank), paid search as responsive search ads, push, App Store, manifesto, pre-roll.
+- `references/spanish-craft.md`. The 20 percent rule. Verb position. Regional variants (rioplatense, mexicano, castellano, andino, caribeño). Vos, tú, usted, vosotros. Banned Spanish vocabulary and phrases. Verified verbatim LatAm and Spanish campaign lines with rationale. Maestros to study.
+- `references/voice-bank.md`. Fifteen voices with two-line samples each: twelve from the English-language tradition (dry confident, quiet intimate, manifesto, folksy slow, conspirator, sober authority, cheeky rebel, founder narrator, technical precise, hostile funny, plain spoken trader, public service grave) plus three native Spanish registers (porteña seca, mexicana directa, castellana conceptual).
 - `references/diagnostics.md`. The critique-first procedure for when the user pastes existing copy. Five-question diagnostic. Symptom-cause-fix table. Edit vs Restructure vs Burn down decision.
 
 **Cookbook.**
 - `cookbook/`. Five end-to-end worked examples: billboard for a LatAm fintech (Spanish), B2B SaaS pricing page, DTC manifesto, founder cold email, App Store listing. Each includes the original brief, the full output in the standard skill format, and a postmortem naming the frameworks and craft moves that did the work.
 
 **Evals.**
-- `evals/`. A lightweight regression suite. Twelve test prompts, a scoring rubric, and a static checker that scans output files for banned vocabulary in English and Spanish, em dashes, and compound-word hyphens.
+- `evals/`. A regression suite that actually runs. Twelve test prompts, a scoring rubric (with a dedicated diagnostic-mode dimension), a headless runner (`run_evals.sh`) that executes prompts through `claude -p` and checks the outputs, and a portable static checker with a `--self-test` mode so a silently broken checker cannot report PASS. CI runs the checker on every PR.
 
-The skill works in any language. It writes Spanish in Spanish, not as a translation. Latino Spanish and Castilian Spanish are treated as different. The Spanish craft file is the most detailed of its kind in any public copywriting skill.
+The skill works in any language. It writes Spanish in Spanish, not as a translation. Latino Spanish and Castilian Spanish are treated as different: regional variants, verb position, a Spanish-specific banned list, three native Spanish voices in the voice bank, and verified campaign lines from LatAm and Spain.
 
 ---
 
@@ -94,7 +94,7 @@ The skill is built to trigger on real copywriting requests, not generic writing 
 - "Write a manifesto for..."
 - "Write long-copy for..."
 
-When it triggers, it runs a structured workflow: briefing → idea → headline → body → CTA → self-edit. It refuses to write past missing brief inputs (audience, promise, proof, CTA, voice). It produces an output block with the idea, the final copy, alternates, and notes.
+When it triggers, it runs a structured workflow: briefing → research → idea → headline → body → offer → CTA → self-edit. It refuses to write past missing brief inputs (audience, promise, proof, CTA, voice). It produces an output block with the idea, the final copy, alternates, and notes.
 
 ---
 
@@ -211,7 +211,7 @@ This makes the work auditable. You see the idea behind the line. You see what wo
 
 ### What is the Copy That Sells skill?
 
-A skill for the Claude family of products (Claude Code, Claude Cowork, the Claude desktop and web apps) that teaches Claude the craft and structure of conversion copywriting. It runs a structured workflow whenever the user asks for copy that should sell. The skill bundles four reference files covering Bly's direct-response frameworks, D&AD Copy Book craft principles, 122 award-winning ad examples, and a final self-edit pass that strips AI tells.
+A skill for the Claude family of products (Claude Code, Claude Cowork, the Claude desktop and web apps) that teaches Claude the craft and structure of conversion copywriting. It runs a structured workflow whenever the user asks for copy that should sell. The skill bundles eight reference files covering Schwartz's awareness levels, Bly's direct-response frameworks, D&AD Copy Book craft principles, 122 award-winning ad examples with verified attribution, format blueprints, Spanish craft, a fifteen-voice bank, a diagnostic procedure, and a final self-edit pass that strips AI tells.
 
 ### Who is this for?
 
@@ -231,7 +231,7 @@ Yes. The skill writes Spanish in Spanish rather than translating from English. I
 
 ### What award shows does the example library reference?
 
-Cannes Lions Print and Outdoor (Grand Prix winners and notable shortlisted work, 2001 to 2026). Clio Awards (Grand Clio and Gold for Print and OOH). D&AD Pencils. One Show. Plus pre-2001 classics from the agency tradition (DDB, Doyle Dane Bernbach, Saatchi & Saatchi, Ogilvy & Mather, AMV BBDO, BBDO, JWT, Leo Burnett, Wieden+Kennedy, CDP, AlmapBBDO).
+Cannes Lions Print and Outdoor (Grand Prix winners and notable shortlisted work, 2001 to 2025). Clio Awards (Grand Clio and Gold for Print and OOH). D&AD Pencils. One Show. Plus pre-2001 classics from the agency tradition (DDB, Doyle Dane Bernbach, Saatchi & Saatchi, Ogilvy & Mather, AMV BBDO, BBDO, JWT, Leo Burnett, Wieden+Kennedy, CDP, AlmapBBDO). Every attribution in the example library is checked against a primary source before it ships; entries that cannot be verified get replaced.
 
 ### Can I use this commercially?
 
@@ -258,13 +258,13 @@ copy-that-sells/
 │   └── copy-that-sells/
 │       ├── SKILL.md             Entry point. The workflow.
 │       ├── references/
-│       │   ├── frameworks.md    Bly + modern extensions. AIDA. PAS.
+│       │   ├── frameworks.md    Schwartz + Bly + modern extensions.
 │       │   ├── craft.md         D&AD Copy Book lessons.
-│       │   ├── examples.md      122 campaigns by technique.
+│       │   ├── examples.md      122 campaigns by technique, verified.
 │       │   ├── self-edit.md     Anti-AI rules (EN Era 1-4, ES). Final pass.
 │       │   ├── formats.md       Per-format blueprints with word counts.
 │       │   ├── spanish-craft.md Spanish writing rules. Regional variants.
-│       │   ├── voice-bank.md    Twelve voices with samples.
+│       │   ├── voice-bank.md    Fifteen voices with samples.
 │       │   └── diagnostics.md   Critique-first procedure.
 │       └── cookbook/
 │           ├── README.md
@@ -278,13 +278,14 @@ copy-that-sells/
 ├── evals/
 │   ├── README.md
 │   ├── prompts.md               12 regression prompts.
-│   ├── rubric.md                Scoring criteria.
-│   └── check_banned_words.sh    Static checker (EN + ES).
+│   ├── rubric.md                Scoring criteria (incl. diagnostic dim).
+│   ├── run_evals.sh             Headless runner via claude -p.
+│   └── check_banned_words.sh    Static checker (EN + ES), self-testing.
 ├── scripts/
 │   └── build-skill.sh           Rebuild dist bundle from source.
 ├── .github/
 │   └── workflows/
-│       └── build.yml            CI: rebuild + verify on PR.
+│       └── build.yml            CI: lint + rebuild + verify on PR.
 ├── docs/
 │   ├── examples-preview.md      Teaser of the example library.
 │   └── install.md               Detailed install guide.
@@ -302,8 +303,8 @@ This skill stands on four bodies of work.
 
 - **The Copy Book** (D&AD, multiple editions). Essays from 32+ great copywriters including Bill Bernbach, David Abbott, Tim Delaney, Tony Cox, Indra Sinha, Neil French, John Webster, Adrian Holmes, Tony Brignull, Lionel Hunt, Norman Berry, Steve Hayden, Lee Clow.
 - **The Copywriter's Handbook** by Robert Bly. The standard direct-response copywriting reference, in its multiple editions.
-- **Cannes Lions International Festival of Creativity**. Print and Outdoor Grand Prix winners and notable work, 2001 to 2026. Archive at [canneslions.com](https://www.canneslions.com).
-- **The Clio Awards**. Grand Clio and Gold winners for Print and OOH, 2001 to 2026. Archive at [clios.com](https://clios.com/awards/winners/).
+- **Cannes Lions International Festival of Creativity**. Print and Outdoor Grand Prix winners and notable work, 2001 to 2025. Archive at [canneslions.com](https://www.canneslions.com).
+- **The Clio Awards**. Grand Clio and Gold winners for Print and OOH, 2001 to 2025. Archive at [clios.com](https://clios.com/awards/winners/).
 
 Adjacent references and galleries used during research:
 - [Ads of the World](https://www.adsoftheworld.com) by The Clio Network

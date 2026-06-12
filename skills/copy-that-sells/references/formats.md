@@ -47,7 +47,9 @@ The principles in `craft.md` and `frameworks.md` apply to every format. But each
 
 The after is shorter, specific, and references the reader's history with the brand.
 
-**Self test.** If you swapped your brand name into a competitor's subject line, would it still make sense? If yes, the line is not unique enough.
+**The preheader.** The 40 to 90 characters of preview text after the subject line in the inbox. It is the second half of the open decision and most senders waste it on "View in browser." Write it as the subject line's next thought, not its repeat. Subject: "We shipped the thing you asked for in February." Preheader: "Bulk export, plus the two filters nobody asked for but everyone uses." If the email template does not expose a preheader field, the first line of body copy becomes the preheader; write it knowing that.
+
+**Self test.** If you swapped your brand name into a competitor's subject line, would it still make sense? If yes, the line is not unique enough. Read subject and preheader together as one two-line ad; that is how the inbox shows them.
 
 ---
 
@@ -252,6 +254,35 @@ The after is shorter, specific, and references the reader's history with the bra
 3. **Line three to four.** Proof or detail.
 4. **Line five.** CTA. Plain.
 
+**Hook bank.** The first line is most of the ad. Fifteen structures that stop the scroll, grouped by mechanism. Fill them with the brief's specifics; the structure without a specific is just noise.
+
+*Confession and cost:*
+1. The mistake, owned. "We priced this wrong for two years."
+2. The number that hurts. "Your weekly report costs you 104 hours a year."
+3. The thing nobody says. "Most async standup tools die because nobody fills out the form."
+
+*Pattern interrupt:*
+4. The reversal of the expected claim. "Do not buy the bigger plan."
+5. The wrong-category statement. "This is not a savings app. It is a rounding error with a bank account."
+6. The unfinished sentence the image completes. "The last invoice you will ever build by hand looks like"
+
+*Reader's mirror:*
+7. The moment, named. "It is 9:40 on Tuesday and the report is still not done."
+8. POV framing. "POV: the standup wrote itself while you reviewed PRs."
+9. The objection, voiced first. "You think your team will not adopt another tool. Correct. Here is why this is not another tool."
+
+*Receipts:*
+10. Before and after with numbers. "Two days to reconcile. Now 9 minutes."
+11. The named customer doing the thing. "How Linear runs standup with zero meetings."
+12. The public test. "We sent 32 cold emails this week. 11 replies. The template is below."
+
+*Tension and curiosity:*
+13. The countdown or deadline that is real. "Price goes up Friday. This is the math for waiting."
+14. The forbidden comparison. "Cheaper than the tool you are using, and it does the part you actually need."
+15. The question only the right reader feels. "How many tabs does your monthly close take?"
+
+Match the hook to the awareness level: mirrors and confessions for problem-aware readers, receipts and comparisons for product-aware, deadlines and offers for most aware.
+
 **Avoid.**
 
 - Hashtag stacks at the bottom.
@@ -260,23 +291,30 @@ The after is shorter, specific, and references the reader's history with the bra
 
 ---
 
-## Paid search ad
+## Paid search ad (responsive search ads)
 
-**Word count.** Google Ads: 3 headlines of 30 characters each, 2 descriptions of 90 characters each. Use all the room.
+**Format reality.** Google retired expanded text ads in 2022. The unit is now the responsive search ad: up to 15 headlines of 30 characters and 4 descriptions of 90 characters, which Google mixes and matches per auction. You are not writing one ad; you are writing an inventory of interchangeable parts.
 
-**Structure.**
+**Word count.** Write 8 to 12 headlines (15 if the offer is rich) and all 4 descriptions. Every headline must make sense next to any other two, in any order.
 
-1. **Headline 1.** The search query echoed back, refined. If the user searched "best CRM for small business," headline 1 might be "CRM for small business teams."
-2. **Headline 2.** The differentiator or benefit. "Set up in 9 minutes."
-3. **Headline 3.** Social proof or risk reversal. "Free for 14 days."
-4. **Description 1.** One sentence expanding on the headline. Specific.
-5. **Description 2.** The CTA in context. "Start free. No card."
+**Headline inventory, by job.**
+
+1. **Query echo (2 to 3 headlines).** The search query reflected back, refined. Search: "best CRM for small business." Headline: "CRM for Small Business Teams."
+2. **Differentiator (2 to 3).** The benefit with a number. "Set Up in 9 Minutes."
+3. **Proof (2 to 3).** Social proof or named result. "12,400 Teams Run on It."
+4. **Risk reversal (1 to 2).** "Free for 14 Days. No Card."
+5. **CTA (1 to 2).** Verb plus outcome. "Start Reconciling Today."
+
+**Descriptions.** Each one a complete sentence that could close the ad alone: one expands the differentiator, one stacks proof, one handles the price objection, one is the offer plus CTA.
+
+**Pinning.** Pin a headline to position 1 only when compliance or brand demands it; pinning reduces the combinations Google can test and usually lowers the Ad Strength rating. Accept the trade knowingly, not by default.
 
 **Avoid.**
 
-- Repeating the same words across all three headlines.
+- Headlines that repeat the same first word; Google often shows three together and the repetition reads as a stutter.
 - Generic verbs ("Discover," "Explore," "Learn"). Use specific verbs that imply the work being saved.
 - Promotion language without the promotion present on the landing page.
+- Writing 15 headlines by diluting 5 good ones. Inventory quality beats inventory volume; stop when the next headline would be filler.
 
 ---
 
@@ -385,7 +423,7 @@ One idea. One line of dialogue or one strong VO line. The product or brand in th
 | Sales page | 1,200 to 4,000 | 6 to 12 min | Close the sale |
 | Billboard | 1 to 7 | 3 sec | Earn the memory |
 | Paid social | 40 to 90 | 6 sec | Earn the tap |
-| Paid search | 60 total | 2 sec | Earn the click |
+| Paid search (RSA) | 8 to 15 headlines of 30 chars, 4 descriptions of 90 | 2 sec | Earn the click |
 | Push | 12 to 25 | 2 sec | Earn the tap |
 | App Store hero | 30 to 60 | 4 sec | Earn the install |
 | Manifesto | 80 to 400 | 1 to 2 min | Earn belief |
