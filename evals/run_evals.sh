@@ -41,6 +41,32 @@ command -v claude >/dev/null 2>&1 || {
 
 mkdir -p "$OUT_DIR"
 
+# When this script runs nested inside a Claude Code session, the session
+# exports ANTHROPIC_BASE_URL (the host app's authenticated proxy) and SDK
+# flags that tell a child CLI the host will refresh tokens for it. A child
+# `claude` inheriting those dies with a 401. Strip the session plumbing so
+# the child resolves its own auth like a fresh terminal. Even stripped, a
+# nested run can still 401 when the host app owns the OAuth refresh token;
+# in that case run this script from a normal terminal, where the CLI can
+# refresh on launch. KEEP_ENV=1 disables the strip entirely.
+CLAUDE_CMD=(claude)
+if [[ -n "${CLAUDE_CODE_SESSION_ID:-}" && "${KEEP_ENV:-0}" != "1" ]]; then
+  CLAUDE_CMD=(env -u ANTHROPIC_BASE_URL -u ANTHROPIC_API_KEY -u ANTHROPIC_AUTH_TOKEN \
+    -u CLAUDE_CODE_SDK_HAS_HOST_AUTH_REFRESH -u CLAUDE_CODE_SDK_HAS_OAUTH_REFRESH claude)
+  echo "(nested Claude Code session detected; running claude with a clean auth environment)"
+fi
+
+# An error message saved as an output would sail through the banned-words
+# check: error prose contains no banned vocabulary. The same silent-pass
+# class of bug the checker's --self-test exists to prevent. So every output
+# gets validated before it counts.
+looks_like_error() {
+  local f="$1"
+  grep -qiE "API Error|Failed to authenticate|authentication_error|invalid api key|credit balance|rate limit" "$f" && return 0
+  [[ $(wc -w < "$f" | tr -d ' ') -lt 15 ]] && return 0
+  return 1
+}
+
 # All prompt ids, in file order.
 all_ids() {
   grep -E '^## [0-9]{2}-' "$PROMPTS_FILE" | sed 's/^## //'
@@ -88,11 +114,27 @@ for id in "${IDS[@]}"; do
   outfile="$OUT_DIR/$id.md"
   echo "== running $id"
 
-  claude -p "$body" \
+  "${CLAUDE_CMD[@]}" -p "$body" \
     --append-system-prompt "$SYSTEM_PROMPT" \
     --allowedTools "Read" \
     ${MODEL:+--model "$MODEL"} \
-    > "$outfile"
+    > "$outfile" 2>&1
+
+  if looks_like_error "$outfile"; then
+    mv "$outfile" "$OUT_DIR/$id.error.log"
+    echo "   RUN ERROR on $id (saved to $id.error.log):"
+    sed 's/^/   | /' "$OUT_DIR/$id.error.log" | head -4
+    FAILED=$((FAILED + 1))
+    if grep -qiE "Failed to authenticate|authentication_error|invalid api key" "$OUT_DIR/$id.error.log"; then
+      echo
+      echo "aborting: authentication is broken, every remaining prompt would fail the same way." >&2
+      echo "most common cause: running nested inside a Claude Code session whose host app owns" >&2
+      echo "the OAuth refresh token. Run this script from a normal terminal instead; the CLI" >&2
+      echo "refreshes its token on launch there. KEEP_ENV=1 skips the env strip if you need it." >&2
+      exit 2
+    fi
+    continue
+  fi
 
   echo "   saved $outfile ($(wc -w < "$outfile" | tr -d ' ') words)"
 
@@ -113,7 +155,7 @@ $body
 
 --- OUTPUT TO SCORE ---
 $(cat "$outfile")"
-    claude -p "$critic_prompt" ${MODEL:+--model "$MODEL"} > "$scorefile"
+    "${CLAUDE_CMD[@]}" -p "$critic_prompt" ${MODEL:+--model "$MODEL"} > "$scorefile" 2>&1
     echo "   scored -> $scorefile"
   fi
 

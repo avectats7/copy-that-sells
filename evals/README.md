@@ -28,6 +28,10 @@ MODEL=claude-sonnet-4-6 ./evals/run_evals.sh
 
 Each run saves to `evals/outputs/<id>.md` (and `<id>.score.md` with `SCORE=1`), then runs the banned-words check. The runner's exit code is the number of outputs that failed the check, so it can gate CI or a pre-push hook.
 
+Outputs are validated before they count: an API error or a sub-15-word response is moved to `<id>.error.log` and counted as a failure instead of being scanned. Error prose contains no banned words, so without this guard a fully broken run would report a perfect PASS, which is the same silent-pass bug class the checker's `--self-test` exists for. On an authentication error the runner aborts immediately rather than burning the remaining prompts.
+
+**Run this from a normal terminal.** Nested inside a Claude Code session, the child `claude` inherits session auth plumbing it cannot use; the runner strips the obvious variables and aborts loudly if auth still fails, but the reliable path is a plain terminal, where the CLI refreshes its own token on launch.
+
 ## The manual loop
 
 The original workflow still works: paste a prompt from `prompts.md` into a fresh session with the skill installed, save the full output to `evals/outputs/<id>.md`, run the checker on it, score against `rubric.md`.
