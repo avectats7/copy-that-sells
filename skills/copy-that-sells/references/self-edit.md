@@ -36,6 +36,8 @@ Copy that sounds AI-generated loses trust the moment the reader notices. This se
 
 The core rule: if a sentence could have been written by ChatGPT, rewrite it. If a word appears on the banned list, replace it. If a structure matches the banned patterns, break it.
 
+Reporting rule: when you confirm the check in your Notes, name the list, not its contents. "Banned-list check: clean" is the whole report. Enumerating the words you avoided re-introduces them into the output and trips every automated scan downstream. The diagnostic mode is the one exception: there, quoting the offending words from the user's pasted copy is the diagnosis itself.
+
 The banned words are organised by era because the AI tells have shifted as models have shifted. Words that were obvious GPT-4 tells in 2024 are still tells now, even if the latest models lean on a different set. Treat the full list as a single blacklist. Spanish has its own list further down because the Spanish AI fingerprint differs from the English one.
 
 ### Banned words: Era 1 (the original GPT tells, 2023 to mid-2024)

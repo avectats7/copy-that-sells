@@ -230,6 +230,15 @@ scan_file() {
 
   echo "== $original$scope_note"
 
+  # A copy-only scan of a file with no blockquoted copy would scan nothing
+  # and pass vacuously. That is an output-format violation, not a clean run.
+  if [[ $COPY_ONLY -eq 1 ]] && ! grep -q '[^[:space:]]' "$scanfile"; then
+    echo "FAIL [No blockquoted copy found]: the output format requires shippable copy in markdown blockquotes (>)."
+    rm -f "$scanfile"
+    echo "FAIL: 1 issue(s) detected in $original"
+    return 1
+  fi
+
   scan_pattern() {
     local pattern="$1"
     local label="$2"

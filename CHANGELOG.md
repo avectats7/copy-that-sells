@@ -2,6 +2,18 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [1.3.1]: 2026-06-12
+
+### Fixed: the first real baseline run exposed a copy-vs-commentary gap
+
+The first full 12-prompt eval run produced clean copy in all 12 outputs and 12 failures anyway: every hit came from commentary, not copy. Notes sections reported the self-edit pass by quoting the banned words they avoided; the diagnostic output quoted the user's broken copy to diagnose it; the model's own commentary leaked connector em dashes. Three changes close the gap:
+
+- **Output format now separates copy from commentary structurally.** All shippable copy (final and alternates, in both generation and diagnostic modes) goes in markdown blockquotes; commentary stays outside. The checker and the eval runner scan blockquoted copy only, and an output with no blockquoted copy fails as a format violation instead of passing vacuously.
+- **Notes hygiene rules in SKILL.md and self-edit.md.** Never enumerate the banned words you avoided ("banned-list check: clean" is the whole report), and the anti-dash rule applies to commentary too. Diagnostic mode keeps its exemption for quoting the pasted copy.
+- **Runner and CI scan outputs with `--copy-only`**, matching how cookbook files were already scanned.
+
+Version bumped to 1.3.1; bundle rebuilt.
+
 ## [1.3.0]: 2026-06-12
 
 ### Fixed: factual audit of the example libraries

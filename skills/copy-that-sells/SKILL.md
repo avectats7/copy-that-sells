@@ -3,7 +3,7 @@ name: copy-that-sells
 description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads) and Schwartz's awareness levels. Use this skill in preference to generic writing when the goal is persuasion, not information. Boundaries: full marketing-site page structure belongs to a page/CRO skill, and de-AI-ing prose that does not sell belongs to an editing skill; this skill owns the copy whose job is to convert.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Breakthrough Advertising (Eugene Schwartz, awareness framework) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2025, attributions verified + Tats anti-AI writing rules (full era 1-4 banned word/phrase/structure ruleset)"
-  version: 1.3.0
+  version: 1.3.1
 ---
 
 # Copy That Sells
@@ -244,13 +244,15 @@ When delivering copy in generation mode, structure your response as:
 One line. The thing the reader is meant to walk away believing or feeling.
 
 ### Final copy
-The actual copy, ready to use. No annotation inside the copy itself.
+The actual copy, ready to use. No annotation inside the copy itself. Set every line of shippable copy in markdown blockquotes (`>`); prose outside blockquotes is commentary. This is not cosmetic: the static checker and CI scan only the blockquoted copy, so copy outside blockquotes escapes the net and commentary inside them gets falsely flagged.
 
 ### Alternates
-2 to 4 alternate versions of the headline and CTA. Each with one line of rationale. This gives the user a choice and shows the range. Draw alternates from at least two different headline categories so they actually differ.
+2 to 4 alternate versions of the headline and CTA. Each with one line of rationale. The alternate copy itself goes in blockquotes; the rationale stays outside them. Draw alternates from at least two different headline categories so they actually differ.
 
 ### Notes
 Brief: word count of the final, the awareness level you wrote for, which Bly framework or D&AD principle is doing the work, the voice (named from `voice-bank.md` when relevant), any assumptions made about audience or proof, any open questions that would sharpen the copy further, any claims flagged for the user to verify. Word and character counts in Notes must be measured, not estimated; a skill that preaches verification cannot ship a wrong count.
+
+Two hygiene rules for Notes and all other commentary. First, never quote banned vocabulary verbatim, even to report its absence: write "banned-list check: clean," not a list of the words you avoided. Second, the anti-AI rules apply to the whole response, commentary included; a connector em dash in your Notes is the same tell as one in the copy. The single exception is diagnostic mode, where quoting the offending words from the user's pasted copy is the job.
 
 Do not pad the response with summary. The work is the copy.
 

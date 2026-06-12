@@ -138,7 +138,10 @@ for id in "${IDS[@]}"; do
 
   echo "   saved $outfile ($(wc -w < "$outfile" | tr -d ' ') words)"
 
-  if ! "$CHECKER" "$outfile"; then
+  # Copy-only: the output format mixes shippable copy (blockquoted) with
+  # commentary that legitimately names banned words (self-edit reports,
+  # diagnostic quotes). Only the copy is held to the banned list.
+  if ! "$CHECKER" --copy-only "$outfile"; then
     echo "   BANNED-WORDS FAIL on $id"
     FAILED=$((FAILED + 1))
   fi

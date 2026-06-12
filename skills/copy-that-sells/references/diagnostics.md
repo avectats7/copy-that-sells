@@ -151,9 +151,9 @@ One to three sentences. Name the root cause. Reference one of the five diagnosti
 Edit, Restructure, or Burn down. One line each on what that means for this draft.
 
 ### The fix
-The actual rewrite, full and ready to use. Same output structure as a generation task: Idea, Final copy, Alternates, Notes.
+The actual rewrite, full and ready to use. Same output structure as a generation task: Idea, Final copy, Alternates, Notes. Blockquote the rewritten copy exactly as in generation mode; diagnosis and commentary stay outside the blockquotes. Quoting the user's original broken copy to diagnose it is expected and exempt from the banned-list rules; just keep those quotes outside blockquotes too.
 
-If recommendation is Burn down, replace "Final copy" with "Three new ideas to start from" and offer the user a choice before writing further.
+If recommendation is Burn down, replace "Final copy" with "Three new ideas to start from," blockquote the idea lines, and offer the user a choice before writing further.
 
 ### What this teaches
 One sentence. Name the lever the user can pull next time without you. "When you read it aloud and stumble in the middle, that is usually a buried verb. Move the verb forward and the sentence opens."

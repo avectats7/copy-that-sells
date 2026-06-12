@@ -42,7 +42,7 @@ jobs:
             echo "no saved eval outputs; skipping."
             exit 0
           fi
-          ./evals/check_banned_words.sh "${files[@]}"
+          ./evals/check_banned_words.sh --copy-only "${files[@]}"
 
   build:
     runs-on: ubuntu-latest
