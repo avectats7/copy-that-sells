@@ -2,6 +2,18 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [1.3.2]: 2026-06-12
+
+### Fixed: checker blind spot on table-cell copy (found by reading the baseline outputs, not just their PASS)
+
+The 1.3.1 baseline run passed 12/12. Reading the outputs rather than trusting the green revealed that the RSA output (prompt 07) presents its 10 headlines inside a markdown table (`| > Headline | 27 | Job |`). The `--copy-only` extractor only pulled lines starting with `>`, and a table row starts with `|`, so **all 10 headlines escaped the scan**. A banned word in an RSA headline would have passed undetected; the run was clean only by luck.
+
+- `extract_copy` now also pulls `>`-prefixed cells out of markdown table rows, leaving the Chars and Job columns as commentary. The RSA headlines are now scanned; they still pass.
+- Added a self-test case: a banned word inside a table cell must fail the copy-only scan. The blind spot cannot regress silently.
+- Output format in SKILL.md documents the table convention (`| > Headline | ... |`) so copy in tables stays inside the net.
+
+No change to the copy the skill produces; this is a tooling-coverage fix. Version bumped to 1.3.2; bundle rebuilt.
+
 ## [1.3.1]: 2026-06-12
 
 ### Fixed: the first real baseline run exposed a copy-vs-commentary gap

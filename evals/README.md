@@ -26,7 +26,7 @@ SCORE=1 ./evals/run_evals.sh 09
 MODEL=claude-sonnet-4-6 ./evals/run_evals.sh
 ```
 
-Each run saves to `evals/outputs/<id>.md` (and `<id>.score.md` with `SCORE=1`), then runs the banned-words check in `--copy-only` mode: the skill's output format mixes blockquoted copy with commentary that legitimately names banned words (self-edit reports, diagnostic quotes of the user's bad copy), so only the blockquoted copy is held to the banned list. An output with no blockquoted copy at all fails as a format violation rather than passing vacuously. The runner's exit code is the number of outputs that failed, so it can gate CI or a pre-push hook.
+Each run saves to `evals/outputs/<id>.md` (and `<id>.score.md` with `SCORE=1`), then runs the banned-words check in `--copy-only` mode: the skill's output format mixes blockquoted copy with commentary that legitimately names banned words (self-edit reports, diagnostic quotes of the user's bad copy), so only the blockquoted copy is held to the banned list. Copy carried in three ways counts: `` ```copy `` fenced blocks, blockquote lines, and `>`-prefixed cells inside a markdown table (the RSA headline-inventory format, where the headlines would otherwise escape the scan because a table row starts with `|`, not `>`). An output with no copy at all fails as a format violation rather than passing vacuously. The runner's exit code is the number of outputs that failed, so it can gate CI or a pre-push hook.
 
 The first full baseline run made the case for this: all 12 outputs produced clean copy, and all 12 failed the whole-file scan, every hit coming from Notes sections reporting which banned words were avoided, or from the diagnostic prompt quoting the pasted copy it was diagnosing.
 

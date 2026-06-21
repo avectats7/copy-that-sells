@@ -185,15 +185,31 @@ OPENERS=(
 # Helpers
 # ---------------------------------------------------------------------------
 
-# Extract only the copy from a markdown file: blockquote lines plus
-# ```copy fenced blocks. Line numbers in the report are relative to the
-# extracted copy, not the source file.
+# Extract only the copy from a markdown file. Three carriers count as copy:
+#   1. ```copy fenced blocks
+#   2. blockquote lines (^>)
+#   3. blockquote-prefixed cells inside a markdown table (| > headline |),
+#      which is how the RSA / paid-search format presents a headline
+#      inventory. Without rule 3 those headlines escape the scan entirely:
+#      a table row starts with "|", not ">", so rule 2 never sees them.
+# Only cells that begin with ">" are pulled; the Chars and Job columns of a
+# headline table carry no ">" and stay out of the scan as commentary.
+# Line numbers in the report are relative to the extracted copy.
 extract_copy() {
   awk '
     /^```copy[[:space:]]*$/ { infence = 1; next }
     /^```/                  { if (infence) { infence = 0; next } }
     infence                 { print; next }
-    /^>/                    { sub(/^> ?/, ""); print }
+    /^>/                    { sub(/^> ?/, ""); print; next }
+    /^[[:space:]]*\|.*>/ {
+      n = split($0, cells, "|")
+      for (i = 1; i <= n; i++) {
+        cell = cells[i]
+        gsub(/^[[:space:]]+|[[:space:]]+$/, "", cell)
+        if (cell ~ /^>/) { sub(/^> ?/, "", cell); print cell }
+      }
+      next
+    }
   ' "$1"
 }
 
@@ -339,10 +355,29 @@ SAMPLE
     failed=1
   fi
 
+  # Table-cell extraction: a banned word inside a markdown table cell
+  # (the RSA headline-inventory format) must be caught in --copy-only mode.
+  # This guards the blind spot where table copy escaped the scan because
+  # table rows start with "|", not ">".
+  local tabledirty
+  tabledirty=$(mktemp)
+  cat > "$tabledirty" <<'SAMPLE'
+| # | Headline | Chars | Job |
+|---|----------|-------|-----|
+| 1 | > We leverage robust tooling | 27 | Query echo |
+SAMPLE
+  out=$(COPY_ONLY=1 scan_file "$tabledirty"); rc=$?
+  if [[ $rc -eq 0 ]]; then
+    echo "SELF-TEST FAIL: banned word in a table cell passed the copy-only scan. Table extraction is broken."
+    echo "$out"
+    failed=1
+  fi
+  rm -f "$tabledirty"
+
   rm -f "$dirty" "$clean"
 
   if [[ $failed -eq 0 ]]; then
-    echo "SELF-TEST PASS: detection working (connector dash, EN, ES, openers, attribution WARN)."
+    echo "SELF-TEST PASS: detection working (connector dash, EN, ES, openers, attribution WARN, table-cell copy)."
     return 0
   fi
   return 2
