@@ -17,13 +17,13 @@ For the complete library, see [skills/copy-that-sells/references/examples.md](..
 
 - **Volkswagen** "Lemon." (DDB, 1960, Julian Koenig and Helmut Krone). The image is a perfect Beetle. The headline says the opposite. The body explains the standard.
 - **Economist** "I never read The Economist. — Management trainee. Aged 42." (AMV BBDO, David Abbott). Yellow page, single line. The reader supplies the meaning.
-- **British Airways** "Magic of Flying." (Ogilvy London, 2013, Cannes Outdoor Grand Prix 2014). Digital billboards in London pointed at real planes overhead and named their destinations. The headline was the sky.
-- **British Airways** "Windows." (Uncommon Creative Studio, 2023, Cannes Outdoor Grand Prix 2023). OOH wrote captions to clouds and destinations passing across them.
+- **British Airways** "Magic of Flying." (OgilvyOne London, 2013, Cannes Direct Grand Prix 2014). Digital billboards where a child pointed at real BA planes overhead as their live flight number and destination appeared. The headline was the sky.
+- **British Airways** "A British Original." (Uncommon Creative Studio, 2023, Cannes Outdoor Grand Prix 2023). Over 500 executions playing the real reasons people fly against the flat "Business or Leisure" booking tick-box.
 
 ## Specificity (proof inside the line)
 
 - **Rolls-Royce** "At 60 miles an hour the loudest noise in this new Rolls-Royce comes from the electric clock." (Ogilvy & Mather, 1958, David Ogilvy). The single most imitated headline in advertising.
-- **Penny** "Price Packs." (Serviceplan Munich, 2024, Cannes Print Grand Prix 2025). Printed the retail price directly on the packaging. The product was the proof.
+- **Penny** "Price Packs." (Serviceplan NEO Munich, 2024, Cannes Print & Publishing Grand Prix 2025). Printed the fixed retail price directly on the packaging. The product was the proof.
 - **The Zimbabwean Newspaper** "Trillion Dollar Campaign." (TBWA\Hunt\Lascaris, 2009, Grand Clio + Cannes Outdoor Grand Prix 2009). Printed posters on actual Zimbabwean trillion-dollar notes that hyperinflation had made worthless. The substrate was the headline.
 
 ## Self-deprecation (truth against the brand)
@@ -35,7 +35,7 @@ For the complete library, see [skills/copy-that-sells/references/examples.md](..
 ## Long-copy seduction (the ad is an essay)
 
 - **Patek Philippe** "You never actually own a Patek Philippe. You merely look after it for the next generation." (Leagas Delaney, 1996, Tim Delaney).
-- **Saatchi & Saatchi for Conservative Party** "Labour isn't working." (1978, 1979, Charles and Maurice Saatchi). Long-copy political poster that helped win the 1979 election.
+- **John Caples for U.S. School of Music** "They laughed when I sat down at the piano. But when I started to play!" (1926). The most imitated story-lead ad in direct response. The headline opens a narrative the body finishes.
 - **Apple** "Here's to the crazy ones." (TBWA\Chiat\Day, 1997). Manifesto length, delivered both as TV voiceover and print.
 
 ---
