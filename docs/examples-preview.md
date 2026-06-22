@@ -1,6 +1,6 @@
 # Examples Preview
 
-A teaser of what is in the full `references/examples.md` library. The full file has 122 campaigns organised across 17 technique sections. This page picks a few to give a sense of the range.
+A teaser of what is in the full `references/examples.md` library. The full file has 152 campaigns organised across 19 technique and benchmark sections plus tonal masterclasses. This page picks a few to give a sense of the range.
 
 For the complete library, see [skills/copy-that-sells/references/examples.md](../skills/copy-that-sells/references/examples.md).
 
@@ -26,6 +26,13 @@ For the complete library, see [skills/copy-that-sells/references/examples.md](..
 - **Penny** "Price Packs." (Serviceplan NEO Munich, 2024, Cannes Print & Publishing Grand Prix 2025). Printed the fixed retail price directly on the packaging. The product was the proof.
 - **The Zimbabwean Newspaper** "Trillion Dollar Campaign." (TBWA\Hunt\Lascaris, 2009, Grand Clio + Cannes Outdoor Grand Prix 2009). Printed posters on actual Zimbabwean trillion-dollar notes that hyperinflation had made worthless. The substrate was the headline.
 
+## Modern brand voice (2019 to 2025)
+
+- **Surreal** (cereal, UK). Billboards: "We're Dwayne Johnson's favourite cereal," small print: "Dwayne is a bus driver from London." A challenger beat a celebrity budget with a footnote.
+- **Coca-Cola** "Recycle Me." (Ogilvy New York, Cannes Print & Publishing Grand Prix 2024). The logo redrawn as it looks on a crushed can, two words lifted from the side of the can.
+- **L'Oréal Paris** "The Final Copy of Ilon Specht." (IPG / McCann, Cannes Film Grand Prix 2025). A documentary about the copywriter who wrote "Because I'm Worth It."
+- **Tecate** "Golfo de México." (LePub, Cannes Lions 2025). After the gulf was renamed "Gulf of America," a real floating bar defending the original name.
+
 ## Self-deprecation (truth against the brand)
 
 - **KFC** "FCK." (Mother London, 2018). Full-page newspaper apology after the chicken-supply crisis. Three letters. The most-praised apology ad in modern history.
@@ -42,7 +49,7 @@ For the complete library, see [skills/copy-that-sells/references/examples.md](..
 
 ## What the full library covers
 
-Seventeen technique sections, each with three to twelve examples and a one-line note on what makes the move work. Sections:
+Nineteen technique and benchmark sections, each with three to eighteen examples and a one-line note on what makes the move work. Sections:
 
 1. Compression
 2. Headline plus visual completion
@@ -60,8 +67,10 @@ Seventeen technique sections, each with three to twelve examples and a one-line 
 14. Dare and insult (used sparingly)
 15. Truth-against-the-category
 16. Cultural and political moments
-17. Latin-American agency print to study
+17. Latin-American and Spanish-language work to study
+18. Modern brand voice (always-on social, packaging, the DTC script)
+19. Recent award benchmarks (2022 to 2025)
 
-Plus an eighteenth section on tonal masterclasses worth studying writer by writer (Howard Gossage, Bill Bernbach, David Abbott, Tim Delaney, Tony Cox, Indra Sinha, Neil French, Lee Clow, Steve Hayden, Hal Riney, John Webster).
+Plus a twentieth section on tonal masterclasses worth studying writer by writer (Howard Gossage, Bill Bernbach, David Abbott, Tim Delaney, Tony Cox, Indra Sinha, Neil French, Lee Clow, Steve Hayden, Hal Riney, John Webster).
 
 Open [examples.md](../skills/copy-that-sells/references/examples.md) for the whole thing.

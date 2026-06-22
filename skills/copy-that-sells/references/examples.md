@@ -1,6 +1,6 @@
 # Examples: A Working Library of Copy That Sold
 
-122 pieces of print, OOH, and direct-response work organised by technique. Mix of timeless classics that defined the craft and award winners from roughly 2001 onward at Cannes Lions (Print + Outdoor Grand Prix), Clio Awards (Grand Clio + Gold for Print and OOH), D&AD Pencils, and One Show. Use as a quick-fire reference when looking for a way in.
+152 pieces of print, OOH, social, and direct-response work organised by technique. Mix of timeless classics that defined the craft, modern always-on brand voice, and award winners from roughly 2001 to 2025 at Cannes Lions, Clio Awards, D&AD, One Show, El Ojo de Iberoamérica, and El Sol. Use as a quick-fire reference when looking for a way in.
 
 Attribution conventions: brand, year (approximate where uncertain), agency, plus the verbatim headline where the line is famous enough to quote confidently. Where the work is more visual than verbal, the description does the work. Award labels (Cannes, Clio, D&AD, One Show) are noted where the work is a known winner.
 
@@ -88,7 +88,7 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ## 6. Question: the reader answers and is invested
 
-- **Maxwell Sackheim** "Do you make these mistakes in English?" (1919, for the Sherwin Cody School of English). Among the most-tested headlines of the early twentieth century; it ran essentially unchanged for four decades. Often misattributed to Caples, who analysed it but did not write it.
+- **Maxwell Sackheim** "Do you make these mistakes in English?" (1919, for the Sherwin Cody School of English). Among the most-tested headlines of the early twentieth century; it ran almost unchanged for four decades. Often misattributed to Caples, who analysed it but did not write it.
 - **Clairol** "Does she... or doesn't she?" (Foote, Cone & Belding, 1956, Shirley Polykoff). Sold hair colour by asking the only question that mattered.
 - **Listerine** "Often a bridesmaid but never a bride." (Lambert Pharmacal, 1925, Milton Feasley). Question in disguise. The reader fills in the cause.
 - **Pepsi** "Is Pepsi OK?" (Goodby Silverstein & Partners, Super Bowl 2019, "More Than OK"). Reclaiming the dismissive restaurant line.
@@ -202,9 +202,9 @@ Scan the section headings to find the technique your brief needs. Each example i
 
 ---
 
-## 17. Latin-American agency print to study
+## 17. Latin-American and Spanish-language work to study
 
-Latin-American agencies have been quietly responsible for some of the strongest print and OOH craft of the last twenty years. Worth studying in the original language. Award shows have noticed; Cannes and Clio both run heavy on these names.
+Agencies across Latin America and Spain have been quietly responsible for some of the strongest print and OOH craft of the last twenty years, and some of the sharpest recent ideas full stop. Worth studying in the original language. Award shows have noticed; Cannes, Clio, El Ojo de Iberoamérica and El Sol all run heavy on these names.
 
 - **AlmapBBDO (Sao Paulo)** Volkswagen Brazil, Havaianas, Billboard magazine. The Havaianas series (multiple Clio + Cannes Lions wins) sold the flip-flop as a recurring character in absurd scenes. Volkswagen Brazil's print has won Lions almost every year of the past two decades.
 - **DDB Brasil and DM9DDB** multiple D&AD Pencils and Cannes Lions across decades. Strong on Volkswagen, Pepsi, public service work.
@@ -215,11 +215,58 @@ Latin-American agencies have been quietly responsible for some of the strongest 
 - **Sancho BBDO (Bogota)** strong long-copy print tradition for Colombian brands and public service work.
 - **JWT Mexico / Wunderman Mexico / Mayo (Buenos Aires)** running output across two decades of Latin-American Cannes and Clio winners.
 
+Recent Spanish-language campaigns to study (each verified against a festival or trade source):
+
+- **Tulipán** "Teniendo sexo podemos reactivar la economía." (Zurda with Retina, Argentina; Gran Ojo PR, El Ojo de Iberoamérica 2024.) The condom brand built a discount platform with 20-plus brands on the premise that sex drives consumer spending. The line turns an Argentine economic-recovery slogan into a shareable double meaning.
+- **J&B** "Orgullo de Pueblo." (El Ruso de Rocky, Spain; Gran Premio Campañas Integradas, El Sol 2023.) Took LGTBI Pride to small rural towns on a float and named the "sexilio," the exodus of the rural queer community to the cities. The pun on "orgullo" (Pride, and pride of one's village) only works in Spanish.
+- **Quilmes** "Coincidencias." (draftLine, in-house, Argentina; Qatar 2022 World Cup; Gran Premio Film, El Sol 2023.) Listed the coincidences between Argentina's 1986 title and 2022 to feed the hope of winning; it went viral again after the final. Conversational copy that is rioplatense to the bone.
+- **Tecate** "Golfo de México." (LePub Mexico City; Gold and Silver Lions, Cannes 2025, Mexico's most-awarded campaign that year.) After the gulf was officially renamed "Gulf of America," Tecate built a real, geolocated floating bar defending the name "Golfo de México," with a Tecate Light edition made from gulf salt. The verbal stand is the whole idea.
+- **BBVA México** "¿Es Fraude?" (Terán\TBWA; Gran Ojo Eficacia, El Ojo 2024; Effies México 2024.) A five-episode game show that teaches viewers to tell real bank messages from fraudulent ones. The title, posed as a question, turns fraud prevention into entertainment.
+
 Reading recommendation when writing in Spanish: study these agencies in the language they actually wrote in. The rhythm of Latin-American Spanish copy is different from translated English. Spanish allows the headline to land later in the sentence in a way English does not; the agencies above know how to use that.
 
 ---
 
-## 18. Tonal masterclasses worth studying
+## 18. Modern brand voice: always-on social, packaging, and the DTC script
+
+These brands built their reputations not on one famous ad but on a voice held across thousands of small touches: a tweet, a reply, a billboard byline, a pack of toilet paper, a launch video. This is the modern counterweight to the print-classic sections above. The craft is tone held at scale and a willingness to sound like a person, not a brand. Most are made in-house, which is part of the lesson: a single sign-off and a consistent voice beat a committee.
+
+- **Duolingo** the unhinged Duo the owl voice (in-house social team, originated by Zaria Parvez, roughly 2021 onward). A language app turned its mascot into a chaotic, self-aware character that entertains first and sells almost never. The craft is the reply copy and the persona never breaking.
+- **Ryanair** the self-roasting airline voice (in-house, peak roughly 2021 to 2023). The budget airline owns its own reputation, mocks its own legroom, and roasts the people in its replies. Low-fi on purpose; the reactive caption is the whole craft.
+- **Liquid Death** "Greatest Hates." (in-house, ongoing). The brand turns real hate comments into actual recorded songs. The voice (canned water sold like a death-metal act) is the product. Proof that tone can carry a commodity.
+- **Oatly** "Wow, no cow." and the packaging voice. (in-house, the self-named "Department of Mind Control" under John Schoolcraft). The deliberately bad jingle and the rambling, anti-marketing long copy on the carton are the brand. The category's evasions are the implicit contrast.
+- **Surreal** the fake-celebrity billboards. (in-house, UK, 2023 onward). "We're Dwayne Johnson's favourite cereal," in small type: "Dwayne is a bus driver from London." A challenger cereal beat a celebrity budget with a footnote. Pure copy as the mechanism.
+- **Who Gives A Crap** the brand voice across pack, web, and email. (in-house, ongoing). Warm, toilet-humour-forward tone applied consistently to a boring sustainable product. The lesson is consistency across every touch, not one campaign.
+- **Dollar Shave Club** "Our blades are f***ing great." (founder Michael Dubin, 2012). A deadpan founder monologue shot in a day for about $4,500 that launched a category. The script is the brand; the DTC launch-video archetype.
+- **Spotify** "Thanks 2016, It's Been Weird." (in-house, 2016 to 2017). Anonymised listening data mined into open-letter billboards ("Dear person who made a playlist called..."). Elite data-into-copy craft and the ancestor of the annual Wrapped OOH voice.
+
+---
+
+## 19. Recent award benchmarks (2022 to 2025)
+
+Recent Grand Prix and benchmark work so the library does not date itself to the print era. Each entry is a current proof of a technique already in this file, set in a contemporary format: compression, object-as-headline, reframe, self-deprecation, specificity. Every entry is sourced to a festival or trade record, and a large subset was spot-checked directly during the last expansion.
+
+- **AnNahar** "The Election Edition." (Impact BBDO Dubai, Cannes Print & Publishing Grand Prix 2022.) When Lebanon's government delayed elections blaming a paper-and-ink shortage, the 88-year-old paper stopped printing, donated its paper and ink for ballots, and ran empty news racks. The first non-existent newspaper to win the Print Grand Prix. The blank page is the argument.
+- **Coinbase** the bouncing QR code. (Accenture Song, Cannes Direct Grand Prix 2022.) A 60-second Super Bowl spot of nothing but a colour-changing QR code drifting across the screen. Anti-advertising compression that crashed the app from traffic. Section 1 (Compression) taken to its limit.
+- **Heinz** "Draw Ketchup." (Rethink Toronto, Cannes Print Gold 2022; the wider "It Has To Be Heinz" platform won the Creative Effectiveness Grand Prix 2024.) Asked to "draw ketchup," people worldwide drew the Heinz bottle, proving the brand is the category. The instruction is the whole idea. Section 15 (truth against the category).
+- **Vice** "The Unfiltered History Tour." (Dentsu Webchutney, multiple Cannes Grands Prix 2022.) An unofficial AR audio tour of the British Museum telling the looted-origin stories of disputed artefacts from the colonised nations' point of view. Script-led; the most awarded work of the festival that year.
+- **CALM x ITV** "The Last Photo." (adam&eveDDB, Cannes Film Grand Prix 2023.) Smiling portraits, revealed to be the last photos of people before they died by suicide, dismantling the myth that suicidal people "look" depressed. Insight-and-reveal in the public-service tradition of section 13.
+- **Stella Artois** "The Artois Probability." (GUT Buenos Aires, Cannes Creative Data Grand Prix 2023, plus Print and Outdoor Gold.) An algorithm tagged classic paintings with the percentage probability that the figures are drinking Stella, by glass shape, liquid colour, date and place. Brueghel's Peasant Wedding: "78% probability of Stella Artois." Heritage proved by data, with the caption as the joke. Specificity (section 5).
+- **Dove** "#TurnYourBack." (Ogilvy UK and DAVID Madrid, Cannes Media Grand Prix 2023.) Launched within 72 hours of TikTok's "Bold Glamour" filter, it asked women to turn their backs on the filter. The "Real Beauty" platform extended into a single line. Reframe (section 4).
+- **Coca-Cola** "Recycle Me." (Ogilvy New York / WPP Open X, Cannes Print & Publishing Grand Prix 2024.) The world's most recognisable logo redrawn as it looks on a crushed can, with the two-word line lifted from the side of the can. Object-as-headline (section 10) and compression at once.
+- **Specsavers** "The Misheard Version." (Golin London, Cannes Audio & Radio Grand Prix 2024 and PR Grand Prix 2024.) Rick Astley re-recorded "Never Gonna Give You Up" with the lyrics people mishear ("Never gonna run around with dessert spoons"), selling hearing tests. The wordplay is the product demo.
+- **Orange** "WoMen's Football." (Marcel Paris, Cannes Film Grand Prix 2024.) A reel of dazzling goals "by the French men's team," revealed mid-film to be the women's team with swapped faces. The reveal weaponises the viewer's own bias.
+- **CeraVe** "Michael CeraVe." (Ogilvy, Cannes Social & Influencer Grand Prix 2024, plus the Super Clio.) A four-week conspiracy that actor Michael Cera secretly invented CeraVe, built entirely on the coincidence in the name. The pun is the campaign.
+- **IKEA** "Proudly Second Best." (DAVID Madrid and INGO Hamburg, Cannes Gold 2023.) The hero children's products (cot, high chair, stool) sit empty in the background because the child prefers a parent's arms. The brand calls itself the second-best option. A Spanish agency's idea, English copy.
+- **Dramamine** "The Last Barf Bag." (FCB Chicago, Cannes Health & Wellness Grand Prix 2024.) A mini-documentary mourning the disappearing airline sickness bag, framing its decline as proof the anti-nausea brand works. Wry, idea-first storytelling around an unglamorous product.
+- **KitKat** "Phone Break." (VML Prague, Cannes Outdoor Grand Prix 2024.) OOH built so passersby could physically snap a "break," stretching "Have a break, have a KitKat" into the chaos of public transport. A sixty-year-old tagline made into an object.
+- **L'Oréal Paris** "The Final Copy of Ilon Specht." (IPG / McCann, dir. Ben Proudfoot, Cannes Film Grand Prix 2025.) A 17-minute documentary about Ilon Specht, the McCann copywriter who wrote "Because I'm Worth It." A film about a piece of copy and the woman behind four of advertising's most famous words. Required viewing for this skill.
+- **Channel 4** "Considering What?" (4Creative, Cannes Film Grand Prix 2025.) A Paralympics film that confronts the condescending "good, considering their disability." The single word "considering" is the hook the whole film takes apart. Provocation (section 7).
+- **AXA** "Three Words." (Publicis Conseil Paris, Cannes Direct Grand Prix and Dan Wieden Titanium Grand Prix 2025.) AXA added "and domestic violence" to a French home-insurance clause that already covered emergency relocation for fire and flood, turning a contract into a way out. The reframe of three words is the idea.
+
+---
+
+## 20. Tonal masterclasses worth studying
 
 These are not technique categories but voices to study. When asked to write in a brand voice, read these and notice the lever each uses.
 

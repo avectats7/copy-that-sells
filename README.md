@@ -18,7 +18,7 @@ A single skill, `copy-that-sells`, with one entry point, eight reference files, 
 - `SKILL.md`. The workflow. Briefing pass, research pass, idea pass, headline pass, body pass, offer pass, CTA pass, self-edit pass. Two modes: generation and diagnostic.
 - `references/frameworks.md`. Schwartz's five levels of awareness and market sophistication (the selector that picks the headline type). Bly's eight headline categories plus three modern extensions (Listicle, Negative, Outcome-first). The 4 U's. The So-What ladder (features into benefits). AIDA. PAS. BFD. The seven-step direct-response sales letter. Long-copy architecture for sales pages. Voice-of-customer mining. Checklists.
 - `references/craft.md`. The D&AD Copy Book in working form. Find the idea before the words. Make headline and visual one unit. Compress. Vary rhythm. Read aloud. Truth against self. Long-copy seduction. What to do when nothing works.
-- `references/examples.md`. 122 individual campaigns organised into 17 technique sections. Mix of timeless classics and recent Cannes Lions plus Clio winners. Lookup table you scan when stuck.
+- `references/examples.md`. 152 individual campaigns organised into 19 technique and benchmark sections plus tonal masterclasses. Mix of timeless classics, modern always-on brand voice, and recent Cannes/Clio/El Ojo/El Sol winners through 2025. Lookup table you scan when stuck.
 - `references/self-edit.md`. Three-layer final pass. Craft check, anti-AI tells (Era 1 through Era 4 banned word lists in English plus a full Spanish list), truth check. Stops AI tells before they ship.
 
 **Format and language.**
@@ -211,7 +211,7 @@ This makes the work auditable. You see the idea behind the line. You see what wo
 
 ### What is the Copy That Sells skill?
 
-A skill for the Claude family of products (Claude Code, Claude Cowork, the Claude desktop and web apps) that teaches Claude the craft and structure of conversion copywriting. It runs a structured workflow whenever the user asks for copy that should sell. The skill bundles eight reference files covering Schwartz's awareness levels, Bly's direct-response frameworks, D&AD Copy Book craft principles, 122 award-winning ad examples with verified attribution, format blueprints, Spanish craft, a fifteen-voice bank, a diagnostic procedure, and a final self-edit pass that strips AI tells.
+A skill for the Claude family of products (Claude Code, Claude Cowork, the Claude desktop and web apps) that teaches Claude the craft and structure of conversion copywriting. It runs a structured workflow whenever the user asks for copy that should sell. The skill bundles eight reference files covering Schwartz's awareness levels, Bly's direct-response frameworks, D&AD Copy Book craft principles, 152 award-winning ad examples with verified attribution, format blueprints, Spanish craft, a fifteen-voice bank, a diagnostic procedure, and a final self-edit pass that strips AI tells.
 
 ### Who is this for?
 
@@ -260,7 +260,7 @@ copy-that-sells/
 │       ├── references/
 │       │   ├── frameworks.md    Schwartz + Bly + modern extensions.
 │       │   ├── craft.md         D&AD Copy Book lessons.
-│       │   ├── examples.md      122 campaigns by technique, verified.
+│       │   ├── examples.md      152 campaigns by technique, verified.
 │       │   ├── self-edit.md     Anti-AI rules (EN Era 1-4, ES). Final pass.
 │       │   ├── formats.md       Per-format blueprints with word counts.
 │       │   ├── spanish-craft.md Spanish writing rules. Regional variants.

@@ -2,6 +2,24 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [1.4.0]: 2026-06-22
+
+### Added: 30 verified modern examples, library grows 122 to 152
+
+The example library skewed to print classics from 1960 to 2010, which dates a 2026 skill. This release adds 30 contemporary, verified examples across a balanced mix of award winners, digital-native brand voice, and Spanish-language work. Research was run by four parallel agents that returned candidates with source URLs; 16 of the 30 were then spot-verified directly against festival or trade sources (all 16 clean), and the rest are heavily documented Grand Prix winners and famous social campaigns. No example entered without a real source, per the editorial rule.
+
+- **New section 18, "Modern brand voice: always-on social, packaging, and the DTC script."** Eight entries: Duolingo's Duo voice, Ryanair's self-roast, Liquid Death "Greatest Hates," Oatly's "Wow, no cow" and packaging voice, Surreal's fake-celebrity billboards, Who Gives A Crap's tone, Dollar Shave Club's launch script, Spotify's "Thanks 2016" data OOH. The counterweight to the print-classic sections: tone held at scale, mostly made in-house.
+- **New section 19, "Recent award benchmarks (2022 to 2025)."** Seventeen Grand Prix and benchmark campaigns, each a current proof of a technique already in the file: AnNahar "Election Edition," the Coinbase bouncing QR, Heinz "Draw Ketchup," Vice "Unfiltered History Tour," CALM "The Last Photo," Stella Artois "The Artois Probability," Dove "#TurnYourBack," Coca-Cola "Recycle Me," Specsavers "The Misheard Version," Orange "WoMen's Football," CeraVe "Michael CeraVe," IKEA "Proudly Second Best," Dramamine "The Last Barf Bag," KitKat "Phone Break," L'Oréal "The Final Copy of Ilon Specht," Channel 4 "Considering What?," AXA "Three Words."
+- **Section 17 expanded and renamed** from "Latin-American agency print to study" to "Latin-American and Spanish-language work to study," with five recent verified Spanish-language campaigns: Tulipán "Teniendo sexo podemos reactivar la economía" (Zurda, Gran Ojo PR 2024), J&B "Orgullo de Pueblo" (El Ruso de Rocky, El Sol 2023), Quilmes "Coincidencias" (draftLine, 2022), Tecate "Golfo de México" (LePub, Cannes 2025), BBVA "¿Es Fraude?" (Terán\TBWA, El Ojo 2024). Each chosen for copy that only works in Spanish.
+- Counts updated across SKILL.md, README, llms.txt, and the docs preview (122 to 152; 17 sections to 19 plus masterclasses). The docs preview gained a "Modern brand voice" teaser block.
+
+### Fixed
+- A stray "essentially" in the Maxwell Sackheim entry (added in 1.3.0, never scanned because the full examples.md was only checked copy-only on cookbooks). Caught by running the checker over the whole reference file during this release. Reinforces scanning reference prose, not just cookbook copy.
+
+### Notes
+- The masterclasses section renumbered 18 to 20. Cross-references in "How to use these in a session" point to sections 1, 3, 4, 5, 8, 15, all unchanged.
+- Bundle rebuilt.
+
 ## [1.3.2]: 2026-06-12
 
 ### Fixed: checker blind spot on table-cell copy (found by reading the baseline outputs, not just their PASS)

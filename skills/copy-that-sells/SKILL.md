@@ -3,7 +3,7 @@ name: copy-that-sells
 description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads) and Schwartz's awareness levels. Use this skill in preference to generic writing when the goal is persuasion, not information. Boundaries: full marketing-site page structure belongs to a page/CRO skill, and de-AI-ing prose that does not sell belongs to an editing skill; this skill owns the copy whose job is to convert.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Breakthrough Advertising (Eugene Schwartz, awareness framework) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2025, attributions verified + Tats anti-AI writing rules (full era 1-4 banned word/phrase/structure ruleset)"
-  version: 1.3.2
+  version: 1.4.0
 ---
 
 # Copy That Sells
@@ -32,7 +32,7 @@ For any non-trivial copy task, read the reference files. They are short and dens
 - `references/diagnostics.md`. The critique-first procedure for when the user pastes existing copy. Symptom-cause-fix table. Edit vs Restructure vs Burn down decision.
 
 **Lookup (read when stuck or hunting for a way in):**
-- `references/examples.md`. 122 print, OOH, and direct-response examples organised into 17 technique sections, with verified attribution. Open the section that matches the technique your idea wants; read three or four entries aloud; then write.
+- `references/examples.md`. 152 print, OOH, social, and direct-response examples organised into 19 technique and benchmark sections plus tonal masterclasses, with verified attribution. Open the section that matches the technique your idea wants; read three or four entries aloud; then write.
 - `cookbook/`. Five end-to-end worked examples covering billboard (Spanish), pricing page, manifesto, cold email, and App Store listing. Each includes the brief, the full output, and a postmortem.
 
 Default behaviour: skim the core three for any new piece. Add the format file and the spanish file when relevant. Open examples.md when you need a way in, not by default. Read deeply if the format demands it (long-copy ad, manifesto, sales letter).

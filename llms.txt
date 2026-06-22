@@ -17,7 +17,7 @@ Core craft:
 - [skills/copy-that-sells/SKILL.md](skills/copy-that-sells/SKILL.md): the entry point. Two-mode workflow (generation + diagnostic) with briefing, research, idea, headline, body, offer, CTA, and self-edit passes.
 - [skills/copy-that-sells/references/frameworks.md](skills/copy-that-sells/references/frameworks.md): Schwartz's 5 awareness levels and market sophistication, Bly's 8 headline categories plus 3 modern extensions (Listicle, Negative, Outcome-first), 4 U's, So-What ladder, AIDA, PAS, BFD, 7-step direct-response letter, long-copy architecture.
 - [skills/copy-that-sells/references/craft.md](skills/copy-that-sells/references/craft.md): D&AD Copy Book lessons.
-- [skills/copy-that-sells/references/examples.md](skills/copy-that-sells/references/examples.md): 122 campaigns organised across 17 technique sections.
+- [skills/copy-that-sells/references/examples.md](skills/copy-that-sells/references/examples.md): 152 campaigns organised across 19 technique and benchmark sections plus tonal masterclasses, through 2025.
 - [skills/copy-that-sells/references/self-edit.md](skills/copy-that-sells/references/self-edit.md): three-layer final pass. Craft check, anti-AI tells (English Era 1 to 4 plus full Spanish list), truth check.
 
 Format and language:
