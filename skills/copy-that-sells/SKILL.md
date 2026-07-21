@@ -1,9 +1,9 @@
 ---
 name: copy-that-sells
-description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads) and Schwartz's awareness levels. Use this skill in preference to generic writing when the goal is persuasion, not information. Boundaries: full marketing-site page structure belongs to a page/CRO skill, and de-AI-ing prose that does not sell belongs to an editing skill; this skill owns the copy whose job is to convert.
+description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft with Bly direct-response frameworks and Schwartz awareness levels. Prefer this over generic writing when the goal is persuasion, not information. Not for long-form articles or blog posts (use a content skill), nor for de-AI-ing prose that does not sell (use an editing skill); this skill owns the copy whose job is to convert.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Breakthrough Advertising (Eugene Schwartz, awareness framework) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2025, attributions verified + Tats anti-AI writing rules (full era 1-4 banned word/phrase/structure ruleset)"
-  version: 2.0.2
+  version: 2.0.3
 ---
 
 # Copy That Sells

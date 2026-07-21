@@ -2,6 +2,15 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [2.0.3]: 2026-07-21
+
+Maintenance release. No change to what the skill writes. Buys headroom in the frontmatter `description` so a future edit cannot silently exceed the field's hard limit.
+
+### Changed: trimmed the `description` to sit well under the 1024-char cap
+
+- The `description` was 1009 / 1024 characters — 15 from the limit, one edit away from truncation or a load failure. Rewrote it to 891 characters (133 headroom) with all 13 trigger phrases preserved. Cut only non-routing filler: the framework parentheticals (still in `metadata.source`) and the redundant page/CRO boundary clause, folding the "not for" guidance into a tighter line that mirrors the "What This Skill Is Not For" section.
+- Bundle rebuilt to match source.
+
 ## [2.0.2]: 2026-07-21
 
 Maintenance release. The repo's tooling is now a single language: the last three shell scripts are ported to Python, so nothing but the GitHub Actions workflow is non-Python. No change to what the skill writes.
