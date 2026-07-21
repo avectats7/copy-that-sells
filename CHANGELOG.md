@@ -2,6 +2,27 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [2.0.0]: 2026-07-21
+
+### Added: automated validation, format templates, and a runnable test suite
+
+This release keeps the full 1.4 workflow and reference library intact and adds a tooling layer on top. Nothing was removed; the 152-example library, Spanish craft, voice bank, diagnostics, and cookbook all stay.
+
+- **`scripts/validate.py`.** A static copy validator. Flags banned phrases, corporate jargon, unproven superlatives, passive voice, missing specificity, and over-length headlines, and prints an Anti-AI Score out of 10. Wired into the Self-Edit Pass as an optional backstop; `references/self-edit.md` remains the authority.
+- **`templates/`.** Fill-in scaffolds for the six most-requested formats: headline, tagline, billboard, landing-page, email, manifesto. `references/formats.md` stays the deeper per-format reference.
+- **`references/anti-ai-rules.md`.** A quick anti-AI companion to `self-edit.md`: banned-phrase families plus a plain-English swap table (leverage → use, unlock → open).
+- **`references/swipe-file.md`.** A short, format-tagged swipe file for a fast pattern hit without opening the full examples library.
+- **`examples/`.** A worked brand brief and its output variations.
+- **`tests/validation-tests.md` + `tests/run-tests.sh`.** Ten cases covering the validator, with an executable runner that asserts each score threshold and exits non-zero on drift.
+
+### Fixed: the validator's scoring was too lenient to be useful
+
+The scoring model capped each category's penalty, so stacking four banned phrases cost the same flat −2 as one, and obvious AI slop ("In today's fast-paced world, our cutting-edge solution leverages AI to unlock your potential") scored 7/10. Deductions now scale with the number of violations; that same line scores 4/10 and heavier slop drops to 2–3. Added two missed tells: hype clichés ("change your life," "transform your life") and the puffery adjective "innovative." All ten bundled tests now pass against the corrected validator.
+
+### Notes
+- Files live inside `skills/copy-that-sells/` so the plugin and the built `.skill` bundle pick them up. Bundle rebuilt.
+- Bumped to 2.0.0 in `plugin.json` and `SKILL.md` metadata.
+
 ## [1.4.0]: 2026-06-22
 
 ### Added: 30 verified modern examples, library grows 122 to 152

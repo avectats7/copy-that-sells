@@ -27,6 +27,9 @@ BANNED_PHRASES = [
     "in the event that", "with regard to", "in reference to", "per se",
     "aforementioned", "heretofore", "henceforth", "therein", "thereof",
     "wherein", "whereby", "notwithstanding", "irregardless",
+    # Hype clichés — the promise-everything, prove-nothing family.
+    "change your life", "will change your life", "transform your life",
+    "life-changing", "change everything", "changes everything",
 ]
 
 PASSIVE_PATTERNS = [
@@ -53,7 +56,7 @@ VAGUE_SUPERLATIVES = [
     "best", "greatest", "ultimate", "perfect", "amazing", "incredible",
     "awesome", "fantastic", "unbelievable", "extraordinary", "phenomenal",
     "outstanding", "exceptional", "remarkable", "miraculous", "revolutionary",
-    "groundbreaking",
+    "groundbreaking", "innovative",
 ]
 
 
@@ -125,11 +128,20 @@ def check_headline_length(text: str, fmt: str) -> Tuple[bool, str]:
 
 
 def calculate_anti_ai_score(results: dict) -> int:
+    """Deductions scale with the NUMBER of violations, not just their presence.
+    Four banned phrases must cost more than one — otherwise stacked slop
+    scores the same as a single slip and the validator rubber-stamps it."""
     score = 10
-    if not results["banned_phrases"][0]: score -= 2
-    if not results["passive_voice"][0]: score -= 1
-    if not results["jargon"][0]: score -= 2
-    if not results["vague_superlatives"][0]: score -= 1
+    # Banned phrases are the loudest AI-tell: -2 for the first, -1 each after.
+    banned = results["banned_phrases"][1]
+    if banned:
+        score -= 2 + (len(banned) - 1)
+    # Jargon and vague superlatives: -1 per distinct offender.
+    score -= len(results["jargon"][1])
+    score -= len(results["vague_superlatives"][1])
+    # Passive voice: -1 per hit (detection already caps the list at 5).
+    score -= len(results["passive_voice"][1])
+    # Structural misses: flat -1 each.
     if not results["specificity"][0]: score -= 1
     if not results["headline_length"][0]: score -= 1
     return max(1, score)

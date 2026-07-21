@@ -3,7 +3,7 @@ name: copy-that-sells
 description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads) and Schwartz's awareness levels. Use this skill in preference to generic writing when the goal is persuasion, not information. Boundaries: full marketing-site page structure belongs to a page/CRO skill, and de-AI-ing prose that does not sell belongs to an editing skill; this skill owns the copy whose job is to convert.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Breakthrough Advertising (Eugene Schwartz, awareness framework) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2025, attributions verified + Tats anti-AI writing rules (full era 1-4 banned word/phrase/structure ruleset)"
-  version: 1.4.0
+  version: 2.0.0
 ---
 
 # Copy That Sells
@@ -33,7 +33,12 @@ For any non-trivial copy task, read the reference files. They are short and dens
 
 **Lookup (read when stuck or hunting for a way in):**
 - `references/examples.md`. 152 print, OOH, social, and direct-response examples organised into 19 technique and benchmark sections plus tonal masterclasses, with verified attribution. Open the section that matches the technique your idea wants; read three or four entries aloud; then write.
+- `references/swipe-file.md`. A shorter, format-tagged swipe file for a fast hit when you want two or three proven patterns without opening the full examples library.
+- `references/anti-ai-rules.md`. The quick anti-AI companion to `self-edit.md`: banned-phrase families and a plain-English swap table (leverage → use, unlock → open, seamless → easy). Use it to fix a flagged line fast; `self-edit.md` stays the canonical, era-organised ruleset.
 - `cookbook/`. Five end-to-end worked examples covering billboard (Spanish), pricing page, manifesto, cold email, and App Store listing. Each includes the brief, the full output, and a postmortem.
+
+**Templates (optional scaffolds, not straitjackets):**
+- `templates/`. Fill-in blueprints for the six most-requested formats: `headline.md`, `tagline.md`, `billboard.md`, `landing-page.md`, `email.md`, `manifesto.md`. Reach for one when you want a fast structural start; the workflow above still governs. `references/formats.md` remains the deeper per-format reference (word counts, hook banks, RSA and App Store specifics).
 
 Default behaviour: skim the core three for any new piece. Add the format file and the spanish file when relevant. Open examples.md when you need a way in, not by default. Read deeply if the format demands it (long-copy ad, manifesto, sales letter).
 
@@ -233,6 +238,16 @@ Always do this before you ship. See `references/self-edit.md` for the full check
 4. Strip the AI tells. Bly's principle was "write the way you talk." The anti-AI rules in `references/self-edit.md` make this concrete: no "delve," no "robust," no "leverage," no "unlock," no dashes as clause connectors (the testimonial attribution dash is the one exception), no invented compound hyphens (standard dictionary compounds like "money-back guarantee" keep theirs), no rule-of-three by default, no "in today's world." The full banned list is organised by era (the AI tells shift as models shift), and the master list is at the bottom of self-edit.md for a quick scan.
 5. Check the promise survives. Does the reader, after reading once, know what is on offer and why it matters to them? If not, you have decorated, not sold.
 6. Verify every claim. Never invent numbers, testimonials, or proofs.
+
+### Automated check (optional backstop, not a substitute for reading aloud)
+
+When a Python runtime is available, run the shippable copy through the validator before you hand it over:
+
+```bash
+python3 scripts/validate.py "Your headline or line here" --format headline
+```
+
+It flags banned phrases, corporate jargon, unproven superlatives, passive voice, missing specificity, and over-length headlines, and prints an Anti-AI Score out of 10. Treat it as a smoke alarm, not a judge: a high score does not make weak copy good, and it scans one line at a time (pass the headline, then key lines), not whole paragraphs. Formats accept `headline`, `billboard`, `ooh`, `tagline`, `digital`, `general`. The `tests/` folder documents its behaviour; `./tests/run-tests.sh` proves the scoring still holds. `references/self-edit.md` remains the authority; the script only catches the obvious tells before they ship.
 
 ---
 
