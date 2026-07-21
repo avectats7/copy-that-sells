@@ -1,190 +1,85 @@
-# Anti-AI Writing Rules — Expanded Reference
+# Anti-AI Quick Fixes
 
-## The Philosophy
-AI writing has a smell. It uses certain words, structures, and rhythms that human copywriters avoid. This reference helps you identify and eliminate AI-tells from your copy.
+The fast-fix companion to `self-edit.md`. When a line trips the banned-word check, or just smells like a model wrote it, this is how you fix it in one pass.
 
-## Banned Phrases (Auto-reject)
+This file is deliberately **not** a banned-word list. Two places own that, and a third hand-kept copy would only drift from them:
 
-These phrases are instant giveaways. Never use them.
+- **`references/self-edit.md`** — the canonical prose ruleset: English Era 1 to 4, the full Spanish list, structural patterns, and the quick-reference master lists. This is the authority.
+- **`references/banned-patterns.txt`** — the machine-readable list the scorer (`scripts/validate.py`) and the CI checker (`evals/check_banned_words.py`) both read. New words go here.
 
-### The "Today's World" Family
-- "In today's fast-paced world..."
-- "In today's competitive landscape..."
-- "In today's ever-changing environment..."
-- "In an era of unprecedented change..."
-- "As we navigate these uncertain times..."
-- "In the modern digital age..."
+Use this file for the move you make *after* something is flagged: the human word that replaces the AI one, the shape that replaces the AI shape.
 
-### The "Unlock" Family
-- "Unlock your potential"
-- "Unlock new possibilities"
-- "Unlock the power of..."
-- "Unlock hidden benefits"
-- "Unlock a world of..."
+## The swap table
 
-### The "Leverage" Family
-- "Leverage our expertise"
-- "Leverage cutting-edge technology"
-- "Leverage data-driven insights"
-- "Leverage best practices"
-- "Leverage synergies"
+The tell is on the left. The right column is a starting point; the exact word depends on the sentence.
 
-### The "Delve" Family
-- "Delve into"
-- "Delve deeper"
-- "Let's delve into..."
-- "Delving into the details"
+| AI word | Say instead |
+|---|---|
+| leverage | use, put to work, wield |
+| utilize | use |
+| optimize | fix, tune, make faster |
+| empower | let, give you the tools to |
+| unlock | open, get, reach |
+| delve into | dig into, look at |
+| seamless | easy, smooth, no setup |
+| robust | solid, holds up, tested |
+| revolutionary | new, different, first |
+| transformative | changes how you work |
+| holistic | complete, end to end |
+| streamline | speed up, cut steps |
+| drive (growth) | grow, push, add |
+| harness | use, tap |
+| synergy | working together |
+| bandwidth (figurative) | time, room |
+| actionable insights | what to do next |
+| deep dive | the detail, a closer look |
+| move the needle | change the number, matter |
+| circle back | follow up, come back to it |
+| at the end of the day | in the end, what matters is |
+| going forward | from now on, next |
 
-### The "Seamless" Family
-- "Seamless experience"
-- "Seamless integration"
-- "Seamless transition"
-- "Seamless solution"
-- "Seamlessly integrates"
+Spanish swaps live in `spanish-craft.md`; the logic is the same (potenciar → mejorar or hacer crecer, aprovechar → usar, optimizar → afinar).
 
-### The "Revolutionary" Family
-- "Revolutionary"
-- "Game-changing"
-- "Transformative"
-- "Groundbreaking"
-- "Disruptive" (unless you are actually disrupting)
-- "Cutting-edge"
-- "State-of-the-art"
-- "Next-generation"
-- "Future-proof"
+## Structural fixes (before, after)
 
-### The "Empower" Family
-- "Empower"
-- "Empowering"
-- "Empowerment"
-- "Empower your team"
-- "Empower your business"
+The banned-word check catches vocabulary. These are the shapes that read as AI even when every word is clean. `self-edit.md` lists them; here is how each one looks fixed.
 
-### The "Optimize" Family
-- "Optimize your workflow"
-- "Optimize performance"
-- "Optimize efficiency"
-- "Optimization"
+### Passive to active
+- AI: The product is designed to save time.
+- Human: We built this to save you time.
 
-### The "Holistic" Family
-- "Holistic approach"
-- "Holistic solution"
-- "Holistic strategy"
-- "360-degree view"
+### Adjective pile to one strong adjective (or a fact)
+- AI: our innovative, cutting-edge, reliable solution
+- Human: the only mattress tested 10,000 times before it ships
 
-### The "Drive" Family
-- "Drive innovation"
-- "Drive results"
-- "Drive engagement"
-- "Drive growth"
-- "Drive success"
+### Abstract to concrete
+- AI: our commitment to excellence drives outcomes
+- Human: we test every unit 10,000 times before it leaves the factory
 
-### The "Journey" Family
-- "Your journey to..."
-- "Begin your journey"
-- "Embark on a journey"
-- "Journey towards"
+### Hedge to commitment
+- AI: this may help you potentially get better results
+- Human: fall asleep in 8 minutes or your money back
 
-### Corporate Fluff
-- "Synergy"
-- "Paradigm shift"
-- "Move the needle"
-- "Circle back"
-- "Think outside the box"
-- "Low-hanging fruit"
-- "Boil the ocean"
-- "Run it up the flagpole"
-- "Bandwidth"
-- "Synergize"
-- "Deep dive"
-- "Actionable insights"
-- "Moving forward"
-- "Going forward"
-- "At the end of the day"
-- "Let's be honest"
-- "It goes without saying"
-- "Needless to say"
-- "Without further ado"
+### List of adjectives to varied rhythm
+- AI: innovative, reliable, and scalable
+- Human: It works. It lasts. It does not break.
 
-## Structural AI-Tells
+### Generic opener to specific hook
+- AI: In today's world, businesses face many challenges.
+- Human: Your competitor just took your best customer.
 
-### 1. Passive Voice
-AI loves passive voice. It sounds "professional" but it's weak.
-- ❌ "The product is designed to..."
-- ✅ "We built this to..."
+## Three fast tests
 
-### 2. Adjective Overload
-AI piles on adjectives. One strong adjective beats three weak ones.
-- ❌ "Our innovative, cutting-edge, revolutionary solution..."
-- ✅ "The only mattress that..."
+### The So-What test
+Ask "so what?" three times. Each answer digs one level closer to the reason a person actually acts.
+- Line: Our software streamlines your workflow.
+- So what? You save time.
+- So what? You get home for dinner.
+- So what? Your kids remember what you look like.
+- Rewrite: Be home for dinner. Two hours back, every day.
 
-### 3. Abstract Nouns
-AI loves abstract concepts. Humans love concrete specifics.
-- ❌ "Our commitment to excellence drives transformative outcomes."
-- ✅ "We test every mattress 10,000 times before it leaves the factory."
+### The read-aloud test
+Say it out loud. Stumble over a word, cut it. Sounds like a press release, rewrite it. Would not say it to a friend, change it.
 
-### 4. Hedging Language
-AI hedges to avoid being wrong. Copywriters commit.
-- ❌ "This may help you potentially achieve better results."
-- ✅ "Fall asleep in 8 minutes or your money back."
-
-### 5. List-Heavy Structure
-AI loves bulleted lists with parallel structure. Humans vary their rhythm.
-- ❌ "Our product is: innovative, reliable, and scalable."
-- ✅ "It works. It lasts. It doesn't break."
-
-### 6. Generic Openers
-AI starts with generic observations.
-- ❌ "In today's world, businesses face many challenges."
-- ✅ "Your competitor just stole your best customer."
-
-## Human Alternatives
-
-| AI Phrase | Human Alternative |
-|-----------|-------------------|
-| "Leverage" | "Use", "Wield", "Put to work" |
-| "Optimize" | "Fix", "Improve", "Make better" |
-| "Empower" | "Give you the tools to", "Let you" |
-| "Unlock" | "Open", "Get", "Access" |
-| "Delve" | "Look at", "Dig into", "Explore" |
-| "Seamless" | "Easy", "Smooth", "No hassle" |
-| "Revolutionary" | "Different", "New", "Actually works" |
-| "Transformative" | "Changes everything", "Makes a real difference" |
-| "Holistic" | "Complete", "Full", "All-in" |
-| "Drive" | "Push", "Move", "Get" |
-| "Synergy" | "Working together", "Teamwork" |
-| "Bandwidth" | "Time", "Capacity", "Room" |
-| "Actionable insights" | "What to do next", "Clear next steps" |
-| "Deep dive" | "Look closer", "The details", "What's really going on" |
-| "Move the needle" | "Make a difference", "Actually change something" |
-| "Circle back" | "Follow up", "Get back to you" |
-| "Think outside the box" | "Be creative", "Try something new" |
-| "Low-hanging fruit" | "Easy wins", "Quick fixes" |
-| "At the end of the day" | "Ultimately", "What matters is" |
-| "Going forward" | "From now on", "Next" |
-
-## The "So What?" Test
-
-For every headline, ask "So what?" three times.
-
-**Example:**
-- Headline: "Our software streamlines your workflow."
-- So what? "You save time."
-- So what? "You get home for dinner."
-- So what? "Your kids remember what you look like."
-
-**Better headline:** "Be home for dinner. Our software gives you 2 hours back every day."
-
-## The Read-Aloud Test
-
-Read your copy out loud. If you:
-- Stumble over a word → Cut it.
-- Sound like a press release → Rewrite it.
-- Wouldn't say this to a friend → Change it.
-- Feel embarrassed → That's your gut talking. Listen.
-
-## The 1995 Test
-
-Would this copy work in 1995? If not, it's probably riding a trend that will date it.
-- ❌ "AI-powered blockchain solution" — trendy, dated
-- ✅ "The pen that never leaks" — timeless
+### The 1995 test
+Would the line still work in 1995? If it only makes sense riding a trend ("AI-powered blockchain platform"), it will date. "The pen that never leaks" will not.

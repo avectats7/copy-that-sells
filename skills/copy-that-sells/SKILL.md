@@ -34,7 +34,7 @@ For any non-trivial copy task, read the reference files. They are short and dens
 **Lookup (read when stuck or hunting for a way in):**
 - `references/examples.md`. 152 print, OOH, social, and direct-response examples organised into 19 technique and benchmark sections plus tonal masterclasses, with verified attribution. Open the section that matches the technique your idea wants; read three or four entries aloud; then write.
 - `references/swipe-file.md`. A shorter, format-tagged swipe file for a fast hit when you want two or three proven patterns without opening the full examples library.
-- `references/anti-ai-rules.md`. The quick anti-AI companion to `self-edit.md`: banned-phrase families and a plain-English swap table (leverage → use, unlock → open, seamless → easy). Use it to fix a flagged line fast; `self-edit.md` stays the canonical, era-organised ruleset.
+- `references/anti-ai-rules.md`. The quick anti-AI companion to `self-edit.md`: a plain-English swap table (leverage → use, unlock → open, seamless → easy), before/after structural fixes, and three fast tests (So-What, read-aloud, 1995). Use it to fix a flagged line fast. It is not a banned list — `self-edit.md` (prose) and `references/banned-patterns.txt` (machine) own that, so this file cannot drift from them.
 - `cookbook/`. Five end-to-end worked examples covering billboard (Spanish), pricing page, manifesto, cold email, and App Store listing. Each includes the brief, the full output, and a postmortem.
 
 **Templates (optional scaffolds, not straitjackets):**
