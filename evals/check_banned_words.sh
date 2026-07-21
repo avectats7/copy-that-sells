@@ -52,134 +52,44 @@ for arg in "$@"; do
 done
 
 # ---------------------------------------------------------------------------
-# Banned lists. Subsets of references/self-edit.md, weighted toward the
-# patterns that actually show up in regressions. The full list lives in the
-# reference file; this checker is the tripwire, not the law.
+# Banned lists. Loaded from the single source of truth shared with the Python
+# scorer (skills/copy-that-sells/scripts/validate.py) so the two tools can
+# never drift apart. The full prose ruleset lives in references/self-edit.md;
+# this checker is the tripwire, not the law.
+#
+# From the shared file this gate loads the hard-fail categories: banned and
+# jargon (by language) plus opener. It deliberately does NOT load superlative
+# ("best", "amazing") — those are legitimate copy WITH proof nearby, a call the
+# scorer makes by proximity and bash cannot.
 # ---------------------------------------------------------------------------
 
-EN_BANNED=(
-  "additionally"
-  "align with"
-  "at its core"
-  "beacon"
-  "bolster(s|ed|ing)?"
-  "captivat(e|es|ed|ing)"
-  "comprehensive"
-  "crucial"
-  "cutting.edge"
-  "delicate dance"
-  "delicate balance"
-  "delv(e|es|ed|ing) into"
-  "dynamic"
-  "embark on"
-  "empower(s|ed|ing|ment)?"
-  "emphasi[sz]ing"
-  "enduring"
-  "enhanc(e|es|ed|ing)"
-  "essentially"
-  "ever.evolving"
-  "foster(s|ed|ing)?"
-  "fundamentally"
-  "game.changer"
-  "garner"
-  "groundbreaking"
-  "harness(es|ed|ing)?"
-  "highlighting"
-  "holistic"
-  "i'?d be remiss"
-  "in essence"
-  "in many ways"
-  "in today's (fast.paced )?world"
-  "intricate"
-  "intricacies"
-  "landscape of"
-  "leverag(e|es|ed|ing)"
-  "meticulous(ly)?"
-  "multifaceted"
-  "navigate the"
-  "noteworthy"
-  "paramount"
-  "pave the way"
-  "pivotal"
-  "realm of"
-  "revolutionary"
-  "robust"
-  "seamless(ly)?"
-  "showcas(e|es|ed|ing)"
-  "spearhead(s|ed|ing)?"
-  "streamline(s|d)?"
-  "synergy"
-  "tapestry"
-  "testament to"
-  "the beauty of (it|this)"
-  "the reality is"
-  "the truth is"
-  "transformative"
-  "underscore(s|d)?"
-  "unleash(es|ed|ing)?"
-  "unlock(s|ed|ing)? the (potential|power)"
-  "unlock(s|ed|ing)? your"
-  "utiliz(e|es|ed|ing)"
-  "vibrant"
-)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PATTERNS_FILE="${PATTERNS_FILE:-$SCRIPT_DIR/../skills/copy-that-sells/references/banned-patterns.txt}"
 
-ES_BANNED=(
-  "potencia(r|do|ndo)"
-  "robust[oa]s?"
-  "fomenta(r|ndo)"
-  "óptim[oa]"
-  "innovador[ae]?s?"
-  "transforma(r|ndo)"
-  "empodera(r|ndo|miento)"
-  "sinergi(a|as)"
-  "aprovechar al máximo"
-  "maximiza(r|ndo)"
-  "optimiza(r|ndo|ción)"
-  "holístic[oa]"
-  "vibrante"
-  "cautiva(r|dor)"
-  "apasionante"
-  "revolucionari[oa]"
-  "disruptiv[oa]"
-  "trascendental"
-  "trascender"
-  "multifacétic[oa]"
-  "apuntala(r|miento)"
-  "implementar"
-  "llevar a cabo"
-  "posibilita(r|ndo)"
-  "facilita(r|ndo)"
-  "materializa(r|ndo)"
-  "plasma(r|ndo)"
-  "en el mundo actual"
-  "en la era digital"
-  "hoy en día"
-  "en la actualidad"
-  "en el dinámico mundo"
-  "más que nunca"
-  "cabe destacar"
-  "vale la pena (señalar|mencionar)"
-  "en conclusión"
-  "en definitiva"
-  "en última instancia"
-  "al final del día"
-  "desbloque(a|á)(r|s)?"
-  "libera(r|á) el poder"
-  "marca(r|á) la diferencia"
-  "construi(r|í) el futuro"
-  "súmate al cambio"
-  "sumate a la revolución"
-  "no es (sólo|solo) .+, es"
-  "no se trata de .+, sino"
-)
+EN_BANNED=()
+ES_BANNED=()
+OPENERS=()
 
-OPENERS=(
-  "great question"
-  "absolutely[!.]"
-  "certainly[!.]"
-  "of course[!.]"
-  "happy to help"
-)
+if [[ ! -f "$PATTERNS_FILE" ]]; then
+  echo "error: shared pattern file not found: $PATTERNS_FILE" >&2
+  exit 2
+fi
+
+while read -r lang cat pat; do
+  [[ -z "${lang:-}" || "${lang:0:1}" == "#" ]] && continue
+  [[ -z "${pat:-}" ]] && continue
+  case "$cat" in
+    opener) OPENERS+=("$pat") ;;
+    banned|jargon)
+      if [[ "$lang" == "en" ]]; then
+        EN_BANNED+=("$pat")
+      elif [[ "$lang" == "es" ]]; then
+        ES_BANNED+=("$pat")
+      fi
+      ;;
+    superlative) : ;;  # proof-gated; the scorer handles these, not this gate.
+  esac
+done < "$PATTERNS_FILE"
 
 # ---------------------------------------------------------------------------
 # Helpers

@@ -1,0 +1,211 @@
+# banned-patterns.txt — single source of truth for banned copy patterns.
+#
+# One place both tools read so their lists can never drift apart again:
+#   - scripts/validate.py        (Python scorer; reads banned + jargon + superlative)
+#   - ../../../evals/check_banned_words.sh  (bash gate; reads banned + jargon + opener)
+#
+# Format, one rule per line:   LANG  CATEGORY  PATTERN
+#   LANG      en | es
+#   CATEGORY  banned | jargon | superlative | opener
+#   PATTERN   an ERE (extended regex). May contain spaces; everything after the
+#             second whitespace run is the pattern, so bash `read -r a b rest`
+#             and Python `split(None, 2)` both parse it without a delimiter that
+#             collides with regex alternation (|).
+# Lines starting with # and blank lines are ignored.
+#
+# CATEGORY semantics:
+#   banned       Hard AI-tell. Shell fails on it; scorer deducts heavily.
+#   jargon       Corporate/AI word that can appear in prose. Shell fails on it
+#                (it only ever scans curated copy); scorer deducts lightly.
+#   superlative  Puffery that is legitimate WITH proof nearby ("best" + a stat).
+#                Scorer proof-gates it; the shell gate does NOT load it, because
+#                proof-gated superlatives are valid copy and bash cannot judge
+#                proximity of proof.
+#   opener       Sycophantic chat opener. Shell only; irrelevant to ad copy.
+#
+# The prose authority remains references/self-edit.md (EN era 1-4 + ES). This
+# file is the machine-readable tripwire distilled from it.
+
+# ---------------------------------------------------------------------------
+# English — banned (heavy)
+# ---------------------------------------------------------------------------
+en  banned  in today's (fast.paced )?world
+en  banned  in today's competitive landscape
+en  banned  in an era of
+en  banned  in the ever.evolving landscape
+en  banned  as we navigate
+en  banned  at its core
+en  banned  at the forefront of
+en  banned  align with
+en  banned  delicate dance
+en  banned  delicate balance
+en  banned  delv(e|es|ed|ing) into
+en  banned  embark on
+en  banned  ever.evolving
+en  banned  i'?d be remiss
+en  banned  in essence
+en  banned  in many ways
+en  banned  landscape of
+en  banned  navigate the
+en  banned  pave the way
+en  banned  realm of
+en  banned  testament to
+en  banned  the beauty of (it|this)
+en  banned  the reality is
+en  banned  the truth is
+en  banned  unlock(s|ed|ing)? the (potential|power)
+en  banned  unlock(s|ed|ing)? your
+en  banned  harness the power of
+en  banned  optimize your workflow
+en  banned  drive (innovation|results|growth|engagement|success)
+en  banned  change your life
+en  banned  transform your life
+en  banned  life.changing
+en  banned  change(s)? everything
+en  banned  cutting.edge
+en  banned  game.changer
+en  banned  game.changing
+en  banned  next.level
+en  banned  best.in.class
+en  banned  world.class
+en  banned  industry.leading
+en  banned  state.of.the.art
+en  banned  paradigm shift
+en  banned  deep dive
+en  banned  actionable insights
+en  banned  mov(e|ing) the needle
+en  banned  circle back
+en  banned  think outside the box
+en  banned  low.hanging fruit
+en  banned  boil the ocean
+en  banned  core competenc(y|ies)
+en  banned  revolutionary
+en  banned  transformative
+en  banned  groundbreaking
+en  banned  innovative
+en  banned  seamless(ly)?
+en  banned  disruptiv(e|ely)
+en  banned  unleash(es|ed|ing)?
+
+# ---------------------------------------------------------------------------
+# English — jargon (light)
+# ---------------------------------------------------------------------------
+en  jargon  additionally
+en  jargon  beacon
+en  jargon  bolster(s|ed|ing)?
+en  jargon  captivat(e|es|ed|ing)
+en  jargon  comprehensive
+en  jargon  crucial
+en  jargon  dynamic
+en  jargon  empower(s|ed|ing|ment)?
+en  jargon  emphasi[sz]ing
+en  jargon  enduring
+en  jargon  enhanc(e|es|ed|ing)
+en  jargon  essentially
+en  jargon  foster(s|ed|ing)?
+en  jargon  fundamentally
+en  jargon  garner
+en  jargon  harness(es|ed|ing)?
+en  jargon  highlighting
+en  jargon  holistic
+en  jargon  intricate
+en  jargon  intricacies
+en  jargon  leverag(e|es|ed|ing)
+en  jargon  meticulous(ly)?
+en  jargon  multifaceted
+en  jargon  noteworthy
+en  jargon  paramount
+en  jargon  pivotal
+en  jargon  robust
+en  jargon  showcas(e|es|ed|ing)
+en  jargon  spearhead(s|ed|ing)?
+en  jargon  streamline(s|d)?
+en  jargon  synergy
+en  jargon  synergiz(e|es|ed|ing)
+en  jargon  tapestry
+en  jargon  underscore(s|d)?
+en  jargon  utiliz(e|es|ed|ing)
+en  jargon  vibrant
+
+# ---------------------------------------------------------------------------
+# English — superlative (proof-gated; scorer only)
+# ---------------------------------------------------------------------------
+en  superlative  best
+en  superlative  greatest
+en  superlative  ultimate
+en  superlative  perfect
+en  superlative  amazing
+en  superlative  incredible
+en  superlative  awesome
+en  superlative  fantastic
+en  superlative  unbelievable
+en  superlative  extraordinary
+en  superlative  phenomenal
+en  superlative  outstanding
+en  superlative  exceptional
+en  superlative  remarkable
+en  superlative  miraculous
+
+# ---------------------------------------------------------------------------
+# English — openers (shell only)
+# ---------------------------------------------------------------------------
+en  opener  great question
+en  opener  absolutely[!.]
+en  opener  certainly[!.]
+en  opener  of course[!.]
+en  opener  happy to help
+
+# ---------------------------------------------------------------------------
+# Spanish — banned (heavy): hype verbs, hype adjectives, dated openers, clichés
+# ---------------------------------------------------------------------------
+es  banned  potencia(r|do|ndo)|potenciá
+es  banned  innovador[ae]?s?
+es  banned  transforma(r|ndo)|transformá
+es  banned  empodera(r|ndo|miento)
+es  banned  sinergi(a|as)
+es  banned  aprovech(ar|á) al máximo
+es  banned  optimiza(r|ndo|ción)|optimizá
+es  banned  maximiza(r|ndo)|maximizá
+es  banned  holístic[oa]
+es  banned  revolucionari[oa]
+es  banned  disruptiv[oa]
+es  banned  trascendental
+es  banned  trascender
+es  banned  multifacétic[oa]
+es  banned  en el mundo actual
+es  banned  en la era digital
+es  banned  hoy en día
+es  banned  en la actualidad
+es  banned  en el dinámico mundo
+es  banned  más que nunca
+es  banned  cabe destacar
+es  banned  vale la pena (señalar|mencionar)
+es  banned  en conclusión
+es  banned  en definitiva
+es  banned  en última instancia
+es  banned  al final del día
+es  banned  desbloque(a|á)(r|s)?
+es  banned  libera(r|á) el poder
+es  banned  marca(r|á) la diferencia
+es  banned  construi(r|í) el futuro
+es  banned  súmate al cambio
+es  banned  sumate a la revolución
+es  banned  no es (sólo|solo) .+, es
+es  banned  no se trata de .+, sino
+
+# ---------------------------------------------------------------------------
+# Spanish — jargon (light): softer corporate verbs and puffery adjectives
+# ---------------------------------------------------------------------------
+es  jargon  robust[oa]s?
+es  jargon  óptim[oa]
+es  jargon  fomenta(r|ndo)
+es  jargon  vibrante
+es  jargon  cautiva(r|dor)
+es  jargon  apasionante
+es  jargon  apuntala(r|miento)
+es  jargon  implementar
+es  jargon  llevar a cabo
+es  jargon  posibilita(r|ndo)
+es  jargon  facilita(r|ndo)
+es  jargon  materializa(r|ndo)
+es  jargon  plasma(r|ndo)

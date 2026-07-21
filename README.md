@@ -275,7 +275,8 @@ copy-that-sells/
 │       │   ├── voice-bank.md    Fifteen voices with samples.
 │       │   ├── diagnostics.md   Critique-first procedure.
 │       │   ├── anti-ai-rules.md Quick anti-AI swap table (companion to self-edit).
-│       │   └── swipe-file.md    Short format-tagged swipe file.
+│       │   ├── swipe-file.md    Short format-tagged swipe file.
+│       │   └── banned-patterns.txt  Shared EN+ES banned list; both checkers read it.
 │       ├── templates/          Fill-in scaffolds for six formats.
 │       │   ├── headline.md
 │       │   ├── tagline.md

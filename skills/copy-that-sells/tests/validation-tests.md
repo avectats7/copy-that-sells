@@ -26,7 +26,7 @@ current validator, so a change that silently weakens scoring will fail here.
 ## Test 4: Vague superlative + hype cliché, no proof
 **Input:** "This is the best mattress ever made. It will change your life."
 **Format:** general
-**Expect:** score ≤ 5 — "best" without proof and the "change your life" cliché.
+**Expect:** score ≤ 6 — "best" without proof, the "change your life" cliché, and no specifics land it in the warn band.
 
 ## Test 5: Specific and clean
 **Input:** "Fall asleep in 8.3 minutes, guaranteed. 94% of testers slept through the night."

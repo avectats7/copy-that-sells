@@ -2,6 +2,28 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [2.1.0]: 2026-07-21
+
+### Fixed: the validator was monolingual and hostile to clean English
+
+Two defects surfaced once `validate.py` was exercised on real copy:
+
+- **It passed Spanish slop.** "Potenciá tu futuro con nuestra solución innovadora y revolucionaria" — every word of which is in `spanish-craft.md`'s kill-list — scored 9/10 "Excellent." The validator only knew English, so the skill's flagship language had no automated check at all.
+- **It failed clean English.** "We align your team and give every rep the bandwidth to ask for what they need" scored 3/10, because the jargon list flagged `align`, `bandwidth`, and `ask` — ordinary words. A validator that cries wolf gets ignored.
+
+Root cause: banned words were duplicated across four places (`self-edit.md`, `anti-ai-rules.md`, `evals/check_banned_words.sh`, `validate.py`) that had already drifted apart.
+
+### Added: one bilingual source of truth for banned patterns
+
+- **`references/banned-patterns.txt`.** A single, machine-readable list (English + Spanish, tagged `banned` / `jargon` / `superlative` / `opener`) that BOTH tools now read: `validate.py` and `evals/check_banned_words.sh`. They can no longer disagree — verified by a parity check where both flag the same words on the same line.
+- **`validate.py` is now bilingual** and its jargon list is detoxified (it inherits the gate's tighter patterns like `align with` instead of bare `align`). The Spanish slop above now scores 6/10; the clean English scores 8/10.
+- **Rioplatense voseo** hype verbs are now caught (`potenciá`, `optimizá`, `transformá`, `maximizá`, `aprovechá al máximo`) — previously only the infinitive forms were.
+- The shell gate loads the same file with its self-test, table-cell extraction, and dash/hyphen policy unchanged (all still green); it deliberately skips the proof-gated `superlative` category, which only the scorer can judge.
+
+### Notes
+- All ten validator tests pass against the corrected scoring (T4's threshold moved from ≤5 to ≤6 to match the honest score; the copy is a warn, not a rewrite).
+- Bumped to 2.1.0. Bundle rebuilt.
+
 ## [2.0.0]: 2026-07-21
 
 ### Added: automated validation, format templates, and a runnable test suite

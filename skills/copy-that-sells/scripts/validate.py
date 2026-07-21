@@ -7,62 +7,67 @@ Run: python validate.py "Your copy here" --format headline
 import re
 import sys
 import argparse
+from pathlib import Path
 from typing import List, Tuple
 
-BANNED_PHRASES = [
-    "in today's fast-paced world", "in an era of", "delve into", "leverage",
-    "unlock your potential", "revolutionary", "game-changing", "seamless experience",
-    "cutting-edge", "harness the power of", "empower", "optimize your workflow",
-    "drive innovation", "synergy", "paradigm shift", "holistic approach",
-    "next-level", "unleash", "transformative", "at the forefront of",
-    "in the ever-evolving landscape", "pivotal", "robust", "scalable",
-    "streamline", "actionable insights", "deep dive", "moving the needle",
-    "circle back", "think outside the box", "low-hanging fruit", "boil the ocean",
-    "run it up the flagpole", "bandwidth", "synergize", "disrupt",
-    "innovative solution", "best-in-class", "world-class", "industry-leading",
-    "state-of-the-art", "in today's competitive landscape", "as we navigate",
-    "going forward", "moving forward", "at the end of the day", "let's be honest",
-    "it goes without saying", "needless to say", "without further ado",
-    "in order to", "due to the fact that", "for all intents and purposes",
-    "in the event that", "with regard to", "in reference to", "per se",
-    "aforementioned", "heretofore", "henceforth", "therein", "thereof",
-    "wherein", "whereby", "notwithstanding", "irregardless",
-    # Hype clichés — the promise-everything, prove-nothing family.
-    "change your life", "will change your life", "transform your life",
-    "life-changing", "change everything", "changes everything",
-]
+# Banned words live in ONE place, shared with evals/check_banned_words.sh, so
+# the two tools can never drift apart. See references/banned-patterns.txt.
+PATTERNS_FILE = Path(__file__).resolve().parent.parent / "references" / "banned-patterns.txt"
+
+# Word-boundary guards that also respect accented Spanish letters (Python's \b
+# is unreliable around non-ASCII). Mirrors the shell checker's [^[:alpha:]] wrap.
+_LEFT = r"(?<![0-9A-Za-zÀ-ÿ])"
+_RIGHT = r"(?![0-9A-Za-zÀ-ÿ])"
 
 PASSIVE_PATTERNS = [
     r"\bis\s+\w+ed\b", r"\bwas\s+\w+ed\b", r"\bbeen\s+\w+ed\b",
     r"\bare\s+\w+ed\b", r"\bwere\s+\w+ed\b",
 ]
 
-JARGON = [
-    "synergy", "paradigm", "holistic", "stakeholder", "deliverables",
-    "actionable", "bandwidth", "pivot", "ideate", "disrupt", "ecosystem",
-    "vertical", "horizontal", "granular", "optics", "loop in", "touch base",
-    "move the needle", "boil the ocean", "circle back", "low-hanging fruit",
-    "run it up", "think outside the box", "best practice", "core competency",
-    "value add", "buy-in", "drill down", "deep dive", "table this", "ping",
-    "sync", "align", "leverage", "unpack", "pressure test", "socialize",
-    "take this offline", "wheelhouse", "ask", "ideation", "disruption",
-    "innovation", "scalability", "visibility", "traction", "burn rate",
-    "runway", "deck", "deliverable", "takeaway", "action item", "silo",
-    "capacity", "resource", "utilize", "facilitate", "monetize",
-    "incentivize", "productize", "solutionize",
-]
 
-VAGUE_SUPERLATIVES = [
-    "best", "greatest", "ultimate", "perfect", "amazing", "incredible",
-    "awesome", "fantastic", "unbelievable", "extraordinary", "phenomenal",
-    "outstanding", "exceptional", "remarkable", "miraculous", "revolutionary",
-    "groundbreaking", "innovative",
-]
+def load_patterns() -> dict:
+    """Read the shared pattern file into {category: [compiled regex, ...]}.
+    Format per line: LANG  CATEGORY  PATTERN (ERE). The scorer uses banned,
+    jargon, and superlative across both languages; opener is the shell's."""
+    cats = {"banned": [], "jargon": [], "superlative": []}
+    if not PATTERNS_FILE.exists():
+        sys.stderr.write(f"warning: pattern file not found at {PATTERNS_FILE}\n")
+        return cats
+    for raw in PATTERNS_FILE.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split(None, 2)
+        if len(parts) < 3:
+            continue
+        _lang, cat, pat = parts
+        if cat not in cats:
+            continue
+        try:
+            cats[cat].append(re.compile(_LEFT + r"(?:" + pat + r")" + _RIGHT, re.IGNORECASE))
+        except re.error:
+            sys.stderr.write(f"warning: skipping bad pattern: {pat}\n")
+    return cats
+
+
+_PATTERNS = load_patterns()
+
+PROOF_INDICATORS = ["because", "since", "proven", "tested", "rated", "voted",
+    "#1", "award", "study", "research", "data", "%", "percent", "times",
+    "x ", "out of"]
+
+
+def _matches(text: str, patterns: list) -> List[str]:
+    found = []
+    for rx in patterns:
+        m = rx.search(text)
+        if m:
+            found.append(m.group(0).strip())
+    return found
 
 
 def check_banned_phrases(text: str) -> Tuple[bool, List[str]]:
-    text_lower = text.lower()
-    found = [p for p in BANNED_PHRASES if p in text_lower]
+    found = _matches(text, _PATTERNS["banned"])
     return len(found) == 0, found
 
 
@@ -79,28 +84,23 @@ def check_passive_voice(text: str) -> Tuple[bool, List[str]]:
 
 
 def check_jargon(text: str) -> Tuple[bool, List[str]]:
-    text_lower = text.lower()
-    found = []
-    for word in JARGON:
-        pattern = r"\b" + re.escape(word) + r"\b"
-        if re.search(pattern, text_lower):
-            found.append(word)
+    found = _matches(text, _PATTERNS["jargon"])
     return len(found) == 0, found
 
 
 def check_vague_superlatives(text: str) -> Tuple[bool, List[str]]:
+    """Superlatives are only a problem WITHOUT nearby proof. "best" next to a
+    stat or an award is legitimate; "best" on its own is puffery."""
     text_lower = text.lower()
     found = []
-    for word in VAGUE_SUPERLATIVES:
-        pattern = r"\b" + re.escape(word) + r"\b"
-        if re.search(pattern, text_lower):
-            idx = text_lower.find(word)
-            surrounding = text_lower[max(0, idx-30):idx+60]
-            proof_indicators = ["because", "since", "proven", "tested", "rated",
-                "voted", "#1", "award", "study", "research", "data", "%",
-                "percent", "times", "x ", "out of"]
-            if not any(p in surrounding for p in proof_indicators):
-                found.append(word)
+    for rx in _PATTERNS["superlative"]:
+        m = rx.search(text)
+        if not m:
+            continue
+        idx = m.start()
+        surrounding = text_lower[max(0, idx - 30):idx + 60]
+        if not any(p in surrounding for p in PROOF_INDICATORS):
+            found.append(m.group(0).strip())
     return len(found) == 0, found
 
 
