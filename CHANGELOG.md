@@ -2,6 +2,23 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [2.0.1]: 2026-07-21
+
+Maintenance release. No change to what the skill writes; the tooling and reference layer got consolidated so the banned-word truth lives in fewer, non-drifting places.
+
+### Changed: the banned-words gate is now Python, not bash
+
+- `evals/check_banned_words.sh` replaced by `evals/check_banned_words.py`, so the skill's tooling is one language. Behaviour is identical — verified byte-for-byte equal output and matching exit codes on the cookbook and a dirty sample before deleting the shell version (same copy-only extraction, EN/ES/opener detection, connector-vs-attribution dash policy, compound-hyphen WARN, `--self-test`). Pure Python 3 standard library, still reading the shared `references/banned-patterns.txt`.
+- CI (`build.yml`) now runs the Python checker and additionally the scorer's ten validator tests, so a scoring regression fails the build.
+
+### Changed: `anti-ai-rules.md` no longer restates a banned list
+
+- Cut the duplicated banned-phrase families (a lossy hand-kept subset of `self-edit.md` and `banned-patterns.txt`) — the last place two banned lists could silently drift. The file is now purely the fast-fix companion: the swap table, before/after structural fixes, and three fast tests (So-What, read-aloud, 1995). 190 → 85 lines.
+
+### Notes
+- Banned-word truth now lives in exactly two intentional places: `banned-patterns.txt` (machine, read by both the scorer and the CI gate) and `self-edit.md` (canonical prose).
+- Bumped to 2.0.1. Bundle rebuilt.
+
 ## [2.0.0]: 2026-07-21
 
 The 2.0 release keeps the full 1.4 workflow and reference library intact — the 152-example library, Spanish craft, voice bank, diagnostics, and cookbook all stay — and adds a validation and tooling layer on top.
