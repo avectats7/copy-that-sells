@@ -7,23 +7,23 @@ A regression suite for the `copy-that-sells` skill. The goal is not to fully gra
 - `prompts.md`. Twelve test briefs covering the formats and languages the skill targets.
 - `rubric.md`. The scoring criteria. Five dimensions for generation prompts (25 points), six for diagnostic prompts (30 points).
 - `check_banned_words.py`. The static checker. Scans for banned English and Spanish vocabulary, connector em/en dashes (testimonial attribution dashes get a WARN instead), sycophantic openers, and compound-word hyphens (WARN only; dictionary compounds are legitimate). Reads its banned patterns from `skills/copy-that-sells/references/banned-patterns.txt`, the single source of truth shared with the scorer, so the gate and the scorer can never disagree. Pure Python 3 standard library, no dependencies.
-- `run_evals.sh`. The headless runner. Executes prompts through `claude -p` with the skill loaded, saves outputs, runs the checker, and optionally runs a critic session against the rubric.
+- `run_evals.py`. The headless runner. Executes prompts through `claude -p` with the skill loaded, saves outputs, runs the checker, and optionally runs a critic session against the rubric.
 - `outputs/`. Where outputs land. Gitignored except for `.gitkeep`.
 
 ## The fast loop
 
 ```bash
 # run one prompt end to end (requires the claude CLI, authenticated)
-./evals/run_evals.sh 01
+python3 evals/run_evals.py 01
 
 # run everything
-./evals/run_evals.sh
+python3 evals/run_evals.py
 
 # run one prompt and have a fresh Claude session score it against the rubric
-SCORE=1 ./evals/run_evals.sh 09
+SCORE=1 python3 evals/run_evals.py 09
 
 # pin a model for comparability across runs
-MODEL=claude-sonnet-4-6 ./evals/run_evals.sh
+MODEL=claude-sonnet-4-6 python3 evals/run_evals.py
 ```
 
 Each run saves to `evals/outputs/<id>.md` (and `<id>.score.md` with `SCORE=1`), then runs the banned-words check in `--copy-only` mode: the skill's output format mixes blockquoted copy with commentary that legitimately names banned words (self-edit reports, diagnostic quotes of the user's bad copy), so only the blockquoted copy is held to the banned list. Copy carried in three ways counts: `` ```copy `` fenced blocks, blockquote lines, and `>`-prefixed cells inside a markdown table (the RSA headline-inventory format, where the headlines would otherwise escape the scan because a table row starts with `|`, not `>`). An output with no copy at all fails as a format violation rather than passing vacuously. The runner's exit code is the number of outputs that failed, so it can gate CI or a pre-push hook.
@@ -60,10 +60,10 @@ The `lint` job in `.github/workflows/build.yml` runs on every PR touching `skill
 
 1. the checker self-test,
 2. the checker in `--copy-only` mode over the five cookbook files,
-3. the scorer's ten validator tests (`skills/copy-that-sells/tests/run-tests.sh`),
+3. the scorer's ten validator tests (`skills/copy-that-sells/tests/run-tests.py`),
 4. the checker over any saved outputs in `evals/outputs/`.
 
-Running the twelve prompts themselves needs an authenticated `claude` CLI, so prompt runs stay local (or in a future workflow with an API key secret). Run `./evals/run_evals.sh` before any release commit.
+Running the twelve prompts themselves needs an authenticated `claude` CLI, so prompt runs stay local (or in a future workflow with an API key secret). Run `python3 evals/run_evals.py` before any release commit.
 
 ## How to interpret results
 

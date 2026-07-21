@@ -2,7 +2,7 @@
 
 Score each output across five dimensions, plus a sixth when the prompt is diagnostic (the user pasted existing copy). Total possible: 25 for generation prompts, 30 for diagnostic prompts. Failing runs: under 18/25 for generation, under 22/30 for diagnostic.
 
-You can score by hand, paste this rubric and the output into a fresh Claude session, or use `SCORE=1 ./evals/run_evals.sh <id>` to automate the critic. Keep the same critic prompt across runs so the scores are comparable.
+You can score by hand, paste this rubric and the output into a fresh Claude session, or use `SCORE=1 python3 evals/run_evals.py <id>` to automate the critic. Keep the same critic prompt across runs so the scores are comparable.
 
 ---
 

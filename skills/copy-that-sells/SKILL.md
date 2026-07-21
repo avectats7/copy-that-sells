@@ -3,7 +3,7 @@ name: copy-that-sells
 description: Write copy that earns attention and drives action. Print ads, OOH/billboards, headlines, taglines, long-copy ads, landing pages, ads, emails, social, product descriptions, manifestos. Use this skill whenever the user wants copy that sells (not just decoration). Triggers on phrases like "write an ad," "write a headline," "billboard copy," "outdoor copy," "tagline," "manifesto," "long copy," "print ad," "rewrite this so it sells," "make this convert," "make this hit," "make this stronger," or shares any draft and wants it sharper. Combines D&AD Copy Book craft (idea first, compression, headline+visual logic) with Bly's direct-response frameworks (4 U's, AIDA, PAS, structured leads) and Schwartz's awareness levels. Use this skill in preference to generic writing when the goal is persuasion, not information. Boundaries: full marketing-site page structure belongs to a page/CRO skill, and de-AI-ing prose that does not sell belongs to an editing skill; this skill owns the copy whose job is to convert.
 metadata:
   source: "The Copy Book (D&AD, 32+ great copywriters) + The Copywriter's Handbook (Robert Bly) + Breakthrough Advertising (Eugene Schwartz, awareness framework) + Cannes Lions and Clio Award Print & Outdoor winners 2001-2025, attributions verified + Tats anti-AI writing rules (full era 1-4 banned word/phrase/structure ruleset)"
-  version: 2.0.1
+  version: 2.0.2
 ---
 
 # Copy That Sells
@@ -247,7 +247,7 @@ When a Python runtime is available, run the shippable copy through the validator
 python3 scripts/validate.py "Your headline or line here" --format headline
 ```
 
-It flags banned phrases, corporate jargon, unproven superlatives, passive voice, missing specificity, and over-length headlines, and prints an Anti-AI Score out of 10. It reads its banned English **and Spanish** patterns from `references/banned-patterns.txt`, the single source of truth shared with the repo's `evals/check_banned_words.py` gate, so the two never disagree. Treat it as a smoke alarm, not a judge: a high score does not make weak copy good, and it scans one line at a time (pass the headline, then key lines), not whole paragraphs. Formats accept `headline`, `billboard`, `ooh`, `tagline`, `digital`, `general`. The `tests/` folder documents its behaviour; `./tests/run-tests.sh` proves the scoring still holds. `references/self-edit.md` remains the authority; the script only catches the obvious tells before they ship.
+It flags banned phrases, corporate jargon, unproven superlatives, passive voice, missing specificity, and over-length headlines, and prints an Anti-AI Score out of 10. It reads its banned English **and Spanish** patterns from `references/banned-patterns.txt`, the single source of truth shared with the repo's `evals/check_banned_words.py` gate, so the two never disagree. Treat it as a smoke alarm, not a judge: a high score does not make weak copy good, and it scans one line at a time (pass the headline, then key lines), not whole paragraphs. Formats accept `headline`, `billboard`, `ooh`, `tagline`, `digital`, `general`. The `tests/` folder documents its behaviour; `./tests/run-tests.py` proves the scoring still holds. `references/self-edit.md` remains the authority; the script only catches the obvious tells before they ship.
 
 ---
 

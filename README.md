@@ -33,13 +33,13 @@ A single skill, `copy-that-sells`, with one entry point, eight reference files, 
 **Tooling (new in 2.0).**
 - `scripts/validate.py`. A static copy validator you can run from the command line. It flags banned phrases, corporate jargon, unproven superlatives, passive voice, missing specificity, and over-length headlines, and prints an Anti-AI Score out of 10. Wired into the self-edit pass as an optional backstop; `self-edit.md` stays the authority. Deductions scale with the number of violations, so stacked slop scores low instead of coasting on a single flat penalty.
 - `templates/`. Fill-in scaffolds for the six most-requested formats: headline, tagline, billboard, landing-page, email, manifesto. A fast structural start; `formats.md` remains the deeper per-format reference.
-- `references/anti-ai-rules.md`. The quick anti-AI companion to `self-edit.md`: banned-phrase families and a plain-English swap table (leverage → use, unlock → open, seamless → easy).
+- `references/anti-ai-rules.md`. The quick anti-AI companion to `self-edit.md`: a plain-English swap table (leverage → use, unlock → open, seamless → easy), before/after structural fixes, and three fast tests. Not a banned list — `self-edit.md` and `banned-patterns.txt` own that, so it cannot drift.
 - `references/swipe-file.md`. A short, format-tagged swipe file for a fast pattern hit without opening the full 152-example library.
 - `examples/`. A worked brand brief and its output variations.
-- `tests/`. Ten cases documenting the validator, with `run-tests.sh` — an executable runner that asserts each score threshold and exits non-zero on drift.
+- `tests/`. Ten cases documenting the validator, with `run-tests.py` — an executable runner that asserts each score threshold and exits non-zero on drift.
 
 **Evals.**
-- `evals/`. A regression suite that actually runs. Twelve test prompts, a scoring rubric (with a dedicated diagnostic-mode dimension), a headless runner (`run_evals.sh`) that executes prompts through `claude -p` and checks the outputs, and a portable static checker with a `--self-test` mode so a silently broken checker cannot report PASS. CI runs the checker on every PR.
+- `evals/`. A regression suite that actually runs. Twelve test prompts, a scoring rubric (with a dedicated diagnostic-mode dimension), a headless runner (`run_evals.py`) that executes prompts through `claude -p` and checks the outputs, and a portable static checker with a `--self-test` mode so a silently broken checker cannot report PASS. CI runs the checker on every PR.
 
 The skill works in any language. It writes Spanish in Spanish, not as a translation. Latino Spanish and Castilian Spanish are treated as different: regional variants, verb position, a Spanish-specific banned list, three native Spanish voices in the voice bank, and verified campaign lines from LatAm and Spain.
 
@@ -288,7 +288,7 @@ copy-that-sells/
 │       │   └── validate.py     Static copy validator + Anti-AI Score.
 │       ├── tests/
 │       │   ├── validation-tests.md  Ten documented validator cases.
-│       │   └── run-tests.sh          Runnable suite; non-zero on drift.
+│       │   └── run-tests.py          Runnable suite; non-zero on drift.
 │       ├── examples/           Worked brand brief + output variations.
 │       └── cookbook/
 │           ├── README.md
@@ -303,10 +303,10 @@ copy-that-sells/
 │   ├── README.md
 │   ├── prompts.md               12 regression prompts.
 │   ├── rubric.md                Scoring criteria (incl. diagnostic dim).
-│   ├── run_evals.sh             Headless runner via claude -p.
+│   ├── run_evals.py             Headless runner via claude -p.
 │   └── check_banned_words.py    Static checker (EN + ES), self-testing.
 ├── scripts/
-│   └── build-skill.sh           Rebuild dist bundle from source.
+│   └── build-skill.py           Rebuild dist bundle from source.
 ├── .github/
 │   └── workflows/
 │       └── build.yml            CI: lint + rebuild + verify on PR.

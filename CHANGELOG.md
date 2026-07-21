@@ -2,6 +2,21 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [2.0.2]: 2026-07-21
+
+Maintenance release. The repo's tooling is now a single language: the last three shell scripts are ported to Python, so nothing but the GitHub Actions workflow is non-Python. No change to what the skill writes.
+
+### Changed: the remaining shell scripts are now Python
+
+- `skills/copy-that-sells/tests/run-tests.sh` → `run-tests.py`. It now imports `validate.py` and asserts on the value `validate()` returns, instead of running the validator as a subprocess and scraping "N/10" from its stdout. More robust test code, not just a language swap.
+- `scripts/build-skill.sh` → `build-skill.py`. Same bundle, built with the standard-library `zipfile`; reproducible metadata (CI verifies contents, not bytes).
+- `evals/run_evals.sh` → `run_evals.py`. Faithful port of the headless runner: prompt extraction, nested-session auth-env stripping, error/short-response detection, the banned-words check, and the optional `SCORE=1` critic pass.
+
+### Notes
+- CI (`build.yml`) updated to call the Python scripts; path triggers updated.
+- All references (README, evals docs, rubric, SKILL.md) point to the `.py` files.
+- Bundle rebuilt (matches source). Verified: validator 10/10, checker self-test and cookbook scan green, bundle content unchanged.
+
 ## [2.0.1]: 2026-07-21
 
 Maintenance release. No change to what the skill writes; the tooling and reference layer got consolidated so the banned-word truth lives in fewer, non-drifting places.

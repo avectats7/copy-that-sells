@@ -5,14 +5,14 @@ on:
   pull_request:
     paths:
       - 'skills/**'
-      - 'scripts/build-skill.sh'
+      - 'scripts/build-skill.py'
       - 'evals/**'
       - '.github/workflows/build.yml'
   push:
     branches: [main]
     paths:
       - 'skills/**'
-      - 'scripts/build-skill.sh'
+      - 'scripts/build-skill.py'
       - 'evals/**'
       - '.github/workflows/build.yml'
 
@@ -36,7 +36,7 @@ jobs:
       - name: Validator tests pass
         # The scorer's ten cases, asserted against its current scoring so a
         # silent regression fails the build.
-        run: ./skills/copy-that-sells/tests/run-tests.sh
+        run: python3 skills/copy-that-sells/tests/run-tests.py
 
       - name: Saved eval outputs are clean (if any)
         run: |
@@ -65,7 +65,7 @@ jobs:
           if ! diff -r --brief skills/copy-that-sells "$tmpdir/copy-that-sells"; then
             echo ""
             echo "::error::dist/copy-that-sells.skill contents drift from skills/copy-that-sells/."
-            echo "Run ./scripts/build-skill.sh locally and commit the rebuilt bundle."
+            echo "Run python3 scripts/build-skill.py locally and commit the rebuilt bundle."
             exit 1
           fi
           echo "bundle content matches source."
@@ -75,7 +75,7 @@ jobs:
           # The verify step above checks the committed bundle. This step
           # makes sure the build script itself still produces a valid
           # bundle on this platform.
-          ./scripts/build-skill.sh
+          python3 scripts/build-skill.py
           # Sanity: the rebuilt bundle should still contain all required files.
           required=(
             "copy-that-sells/SKILL.md"

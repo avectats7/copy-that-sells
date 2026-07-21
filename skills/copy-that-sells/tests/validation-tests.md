@@ -2,7 +2,7 @@
 
 These cases exercise `scripts/validate.py`. Each lists the input, the format,
 and the Anti-AI Score threshold the validator must satisfy. Run them all with
-`./tests/run-tests.sh` (from the skill root); it exits non-zero if any case
+`./tests/run-tests.py` (from the skill root); it exits non-zero if any case
 drifts, so it doubles as a regression guard for the scoring model.
 
 The thresholds are asserted, not decorative: they were measured against the
