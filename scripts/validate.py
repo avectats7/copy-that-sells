@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""
+Copy That Sells — Quality Validator
+Run: python validate.py "Your copy here" --format headline
+"""
+
+import re
+import sys
+import argparse
+from typing import List, Tuple
+
+BANNED_PHRASES = [
+    "in today's fast-paced world", "in an era of", "delve into", "leverage",
+    "unlock your potential", "revolutionary", "game-changing", "seamless experience",
+    "cutting-edge", "harness the power of", "empower", "optimize your workflow",
+    "drive innovation", "synergy", "paradigm shift", "holistic approach",
+    "next-level", "unleash", "transformative", "at the forefront of",
+    "in the ever-evolving landscape", "pivotal", "robust", "scalable",
+    "streamline", "actionable insights", "deep dive", "moving the needle",
+    "circle back", "think outside the box", "low-hanging fruit", "boil the ocean",
+    "run it up the flagpole", "bandwidth", "synergize", "disrupt",
+    "innovative solution", "best-in-class", "world-class", "industry-leading",
+    "state-of-the-art", "in today's competitive landscape", "as we navigate",
+    "going forward", "moving forward", "at the end of the day", "let's be honest",
+    "it goes without saying", "needless to say", "without further ado",
+    "in order to", "due to the fact that", "for all intents and purposes",
+    "in the event that", "with regard to", "in reference to", "per se",
+    "aforementioned", "heretofore", "henceforth", "therein", "thereof",
+    "wherein", "whereby", "notwithstanding", "irregardless",
+]
+
+PASSIVE_PATTERNS = [
+    r"\bis\s+\w+ed\b", r"\bwas\s+\w+ed\b", r"\bbeen\s+\w+ed\b",
+    r"\bare\s+\w+ed\b", r"\bwere\s+\w+ed\b",
+]
+
+JARGON = [
+    "synergy", "paradigm", "holistic", "stakeholder", "deliverables",
+    "actionable", "bandwidth", "pivot", "ideate", "disrupt", "ecosystem",
+    "vertical", "horizontal", "granular", "optics", "loop in", "touch base",
+    "move the needle", "boil the ocean", "circle back", "low-hanging fruit",
+    "run it up", "think outside the box", "best practice", "core competency",
+    "value add", "buy-in", "drill down", "deep dive", "table this", "ping",
+    "sync", "align", "leverage", "unpack", "pressure test", "socialize",
+    "take this offline", "wheelhouse", "ask", "ideation", "disruption",
+    "innovation", "scalability", "visibility", "traction", "burn rate",
+    "runway", "deck", "deliverable", "takeaway", "action item", "silo",
+    "capacity", "resource", "utilize", "facilitate", "monetize",
+    "incentivize", "productize", "solutionize",
+]
+
+VAGUE_SUPERLATIVES = [
+    "best", "greatest", "ultimate", "perfect", "amazing", "incredible",
+    "awesome", "fantastic", "unbelievable", "extraordinary", "phenomenal",
+    "outstanding", "exceptional", "remarkable", "miraculous", "revolutionary",
+    "groundbreaking",
+]
+
+
+def check_banned_phrases(text: str) -> Tuple[bool, List[str]]:
+    text_lower = text.lower()
+    found = [p for p in BANNED_PHRASES if p in text_lower]
+    return len(found) == 0, found
+
+
+def check_passive_voice(text: str) -> Tuple[bool, List[str]]:
+    found = []
+    for pattern in PASSIVE_PATTERNS:
+        matches = re.findall(pattern, text, re.IGNORECASE)
+        found.extend(matches)
+    filtered = [m for m in found if not any(m.lower().endswith(x) for x in [
+        "red", "bed", "led", "fed", "wed", "shed", "bred", "bled",
+        "aged", "sized", "shaped", "toned", "hued", "natured"
+    ])]
+    return len(filtered) == 0, filtered[:5]
+
+
+def check_jargon(text: str) -> Tuple[bool, List[str]]:
+    text_lower = text.lower()
+    found = []
+    for word in JARGON:
+        pattern = r"\b" + re.escape(word) + r"\b"
+        if re.search(pattern, text_lower):
+            found.append(word)
+    return len(found) == 0, found
+
+
+def check_vague_superlatives(text: str) -> Tuple[bool, List[str]]:
+    text_lower = text.lower()
+    found = []
+    for word in VAGUE_SUPERLATIVES:
+        pattern = r"\b" + re.escape(word) + r"\b"
+        if re.search(pattern, text_lower):
+            idx = text_lower.find(word)
+            surrounding = text_lower[max(0, idx-30):idx+60]
+            proof_indicators = ["because", "since", "proven", "tested", "rated",
+                "voted", "#1", "award", "study", "research", "data", "%",
+                "percent", "times", "x ", "out of"]
+            if not any(p in surrounding for p in proof_indicators):
+                found.append(word)
+    return len(found) == 0, found
+
+
+def check_specificity(text: str) -> Tuple[bool, str]:
+    has_numbers = bool(re.search(r"\d", text))
+    has_specifics = bool(re.search(
+        r"\b(?:January|February|March|April|May|June|July|August|September|"
+        r"October|November|December|Monday|Tuesday|Wednesday|Thursday|Friday|"
+        r"Saturday|Sunday|\d{4}|\$|€|£|percent|%)\b", text, re.IGNORECASE))
+    if has_numbers or has_specifics:
+        return True, "Contains specific details (numbers, dates, currency)"
+    return False, "No specific details found — add numbers, dates, or concrete facts"
+
+
+def check_headline_length(text: str, fmt: str) -> Tuple[bool, str]:
+    lines = text.strip().split("\n")
+    headline = lines[0] if lines else text
+    words = headline.split()
+    word_count = len(words)
+    limits = {"billboard": 7, "ooh": 7, "headline": 12, "digital": 10, "tagline": 7}
+    limit = limits.get(fmt, 15)
+    if word_count > limit:
+        return False, f"{word_count} words (max {limit} for {fmt})"
+    return True, f"{word_count} words (max {limit})"
+
+
+def calculate_anti_ai_score(results: dict) -> int:
+    score = 10
+    if not results["banned_phrases"][0]: score -= 2
+    if not results["passive_voice"][0]: score -= 1
+    if not results["jargon"][0]: score -= 2
+    if not results["vague_superlatives"][0]: score -= 1
+    if not results["specificity"][0]: score -= 1
+    if not results["headline_length"][0]: score -= 1
+    return max(1, score)
+
+
+def validate(text: str, fmt: str = "general") -> dict:
+    results = {
+        "banned_phrases": check_banned_phrases(text),
+        "passive_voice": check_passive_voice(text),
+        "jargon": check_jargon(text),
+        "vague_superlatives": check_vague_superlatives(text),
+        "specificity": check_specificity(text),
+        "headline_length": check_headline_length(text, fmt),
+    }
+    results["anti_ai_score"] = calculate_anti_ai_score(results)
+    return results
+
+
+def print_report(results: dict, text: str):
+    print("=" * 60)
+    print("COPY THAT SELLS — QUALITY VALIDATION REPORT")
+    print("=" * 60)
+    print(f"\nInput: \"{text[:80]}{'...' if len(text) > 80 else ''}\"\n")
+    checks = [
+        ("Banned Phrases", "banned_phrases", "PASS", "FAIL"),
+        ("Passive Voice", "passive_voice", "PASS", "FAIL"),
+        ("Corporate Jargon", "jargon", "PASS", "FAIL"),
+        ("Vague Superlatives", "vague_superlatives", "PASS", "FAIL"),
+        ("Specificity", "specificity", "PASS", "NEEDS WORK"),
+        ("Headline Length", "headline_length", "PASS", "TOO LONG"),
+    ]
+    for label, key, pass_msg, fail_msg in checks:
+        passed, details = results[key]
+        status = f"PASS: {pass_msg}" if passed else f"FAIL: {fail_msg}"
+        detail_str = ""
+        if isinstance(details, list) and details:
+            detail_str = f" — Found: {', '.join(details[:3])}"
+        elif isinstance(details, str) and details:
+            detail_str = f" — {details}"
+        print(f"  {label:<20} {status}{detail_str}")
+    score = results["anti_ai_score"]
+    score_bar = "█" * score + "░" * (10 - score)
+    print(f"\n  Anti-AI Score: [{score_bar}] {score}/10")
+    if score >= 8:
+        print("  PASS: Excellent — This copy passes the human test.")
+    elif score >= 5:
+        print("  WARN: Decent — Some AI-tells detected. Review flagged items.")
+    else:
+        print("  FAIL: Needs rewrite — Too many AI indicators. Start over.")
+    print("=" * 60)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Validate copy for AI-tells and quality issues.")
+    parser.add_argument("text", help="The copy text to validate")
+    parser.add_argument("--format", "-f", default="general",
+        choices=["headline", "billboard", "ooh", "tagline", "digital", "general"],
+        help="Format type for length checking")
+    args = parser.parse_args()
+    results = validate(args.text, args.format)
+    print_report(results, args.text)
+    if results["anti_ai_score"] < 5:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
