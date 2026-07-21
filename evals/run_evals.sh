@@ -18,7 +18,7 @@
 #   2. run through `claude -p` with SKILL.md appended to the system prompt
 #      and the Read tool allowed, so the model can open the reference files
 #   3. output saved to evals/outputs/<id>.md
-#   4. checked with ./evals/check_banned_words.sh
+#   4. checked with python3 evals/check_banned_words.py
 #   5. with SCORE=1, scored by a fresh `claude -p` against evals/rubric.md
 #
 # Exit code: number of prompts whose output failed the banned-words check
@@ -32,7 +32,7 @@ cd "$REPO_ROOT"
 PROMPTS_FILE="evals/prompts.md"
 SKILL_FILE="skills/copy-that-sells/SKILL.md"
 OUT_DIR="evals/outputs"
-CHECKER="evals/check_banned_words.sh"
+CHECKER="python3 evals/check_banned_words.py"
 
 command -v claude >/dev/null 2>&1 || {
   echo "error: the claude CLI is not on PATH. Install Claude Code first." >&2
@@ -141,7 +141,7 @@ for id in "${IDS[@]}"; do
   # Copy-only: the output format mixes shippable copy (blockquoted) with
   # commentary that legitimately names banned words (self-edit reports,
   # diagnostic quotes). Only the copy is held to the banned list.
-  if ! "$CHECKER" --copy-only "$outfile"; then
+  if ! $CHECKER --copy-only "$outfile"; then
     echo "   BANNED-WORDS FAIL on $id"
     FAILED=$((FAILED + 1))
   fi

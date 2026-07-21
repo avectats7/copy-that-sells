@@ -17,7 +17,7 @@ The 2.0 release keeps the full 1.4 workflow and reference library intact — the
 
 ### Added: one bilingual source of truth for banned patterns
 
-- **`references/banned-patterns.txt`.** A single machine-readable list (English + Spanish, tagged `banned` / `jargon` / `superlative` / `opener`) that BOTH tools read — `validate.py` and `evals/check_banned_words.sh` — so they can never drift apart. Verified by a parity check where both flag the same words on the same line. Replaces four separately-maintained lists.
+- **`references/banned-patterns.txt`.** A single machine-readable list (English + Spanish, tagged `banned` / `jargon` / `superlative` / `opener`) that BOTH tools read — `validate.py` and `evals/check_banned_words.py` — so they can never drift apart. Verified by a parity check where both flag the same words on the same line. Replaces four separately-maintained lists.
 - **`validate.py` is bilingual** and its jargon list is detoxified (it inherits the gate's tighter patterns like `align with` instead of bare `align`).
 - **Rioplatense voseo** hype verbs are caught (`potenciá`, `optimizá`, `transformá`, `maximizá`, `aprovechá al máximo`), not just the infinitives.
 - The shell gate loads the same file with its self-test, table-cell extraction, and dash/hyphen policy unchanged; it skips the proof-gated `superlative` category, which only the scorer can judge.

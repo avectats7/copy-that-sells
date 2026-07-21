@@ -304,7 +304,7 @@ copy-that-sells/
 │   ├── prompts.md               12 regression prompts.
 │   ├── rubric.md                Scoring criteria (incl. diagnostic dim).
 │   ├── run_evals.sh             Headless runner via claude -p.
-│   └── check_banned_words.sh    Static checker (EN + ES), self-testing.
+│   └── check_banned_words.py    Static checker (EN + ES), self-testing.
 ├── scripts/
 │   └── build-skill.sh           Rebuild dist bundle from source.
 ├── .github/

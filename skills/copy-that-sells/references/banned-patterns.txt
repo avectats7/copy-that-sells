@@ -2,7 +2,7 @@
 #
 # One place both tools read so their lists can never drift apart again:
 #   - scripts/validate.py        (Python scorer; reads banned + jargon + superlative)
-#   - ../../../evals/check_banned_words.sh  (bash gate; reads banned + jargon + opener)
+#   - ../../../evals/check_banned_words.py  (gate; reads banned + jargon + opener)
 #
 # Format, one rule per line:   LANG  CATEGORY  PATTERN
 #   LANG      en | es

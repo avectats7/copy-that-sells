@@ -58,4 +58,4 @@ Twelve prompts that cover the formats and languages the skill targets. Run any o
 
 ## How to use this file
 
-Pick a prompt. Paste into a fresh session with the skill installed. Save the model's complete output (Idea, Final copy, Alternates, Notes) to `evals/outputs/<prompt-id>.md`. Run `./evals/check_banned_words.sh evals/outputs/<prompt-id>.md`. Score against `rubric.md`.
+Pick a prompt. Paste into a fresh session with the skill installed. Save the model's complete output (Idea, Final copy, Alternates, Notes) to `evals/outputs/<prompt-id>.md`. Run `python3 evals/check_banned_words.py evals/outputs/<prompt-id>.md`. Score against `rubric.md`.

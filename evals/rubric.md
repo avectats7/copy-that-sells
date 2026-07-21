@@ -8,7 +8,7 @@ You can score by hand, paste this rubric and the output into a fresh Claude sess
 
 ## 1. Clean of AI tells (5 points)
 
-The output passes `./evals/check_banned_words.sh` cleanly.
+The output passes `python3 evals/check_banned_words.py` cleanly.
 
 - 5 = no hits in the static checker.
 - 4 = one hit on a marginal banned word, easily defensible.

@@ -6,7 +6,7 @@ A regression suite for the `copy-that-sells` skill. The goal is not to fully gra
 
 - `prompts.md`. Twelve test briefs covering the formats and languages the skill targets.
 - `rubric.md`. The scoring criteria. Five dimensions for generation prompts (25 points), six for diagnostic prompts (30 points).
-- `check_banned_words.sh`. The static checker. Scans for banned English and Spanish vocabulary, connector em/en dashes (testimonial attribution dashes get a WARN instead), sycophantic openers, and compound-word hyphens (WARN only; dictionary compounds are legitimate). Portable across macOS BSD grep and Linux GNU grep; the dash detection runs in perl precisely because `grep -P` does not exist on macOS and used to fail silently there.
+- `check_banned_words.py`. The static checker. Scans for banned English and Spanish vocabulary, connector em/en dashes (testimonial attribution dashes get a WARN instead), sycophantic openers, and compound-word hyphens (WARN only; dictionary compounds are legitimate). Reads its banned patterns from `skills/copy-that-sells/references/banned-patterns.txt`, the single source of truth shared with the scorer, so the gate and the scorer can never disagree. Pure Python 3 standard library, no dependencies.
 - `run_evals.sh`. The headless runner. Executes prompts through `claude -p` with the skill loaded, saves outputs, runs the checker, and optionally runs a critic session against the rubric.
 - `outputs/`. Where outputs land. Gitignored except for `.gitkeep`.
 
@@ -42,17 +42,17 @@ The original workflow still works: paste a prompt from `prompts.md` into a fresh
 
 ```bash
 # scan any file
-./evals/check_banned_words.sh evals/outputs/01-billboard-fintech-es.md
+python3 evals/check_banned_words.py evals/outputs/01-billboard-fintech-es.md
 
 # scan only the copy inside a cookbook file (blockquotes + ```copy fences),
 # because cookbook prose legitimately names banned words while teaching
-./evals/check_banned_words.sh --copy-only skills/copy-that-sells/cookbook/01-billboard-latam-fintech.md
+python3 evals/check_banned_words.py --copy-only skills/copy-that-sells/cookbook/01-billboard-latam-fintech.md
 
 # verify the checker itself can still detect violations
-./evals/check_banned_words.sh --self-test
+python3 evals/check_banned_words.py --self-test
 ```
 
-The self-test exists because of a real incident: the previous version used `grep -P`, which BSD grep on macOS rejects, and the error was silenced, so em dashes passed undetected on the machine the skill was developed on. A checker that cannot fail is worse than no checker. CI runs the self-test before trusting anything else.
+The self-test exists because of a real incident in an earlier bash version: it used `grep -P`, which BSD grep on macOS rejects, and the error was silenced, so em dashes passed undetected on the machine the skill was developed on. The checker is now pure Python (no such portability trap), but the principle stands — a checker that cannot fail is worse than no checker. CI runs the self-test before trusting anything else.
 
 ## What runs in CI
 
@@ -60,14 +60,15 @@ The `lint` job in `.github/workflows/build.yml` runs on every PR touching `skill
 
 1. the checker self-test,
 2. the checker in `--copy-only` mode over the five cookbook files,
-3. the checker over any saved outputs in `evals/outputs/`.
+3. the scorer's ten validator tests (`skills/copy-that-sells/tests/run-tests.sh`),
+4. the checker over any saved outputs in `evals/outputs/`.
 
 Running the twelve prompts themselves needs an authenticated `claude` CLI, so prompt runs stay local (or in a future workflow with an API key secret). Run `./evals/run_evals.sh` before any release commit.
 
 ## How to interpret results
 
 - **All outputs pass static checks.** No regression.
-- **One or two fail on the same banned word.** A new model generation is leaning on a word not yet listed. Add it to `references/self-edit.md`, the master list, and the checker's subset, then rerun.
+- **One or two fail on the same banned word.** A new model generation is leaning on a word not yet listed. Add it once to `references/banned-patterns.txt` (both the gate and the scorer read that file) and, for the prose ruleset, `references/self-edit.md`, then rerun.
 - **Multiple outputs fail on format limits.** The skill is not respecting `formats.md`. Investigate the workflow files.
 - **Outputs pass static checks but score poorly on the rubric.** Technically clean, craft missing. The fix lives in `craft.md` or `frameworks.md`.
 - **Prompt 09 scores under 4 on dimension 6.** Diagnostic mode is rewriting before diagnosing. The fix lives in `diagnostics.md` and the SKILL.md mode-switch instruction.

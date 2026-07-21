@@ -10,7 +10,7 @@ import argparse
 from pathlib import Path
 from typing import List, Tuple
 
-# Banned words live in ONE place, shared with evals/check_banned_words.sh, so
+# Banned words live in ONE place, shared with evals/check_banned_words.py, so
 # the two tools can never drift apart. See references/banned-patterns.txt.
 PATTERNS_FILE = Path(__file__).resolve().parent.parent / "references" / "banned-patterns.txt"
 
