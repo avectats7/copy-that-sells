@@ -10,6 +10,36 @@ If you have ever asked Claude to write an ad and it came back with "unlock the p
 
 ---
 
+## What makes it different
+
+Most copywriting skills give Claude a stack of frameworks and leave it to guess which one fits. This one makes Claude answer three questions before it writes a line: who is reading, what that reader already believes, and what idea the copy is carrying. The answers pick the framework.
+
+| | copy-that-sells | Anthropic `copywriting` | Anthropic `ogilvy` |
+|---|---|---|---|
+| Picks the headline type from the reader's awareness level (Schwartz) | Yes | No | No |
+| Writes 3 to 7 ideas and tests them before any headline | Yes | No | Big idea principle, no test |
+| Asks for a missing brief input before writing | Yes | Yes | Self-check questions only |
+| Offer pass: deal, guarantee, honest urgency, bonuses | Yes | Guarantees only | No |
+| Diagnostic mode for copy you paste in | Yes | Separate skill (`copy-editing`) | Review principles, no procedure |
+| Native Spanish, five regional variants | Yes | No | No |
+| Banned AI vocabulary in English and Spanish | Yes | No | No |
+| Validator script, test suite, CI on every PR | Yes | No | No |
+| Campaign library with verified attribution | 152 entries | No | Ogilvy's own work |
+
+Checked against the Anthropic-published versions as of October 2026.
+
+**It starts from the reader's head.** Schwartz's five awareness levels decide the headline category and the lead type. A reader who has never heard of the problem gets a different first line than a reader comparing prices. Neither Anthropic skill uses the awareness levels.
+
+**It treats the billboard as the test.** If the idea cannot survive as one line on a poster, the skill sends it back. The same test runs on a homepage hero, a subject line and a cover slide. Most copy fails here first, which is the point of running it.
+
+**It writes Spanish in Spanish.** Rioplatense, mexicano, castellano, andino and caribeño get their own rules for verb position, vos and tú, and banned vocabulary. Three of the fifteen voices in the voice bank are native Spanish registers. Translated English copy reads like translated English copy, and LatAm readers notice.
+
+**It checks its own work with code.** `scripts/validate.py` scores each line for banned phrases, jargon, unproven superlatives and missing specifics. The same pattern file drives the CI gate, so the skill and the gate cannot disagree about what counts as a tell.
+
+When to use something else: the Anthropic `ogilvy` skill goes deeper on Ogilvy himself, and `copywriting` covers page structure for SaaS sites in more detail. Install them alongside this one if you want range.
+
+---
+
 ## What's inside
 
 A single skill, `copy-that-sells`, with one entry point, eight reference files, and a cookbook of worked examples.
