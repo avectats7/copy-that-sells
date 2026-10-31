@@ -49,16 +49,16 @@ The skill works in any language. It writes Spanish in Spanish, not as a translat
 
 ### For Claude Code users
 
-Add the plugin from this repo. Two commands.
+In a Claude Code session, run these two commands to add the plugin from this repository:
 
 ```bash
 /plugin marketplace add avectats7/copy-that-sells
 /plugin install copy-that-sells
 ```
 
-Skills are auto-discovered. After install, the `copy-that-sells` skill is available in any Claude Code session. It triggers on phrases like "write an ad," "billboard copy," "headline ideas," "rewrite this so it sells."
+Claude Code finds the skill automatically. After the install, the `copy-that-sells` skill is available in every Claude Code session. Phrases such as "write an ad," "billboard copy," "headline ideas" and "rewrite this so it sells" start the skill.
 
-To uninstall:
+To remove the skill, run these commands:
 
 ```bash
 /plugin uninstall copy-that-sells
@@ -67,28 +67,28 @@ To uninstall:
 
 ### For Claude Cowork users
 
-Download the packaged skill file:
+1. Download the packaged skill file: [**Download copy-that-sells.skill**](dist/copy-that-sells.skill)
+2. Open the file in Cowork. Cowork asks if you want to install the skill.
+3. Click **Install**.
 
-[**Download copy-that-sells.skill**](dist/copy-that-sells.skill)
-
-In Cowork, open the file. Cowork will offer to install the skill. After install, mention copywriting in a Cowork conversation and the skill loads itself.
+After the install, ask for copywriting in a Cowork conversation. The skill loads automatically.
 
 ### For manual install (any environment running Claude with skill support)
 
-Clone the repo and copy the skill folder into your local skills directory.
+Clone the repository and copy the skill folder into your local skills directory:
 
 ```bash
 git clone https://github.com/avectats7/copy-that-sells.git
 cp -r copy-that-sells/skills/copy-that-sells ~/.claude/skills/
 ```
 
-Path varies by client. Check your environment's skills directory.
+The skills directory is different for each client. Check the skills directory of your environment.
 
 ---
 
 ## When the skill triggers
 
-The skill is built to trigger on real copywriting requests, not generic writing requests. Tells that fire it:
+The skill starts on real copywriting requests, not on general writing requests. These requests start it:
 
 - "Write an ad for..."
 - "Write a billboard for..."
@@ -102,7 +102,7 @@ The skill is built to trigger on real copywriting requests, not generic writing 
 - "Write a manifesto for..."
 - "Write long-copy for..."
 
-When it triggers, it runs a structured workflow: briefing → research → idea → headline → body → offer → CTA → self-edit. It refuses to write past missing brief inputs (audience, promise, proof, CTA, voice). It produces an output block with the idea, the final copy, alternates, and notes.
+When the skill starts, it does a structured workflow: briefing → research → idea → headline → body → offer → CTA → self-edit. If a brief input is missing (audience, promise, proof, CTA, voice), it asks for that input before it writes. It gives an output block with the idea, the final copy, the alternates and the notes.
 
 ---
 

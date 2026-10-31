@@ -2,6 +2,16 @@
 
 All notable changes to the `copy-that-sells` skill.
 
+## [2.1.0]: 2026-10-31
+
+No change to what the skill writes. The instruction text is easier to parse.
+
+### Changed: instruction text in Simplified Technical English
+
+- Rewrote the instruction text of `SKILL.md`, `docs/install.md` and the README install and trigger sections in Simplified Technical English: active voice, one instruction for each sentence, no contractions, conditions first, sequences as numbered lists.
+- Example headlines, quoted copy, trigger phrases, banned lists, templates, cookbook entries and Spanish files did not change.
+- Bundle rebuilt to match source.
+
 ## [2.0.3]: 2026-07-21
 
 Maintenance release. No change to what the skill writes. Buys headroom in the frontmatter `description` so a future edit cannot silently exceed the field's hard limit.
